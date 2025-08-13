@@ -1,3 +1,14 @@
+// Utility functions
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
 // FAQ toggle function
 function toggleFAQ(button) {
     const content = button.nextElementSibling;
@@ -19,6 +30,84 @@ function toggleFAQ(button) {
     }
 }
 
+// Program accordion toggle function
+function toggleProgram(button) {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector('.program-icon');
+    const isOpen = content.classList.contains('active');
+    
+    // Close all other program items
+    document.querySelectorAll('.program-content').forEach(item => {
+        item.classList.remove('active');
+    });
+    document.querySelectorAll('.program-icon').forEach(item => {
+        item.textContent = '+';
+    });
+    
+    // Toggle current item
+    if (!isOpen) {
+        content.classList.add('active');
+        icon.textContent = '−';
+    }
+}
+
+// Smooth scroll to section
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
+// Form validation and submission
+function validateForm(form) {
+    const name = form.querySelector('input[name="name"]');
+    const email = form.querySelector('input[name="email"]');
+    const phone = form.querySelector('input[name="phone"]');
+    
+    let isValid = true;
+    
+    // Clear previous error states
+    [name, email, phone].forEach(field => {
+        if (field) {
+            field.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        }
+    });
+    
+    // Validate name
+    if (name && name.value.trim().length < 2) {
+        name.style.borderColor = '#ff6b6b';
+        isValid = false;
+    }
+    
+    // Validate email
+    if (email && !isValidEmail(email.value)) {
+        email.style.borderColor = '#ff6b6b';
+        isValid = false;
+    }
+    
+    // Validate phone (optional but if provided, should be valid)
+    if (phone && phone.value.trim() && !isValidPhone(phone.value)) {
+        phone.style.borderColor = '#ff6b6b';
+        isValid = false;
+    }
+    
+    return isValid;
+}
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function isValidPhone(phone) {
+    const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+    return phoneRegex.test(phone);
+}
+
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for anchor links
@@ -36,6 +125,34 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Contact form handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (validateForm(this)) {
+                // Show success message
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Отправлено!';
+                submitBtn.style.background = '#10B981';
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = '';
+                }, 3000);
+                
+                // Here you would typically send the form data to your server
+                console.log('Form submitted successfully');
+            }
+        });
+    }
 
     // Enhanced scroll animations
     const observerOptions = {
@@ -157,7 +274,11 @@ document.addEventListener('DOMContentLoaded', function() {
         .earnings-description,
         .resume-title,
         .resume-subtitle,
-        .about-school
+        .about-school,
+        .advantage-item,
+        .program-item,
+        .about-course-content,
+        .final-cta-content
     `);
 
     animateElements.forEach((el, index) => {
@@ -248,6 +369,18 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (el.classList.contains('nav-menu') || el.classList.contains('nav-menu a')) {
             animationType = 'slide-in-left';
             delay = index * 0.1;
+        } else if (el.classList.contains('advantage-item')) {
+            animationType = 'fade-in-up';
+            delay = index * 0.1;
+        } else if (el.classList.contains('program-item')) {
+            animationType = 'slide-in-bottom';
+            delay = index * 0.1;
+        } else if (el.classList.contains('about-course-content')) {
+            animationType = 'fade-in-up';
+            delay = 0.3;
+        } else if (el.classList.contains('final-cta-content')) {
+            animationType = 'bounce-in';
+            delay = 0.2;
         }
         
         // Apply initial transform based on animation type
@@ -309,7 +442,8 @@ document.addEventListener('DOMContentLoaded', function() {
         .case-item, .review-item, .why-item,
         .faq-question, .social-link, .nav-menu a,
         .vacancy-item, .earning-tier, .portfolio-tag,
-        .icon-square, .tool-icon, .course-actions a
+        .icon-square, .tool-icon, .course-actions a,
+        .advantage-item, .program-question
     `);
 
     interactiveElements.forEach(el => {
@@ -542,9 +676,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (headerCta) {
         headerCta.addEventListener('click', function(e) {
             e.preventDefault();
-            console.log('Header CTA clicked');
-            // Здесь можно добавить аналитику
-            // gtag('event', 'header_cta_click', { label: 'placeholder_button' });
+            scrollToSection('contact');
         });
     }
 
@@ -554,8 +686,6 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function() {
             const itemText = this.textContent.trim();
             console.log('Menu item clicked:', itemText);
-            // Здесь можно добавить аналитику
-            // gtag('event', 'menu_item_click', { label: itemText });
             
             // Close menu after click
             setTimeout(() => {
@@ -621,7 +751,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Smooth horizontal scrolling for sliders
-    const sliders = document.querySelectorAll('.companies-slider, .cases-slider, .speakers-grid');
+    const sliders = document.querySelectorAll('.companies-slider, .cases-slider, .speakers-grid, .reviews-slider');
     sliders.forEach(slider => {
         let isDown = false;
         let startX;

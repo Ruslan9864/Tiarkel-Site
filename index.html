@@ -3,27 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Школа Татьяны Аракеловой - Курсы графического дизайна</title>
-    <meta name="description" content="Профессиональные курсы графического дизайна от Школы Татьяны Аракеловой. Освойте Adobe Illustrator, Photoshop, InDesign и создайте портфолио из 15 работ.">
+    <title>Курсы графического дизайна онлайн — Tiarkel</title>
+    <meta name="description" content="Онлайн-школа графического дизайна от Татьяны Аракеловой. Освой профессию за 3 месяца, создавай проекты мирового уровня. Поддержка наставника, практика на реальных проектах.">
     <link rel="canonical" href="/">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
+    <!-- Preload critical resources -->
+    <link rel="preload" href="Logo.svg" as="image">
+    <link rel="preload" href="styles.css" as="style">
+    
     <!-- Open Graph -->
-    <meta property="og:title" content="Школа Татьяны Аракеловой - Курсы графического дизайна">
-    <meta property="og:description" content="Профессиональные курсы графического дизайна с нуля до профессионала.">
+    <meta property="og:title" content="Курсы графического дизайна онлайн — Tiarkel">
+    <meta property="og:description" content="Онлайн-школа графического дизайна от Татьяны Аракеловой. Освой профессию за 3 месяца.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="/">
     <meta property="og:image" content="images/og-home.jpg">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Школа Татьяны Аракеловой - Курсы графического дизайна">
-    <meta name="twitter:description" content="Профессиональные курсы графического дизайна с нуля до профессионала.">
+    <meta name="twitter:title" content="Курсы графического дизайна онлайн — Tiarkel">
+    <meta name="twitter:description" content="Онлайн-школа графического дизайна от Татьяны Аракеловой.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Курсы графического дизайна онлайн",
+        "description": "Онлайн-школа графического дизайна от Татьяны Аракеловой. Освой профессию за 3 месяца и создавай проекты мирового уровня.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Tiarkel",
+            "url": "https://tiarkel.com"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Татьяна Аракелова"
+        },
+        "duration": "P3M",
+        "timeRequired": "P3M",
+        "educationalLevel": "Beginner",
+        "inLanguage": "ru",
+        "offers": {
+            "@type": "Offer",
+            "price": "997",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip link for accessibility -->
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+    
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="nav">
                 <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
@@ -31,12 +66,12 @@
                 </button>
                 <div class="nav-center">
                     <a href="index.html" class="logo" aria-label="На главную">
-                        <img src="Logo.svg" alt="Логотип" class="logo-img" />
+                        <img src="Logo.svg" alt="Логотип Tiarkel" class="logo-img" loading="eager" />
                         <div class="logo-descriptor">Школа Татьяны Аракеловой</div>
                     </a>
                 </div>
                 <div class="nav-right">
-                    <button class="btn-secondary" id="header-cta">Кнопка</button>
+                    <button class="btn-primary" id="header-cta" onclick="scrollToSection('contact')">Записаться</button>
                 </div>
             </nav>
             <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Основное меню">
@@ -44,12 +79,12 @@
                 <div class="nav-menu-container">
                     <ul class="nav-menu">
                         <li><a href="index.html" aria-current="page">Главная</a></li>
+                        <li><a href="#about">О курсе</a></li>
+                        <li><a href="#program">Программа</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
                         <li><a href="cases.html">Работы учеников</a></li>
-                        <li><a href="program.html">Программа</a></li>
-                        <li><a href="courses/osnovnoy-kurs.html">Основной курс</a></li>
-                        <li><a href="courses/osnovnoy-kurs.html#pricing">Тарифы</a></li>
-                        <li><a href="courses/osnovnoy-kurs.html#reviews">Отзывы</a></li>
-                        <li><a href="courses/osnovnoy-kurs.html#contact">Обратная связь</a></li>
+                        <li><a href="services.html">Услуги дизайна</a></li>
+                        <li><a href="#contact">Записаться</a></li>
                     </ul>
                 </div>
             </div>
@@ -58,38 +93,38 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-left">
                     <h1 class="hero-title">
-                        Школа<br>Татьяны Аракеловой
+                        Онлайн-школа<br>графического дизайна<br>от Татьяны Аракеловой
                     </h1>
                     <p class="hero-subtitle">
-                        Профессиональные курсы графического дизайна<br>
-                        с нуля до создания портфолио
+                        Освой профессию за 3 месяца и создавай проекты мирового уровня
                     </p>
                     <div class="hero-badges">
-                        <span class="badge">ПРЕДЗАКАЗ</span>
-                        <span class="badge">ЛАБОРАТОРИЯ</span>
+                        <span class="badge">ПОДДЕРЖКА НАСТАВНИКА</span>
+                        <span class="badge">ПРАКТИКА НА РЕАЛЬНЫХ ПРОЕКТАХ</span>
                         <span class="badge">ПОРТФОЛИО - 15 работ</span>
-                        <span class="badge">СТАРТ КУРСА - 22 августа</span>
+                        <span class="badge">НАБОР ОТКРЫТ</span>
                     </div>
+                    <button class="btn-primary btn-large" onclick="scrollToSection('contact')">Записаться на курс</button>
                 </div>
                 <div class="hero-right">
                     <div class="hero-card">
                         <h2>ДИЗАЙНА<br>ЛАБОРАТОРИЯ</h2>
                         <div class="hero-badges-mobile">
-                            <span class="badge">ПРЕДЗАКАЗ</span>
-                            <span class="badge">ЛАБОРАТОРИЯ</span>
+                            <span class="badge">ПОДДЕРЖКА НАСТАВНИКА</span>
+                            <span class="badge">ПРАКТИКА НА РЕАЛЬНЫХ ПРОЕКТАХ</span>
                         </div>
                         <p class="hero-description">
                             За 3 месяца освой навыки,
                             благодаря которым ты выйдешь + $2000 на графическом дизайне
                         </p>
-                        <a href="courses/osnovnoy-kurs.html" class="btn-primary btn-large">Подробнее о курсе</a>
+                        <button class="btn-primary btn-large" onclick="scrollToSection('contact')">Записаться на курс</button>
                         <div class="hero-info">
-                            <p>старт - 22 августа</p>
+                            <p>3 месяца обучения</p>
                             <p>15 работ в портфолио</p>
                         </div>
                     </div>
@@ -99,195 +134,246 @@
     </section>
 
     <!-- Main Content -->
-    <main class="main">
+    <main class="main" id="main">
         <div class="container">
-            <!-- Courses Section -->
-            <section class="courses-section" id="courses">
-                <h2 class="section-title">НАШИ КУРСЫ</h2>
-                
-                <div class="courses-grid">
-                    <!-- Main Course Card -->
-                    <div class="course-card featured">
-                        <div class="course-image">
-                            <img src="images/course-main.jpg" alt="Дизайна Лаборатория">
-                            <div class="course-badge">ОСНОВНОЙ КУРС</div>
-                        </div>
-                        <div class="course-content">
-                            <h3>ДИЗАЙНА ЛАБОРАТОРИЯ</h3>
-                            <p class="course-description">
-                                Полный курс графического дизайна с нуля до профессионала. 
-                                Освойте Adobe Illustrator, Photoshop, InDesign и создайте портфолио из 15 работ.
-                            </p>
-                            <div class="course-features">
-                                <div class="feature">
-                                    <span class="feature-icon">📚</span>
-                                    <span>3 месяца обучения</span>
-                                </div>
-                                <div class="feature">
-                                    <span class="feature-icon">🎨</span>
-                                    <span>15 работ в портфолио</span>
-                                </div>
-                                <div class="feature">
-                                    <span class="feature-icon">👥</span>
-                                    <span>Персональные кураторы</span>
-                                </div>
-                                <div class="feature">
-                                    <span class="feature-icon">💰</span>
-                                    <span>Доход от $700 до $2500+</span>
-                                </div>
-                            </div>
-                            <div class="course-price">
-                                <span class="price-from">от</span>
-                                <span class="price-amount">$997</span>
-                            </div>
-                            <div class="course-actions">
-                                <a href="courses/osnovnoy-kurs.html" class="btn-primary">Подробнее</a>
-                                <a href="courses/osnovnoy-kurs.html#pricing" class="btn-secondary">Тарифы</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Additional Courses -->
-                    <div class="course-card">
-                        <div class="course-image">
-                            <img src="images/course-basics.jpg" alt="Основы дизайна">
-                            <div class="course-badge">БАЗОВЫЙ</div>
-                        </div>
-                        <div class="course-content">
-                            <h3>ОСНОВЫ ГРАФИЧЕСКОГО ДИЗАЙНА</h3>
-                            <p class="course-description">
-                                Введение в графический дизайн. Основы композиции, типографики и работы с цветом.
-                            </p>
-                            <div class="course-features">
-                                <div class="feature">
-                                    <span class="feature-icon">⏱️</span>
-                                    <span>1 месяц</span>
-                                </div>
-                                <div class="feature">
-                                    <span class="feature-icon">🎨</span>
-                                    <span>5 работ в портфолио</span>
-                                </div>
-                            </div>
-                            <div class="course-price">
-                                <span class="price-amount">$297</span>
-                            </div>
-                            <div class="course-actions">
-                                <a href="#" class="btn-primary">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="course-card">
-                        <div class="course-image">
-                            <img src="images/course-advanced.jpg" alt="Продвинутый курс">
-                            <div class="course-badge">ПРОДВИНУТЫЙ</div>
-                        </div>
-                        <div class="course-content">
-                            <h3>ПРОДВИНУТЫЙ ДИЗАЙН</h3>
-                            <p class="course-description">
-                                Для опытных дизайнеров. Сложные проекты, анимация, 3D и продвинутые техники.
-                            </p>
-                            <div class="course-features">
-                                <div class="feature">
-                                    <span class="feature-icon">⏱️</span>
-                                    <span>2 месяца</span>
-                                </div>
-                                <div class="feature">
-                                    <span class="feature-icon">🎨</span>
-                                    <span>10 работ в портфолио</span>
-                                </div>
-                            </div>
-                            <div class="course-price">
-                                <span class="price-amount">$797</span>
-                            </div>
-                            <div class="course-actions">
-                                <a href="#" class="btn-primary">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Course Stats -->
-                <div class="course-stats">
-                    <div class="stat-item">
-                        <h3>500+</h3>
-                        <p>выпускников</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>85%</h3>
-                        <p>находят работу</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>$1500+</h3>
-                        <p>средний доход</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>5+</h3>
-                        <p>лет опыта</p>
-                    </div>
-                </div>
-
-                <!-- CTA Section -->
-                <div class="courses-cta">
-                    <h3>ГОТОВЫ НАЧАТЬ?</h3>
-                    <p>Присоединяйтесь к нашему основному курсу и станьте профессиональным графическим дизайнером</p>
-                    <a href="courses/osnovnoy-kurs.html" class="btn-primary btn-large">Записаться на курс</a>
-                </div>
-            </section>
-
-            <!-- Why Choose Us -->
-            <section class="why-choose-section">
+            <!-- Advantages Section -->
+            <section class="advantages-section" aria-label="Преимущества курса">
                 <h2 class="section-title">ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
                 
-                <div class="why-grid">
-                    <div class="why-item">
-                        <div class="why-icon">🎯</div>
-                        <h3>Практический подход</h3>
-                        <p>Все задания основаны на реальных проектах. Вы создаете работы, которые можно добавить в портфолио.</p>
+                <div class="advantages-grid">
+                    <div class="advantage-item">
+                        <div class="advantage-icon">👨‍🏫</div>
+                        <h3>Поддержка наставника</h3>
+                        <p>Персональный куратор отвечает на вопросы в течение 5-10 минут в рабочее время</p>
                     </div>
                     
-                    <div class="why-item">
-                        <div class="why-icon">👨‍🏫</div>
-                        <h3>Опытные преподаватели</h3>
-                        <p>Наши спикеры работают в крупных компаниях и имеют многолетний опыт в дизайне.</p>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">🎯</div>
+                        <h3>Практика на реальных проектах</h3>
+                        <p>Все задания основаны на реальных проектах. Вы создаете работы, которые можно добавить в портфолио</p>
                     </div>
                     
-                    <div class="why-item">
-                        <div class="why-icon">💬</div>
-                        <h3>Поддержка 24/7</h3>
-                        <p>Кураторы отвечают на вопросы в течение 5-10 минут в рабочее время.</p>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">📈</div>
+                        <h3>Гарантированный результат</h3>
+                        <p>85% наших учеников находят работу в дизайне в течение 1-3 месяцев после курса</p>
                     </div>
                     
-                    <div class="why-item">
-                        <div class="why-icon">🎓</div>
-                        <h3>Сертификат</h3>
-                        <p>После успешного завершения курса вы получаете сертификат, подтверждающий ваши навыки.</p>
-                    </div>
-                    
-                    <div class="why-item">
-                        <div class="why-icon">👥</div>
-                        <h3>Сообщество</h3>
-                        <p>Присоединяйтесь к большому сообществу дизайнеров и получайте доступ к вакансиям.</p>
-                    </div>
-                    
-                    <div class="why-item">
-                        <div class="why-icon">📈</div>
-                        <h3>Результаты</h3>
-                        <p>85% наших учеников находят работу в дизайне в течение 1-3 месяцев после курса.</p>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">💼</div>
+                        <h3>Портфолио из 15 работ</h3>
+                        <p>Создадите профессиональное портфолио, которое поможет найти первых клиентов</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Tools Preview -->
-            <section class="tools-preview">
-                <h2 class="section-title">ИНСТРУМЕНТЫ, КОТОРЫЕ ВЫ ОСВОИТЕ</h2>
-                <div class="tools-grid">
-                    <div class="tool-item">Adobe Illustrator</div>
-                    <div class="tool-item">Adobe Photoshop</div>
-                    <div class="tool-item">Adobe InDesign</div>
-                    <div class="tool-item">Affinity Designer</div>
+            <!-- About Course Section -->
+            <section class="about-course-section" id="about" aria-label="О курсе">
+                <div class="about-course-content">
+                    <div class="about-course-left">
+                        <h2 class="section-title">О КУРСЕ</h2>
+                        <h3>Методология обучения</h3>
+                        <p>Наш курс построен на принципе "от теории к практике". Вы изучаете основы графического дизайна и сразу применяете знания в реальных проектах.</p>
+                        
+                        <h3>Формат занятий</h3>
+                        <ul class="about-features">
+                            <li>156 уроков (91 теория + 65 практики)</li>
+                            <li>Онлайн-проверки работ кураторами</li>
+                            <li>Стримы с ответами на вопросы</li>
+                            <li>Общение в закрытом чате</li>
+                        </ul>
+                        
+                        <h3>Доступ к материалам</h3>
+                        <p>Все уроки доступны в записи. Вы можете изучать материалы в удобное время и в своем темпе.</p>
+                        
+                        <button class="btn-primary" onclick="scrollToSection('contact')">Записаться на курс</button>
+                    </div>
+                    <div class="about-course-right">
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <h3>500+</h3>
+                                <p>выпускников</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>85%</h3>
+                                <p>находят работу</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>$1500+</h3>
+                                <p>средний доход</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>5+</h3>
+                                <p>лет опыта</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="tools-note">На курсе вы научитесь работать с профессиональными инструментами дизайна</p>
+            </section>
+
+            <!-- Program Preview Section -->
+            <section class="program-preview-section" id="program" aria-label="Программа курса">
+                <h2 class="section-title">ПРОГРАММА КУРСА</h2>
+                <p class="section-subtitle">3 месяца интенсивного обучения графическому дизайну</p>
+                
+                <div class="program-accordion">
+                    <div class="program-item">
+                        <button class="program-question" onclick="toggleProgram(this)">
+                            <span>Этап 1 — Основы маркетинга и профессии</span>
+                            <span class="program-icon">+</span>
+                        </button>
+                        <div class="program-content">
+                            <p>Изучаем теорию маркетинга, брифинг, анализ бренда, работу с цветом, шрифтами, композицией. Создаем мудборды и выстраиваем бренд-миссию в дизайне.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <button class="program-question" onclick="toggleProgram(this)">
+                            <span>Этап 2 — Логотипы</span>
+                            <span class="program-icon">+</span>
+                        </button>
+                        <div class="program-content">
+                            <p>Построение логотипа по сетке, отрисовка шрифтового и простого логотипа. Полный цикл брендинга на базе мудборда.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <button class="program-question" onclick="toggleProgram(this)">
+                            <span>Этап 3 — Сложный логотип и иллюстрация</span>
+                            <span class="program-icon">+</span>
+                        </button>
+                        <div class="program-content">
+                            <p>Мокапы, сложные логотипы и векторная иллюстрация. Создание презентации проекта.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <button class="program-question" onclick="toggleProgram(this)">
+                            <span>Этап 4 — Фирменный стиль и айдентика</span>
+                            <span class="program-icon">+</span>
+                        </button>
+                        <div class="program-content">
+                            <p>Цветовые модели, подготовка к печати, типографика. Визитка, флаер, сертификат, паттерны, упаковка.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <button class="program-question" onclick="toggleProgram(this)">
+                            <span>Этап 5 — Реклама и упаковка</span>
+                            <span class="program-icon">+</span>
+                        </button>
+                        <div class="program-content">
+                            <p>Карточки для маркетплейсов, наружная/цифровая реклама, баннеры. Сложная упаковка из разных материалов.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <button class="program-question" onclick="toggleProgram(this)">
+                            <span>Этап 6 — Каталог и презентация</span>
+                            <span class="program-icon">+</span>
+                        </button>
+                        <div class="program-content">
+                            <p>Знакомство с InDesign, правила верстки, модульные сетки, инфографика. Каталоги, презентации, авторское право.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="program-cta">
+                    <a href="program.html" class="btn-secondary">Смотреть полную программу</a>
+                </div>
+            </section>
+
+            <!-- Reviews Section -->
+            <section class="reviews-section" id="reviews" aria-label="Отзывы выпускников">
+                <h2 class="section-title">ОТЗЫВЫ ВЫПУСКНИКОВ</h2>
+                <p class="section-subtitle">Реальные истории успеха наших учеников</p>
+                
+                <div class="reviews-slider">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <h4>ЕКАТЕРИНА ДАЛИНЧУК</h4>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                        <p class="review-text">
+                            "До курса уже работала в профессии, но хотела повысить доход. На обучении улучшила навыки работы в программах и поняла как донести миссию бренда через графический дизайн. После курса повысила чек в два раза."
+                        </p>
+                        <div class="review-income">
+                            <strong>Доход: от 2000$/мес</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="review-header">
+                            <h4>АННА ПОЛИЩУК</h4>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                        <p class="review-text">
+                            "Работала администратором сайта интернет магазина, зарабатывала 450$. Сейчас делает анимационную рекламу для соц.сетей телекоммуникационной компании Telenor в Норвегии."
+                        </p>
+                        <div class="review-income">
+                            <strong>Доход: до 2500€/мес</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="review-header">
+                            <h4>НИНА СОКОЛОВА</h4>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                        <p class="review-text">
+                            "Из SMM-специалиста в графического дизайнера. После курсов доход и чек повысились в три раза. Теперь работаю с крупными брендами."
+                        </p>
+                        <div class="review-income">
+                            <strong>Доход: 2000$/мес</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reviews-cta">
+                    <a href="cases.html" class="btn-secondary">Смотреть все работы учеников</a>
+                </div>
+            </section>
+
+            <!-- Final CTA Section -->
+            <section class="final-cta-section" aria-label="Призыв к действию">
+                <div class="final-cta-content">
+                    <h2>ГОТОВЫ НАЧАТЬ ПУТЬ В ДИЗАЙНЕ?</h2>
+                    <p>Присоединяйтесь к нашему курсу и станьте профессиональным графическим дизайнером уже через 3 месяца</p>
+                    <button class="btn-primary btn-large" onclick="scrollToSection('contact')">Записаться на курс</button>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact-section" id="contact" aria-label="Форма заявки">
+                <div class="contact-container">
+                    <div class="contact-left">
+                        <h2 class="contact-title">ОСТАЛИСЬ ВОПРОСЫ?</h2>
+                        <p class="contact-subtitle">Оставьте заявку и получите бесплатную консультацию</p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <span>design@tiarkel.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📱</span>
+                                <span>+7 (999) 123-45-67</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">⏰</span>
+                                <span>Пн-Пт: 9:00-18:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form class="contact-form" id="contactForm">
+                            <input type="text" name="name" placeholder="Ваше имя" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="tel" name="phone" placeholder="Телефон">
+                            <textarea name="message" placeholder="Расскажите о ваших целях" rows="4"></textarea>
+                            <button type="submit" class="btn-contact">Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
@@ -299,14 +385,24 @@
                 <div class="footer-social">
                     <h3>НАШИ СОЦСЕТИ</h3>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/tiarkel/" class="social-link">Instagram</a>
-                        <a href="https://t.me/tatvorit" class="social-link">TELEGRAM</a>
-                        <a href="https://www.behance.net/1db30958" class="social-link">behance</a>
-                        <a href="https://www.pinterest.com/tiaara98/" class="social-link">Pinterest</a>
+                        <a href="https://www.instagram.com/tiarkel/" class="social-link" aria-label="Instagram">
+                            <span class="social-icon">📷</span>Instagram
+                        </a>
+                        <a href="https://t.me/tatvorit" class="social-link" aria-label="Telegram">
+                            <span class="social-icon">✈️</span>TELEGRAM
+                        </a>
+                        <a href="https://www.behance.net/1db30958" class="social-link" aria-label="Behance">
+                            <span class="social-icon">🎨</span>behance
+                        </a>
+                        <a href="https://www.pinterest.com/tiaara98/" class="social-link" aria-label="Pinterest">
+                            <span class="social-icon">📌</span>Pinterest
+                        </a>
                     </div>
                 </div>
                 <div class="footer-legal">
                     <a href="#" class="legal-link">Договор оферты</a>
+                    <a href="#" class="legal-link">Политика конфиденциальности</a>
+                    <p class="copyright">© 2024 Tiarkel. Все права защищены.</p>
                 </div>
             </div>
         </div>

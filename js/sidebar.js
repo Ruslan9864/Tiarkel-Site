@@ -1,5 +1,5 @@
 /**
- * Боковое меню для Tiarkel Site
+ * Объединенное боковое меню для Tiarkel Site
  * Управляет открытием/закрытием и навигацией
  */
 
@@ -9,6 +9,7 @@ class SidebarMenu {
         this.sidebarToggle = null;
         this.sidebarBackdrop = null;
         this.sidebarClose = null;
+        this.burgerButton = null;
         this.currentPage = this.getCurrentPage();
         
         this.init();
@@ -26,9 +27,8 @@ class SidebarMenu {
         const sidebarHTML = `
             <div class="sidebar" id="sidebar">
                 <div class="sidebar-header">
-                    <a href="/" class="sidebar-logo">
+                    <a href="index.html" class="sidebar-logo">
                         <img src="Logo.svg" alt="Tiarkel">
-                        <span>Tiarkel</span>
                     </a>
                     <button class="sidebar-close" id="sidebar-close" aria-label="Закрыть меню">
                         <span>×</span>
@@ -39,25 +39,25 @@ class SidebarMenu {
                     <div class="sidebar-section">
                         <div class="sidebar-section-title">Основные разделы</div>
                         <ul class="sidebar-menu">
-                            <li><a href="/" class="sidebar-link" data-page="home">
+                            <li><a href="index.html" class="sidebar-link" data-page="home">
                                 <span class="sidebar-icon">🏠</span>
                                 <span class="sidebar-text">Главная</span>
                             </a></li>
-                            <li><a href="/program.html" class="sidebar-link" data-page="program">
+                            <li><a href="program.html" class="sidebar-link" data-page="program">
                                 <span class="sidebar-icon">📚</span>
                                 <span class="sidebar-text">Программа курса</span>
                             </a></li>
-                            <li><a href="/pricing.html" class="sidebar-link" data-page="pricing">
+                            <li><a href="pricing.html" class="sidebar-link" data-page="pricing">
                                 <span class="sidebar-icon">💰</span>
                                 <span class="sidebar-text">Тарифы</span>
                                 <span class="sidebar-badge">4 тарифа</span>
                             </a></li>
-                            <li><a href="/cases.html" class="sidebar-link" data-page="cases">
+                            <li><a href="cases.html" class="sidebar-link" data-page="cases">
                                 <span class="sidebar-icon">🎯</span>
                                 <span class="sidebar-text">Кейсы студентов</span>
                                 <span class="sidebar-badge">8 кейсов</span>
                             </a></li>
-                            <li><a href="/services.html" class="sidebar-link" data-page="services">
+                            <li><a href="services.html" class="sidebar-link" data-page="services">
                                 <span class="sidebar-icon">🎨</span>
                                 <span class="sidebar-text">Услуги студии</span>
                                 <span class="sidebar-badge">4 услуги</span>
@@ -68,11 +68,11 @@ class SidebarMenu {
                     <div class="sidebar-section">
                         <div class="sidebar-section-title">Информация</div>
                         <ul class="sidebar-menu">
-                            <li><a href="/contacts.html" class="sidebar-link" data-page="contacts">
+                            <li><a href="contacts.html" class="sidebar-link" data-page="contacts">
                                 <span class="sidebar-icon">📞</span>
                                 <span class="sidebar-text">Контакты</span>
                             </a></li>
-                            <li><a href="/faq.html" class="sidebar-link" data-page="faq">
+                            <li><a href="faq.html" class="sidebar-link" data-page="faq">
                                 <span class="sidebar-icon">❓</span>
                                 <span class="sidebar-text">FAQ</span>
                             </a></li>
@@ -82,11 +82,11 @@ class SidebarMenu {
                     <div class="sidebar-section">
                         <div class="sidebar-section-title">Документы</div>
                         <ul class="sidebar-menu">
-                            <li><a href="/oferta.html" class="sidebar-link" data-page="oferta">
+                            <li><a href="oferta.html" class="sidebar-link" data-page="oferta">
                                 <span class="sidebar-icon">📄</span>
                                 <span class="sidebar-text">Публичная оферта</span>
                             </a></li>
-                            <li><a href="/privacy.html" class="sidebar-link" data-page="privacy">
+                            <li><a href="privacy.html" class="sidebar-link" data-page="privacy">
                                 <span class="sidebar-icon">🔒</span>
                                 <span class="sidebar-text">Политика конфиденциальности</span>
                             </a></li>
@@ -96,7 +96,7 @@ class SidebarMenu {
                     <div class="sidebar-section">
                         <div class="sidebar-section-title">Курсы</div>
                         <ul class="sidebar-menu">
-                            <li><a href="/courses/osnovnoy-kurs.html" class="sidebar-link" data-page="course">
+                            <li><a href="courses/osnovnoy-kurs.html" class="sidebar-link" data-page="course">
                                 <span class="sidebar-icon">🎓</span>
                                 <span class="sidebar-text">Основной курс</span>
                                 <span class="sidebar-badge">LITE</span>
@@ -125,10 +125,6 @@ class SidebarMenu {
             </div>
             
             <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
-            
-            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Открыть меню">
-                <span>☰</span>
-            </button>
         `;
         
         // Добавляем HTML в body
@@ -136,16 +132,18 @@ class SidebarMenu {
         
         // Получаем ссылки на элементы
         this.sidebar = document.getElementById('sidebar');
-        this.sidebarToggle = document.getElementById('sidebar-toggle');
         this.sidebarBackdrop = document.getElementById('sidebar-backdrop');
         this.sidebarClose = document.getElementById('sidebar-close');
+        this.burgerButton = document.querySelector('.burger');
     }
     
     setupEventListeners() {
-        // Открытие меню
-        this.sidebarToggle.addEventListener('click', () => {
-            this.openSidebar();
-        });
+        // Открытие меню через бургер
+        if (this.burgerButton) {
+            this.burgerButton.addEventListener('click', () => {
+                this.openSidebar();
+            });
+        }
         
         // Закрытие меню
         this.sidebarClose.addEventListener('click', () => {
@@ -178,28 +176,17 @@ class SidebarMenu {
                 this.animateMenuItems();
             }
         });
-        
-        // Скрытие/показ кнопки при скролле
-        let lastScrollTop = 0;
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // Скролл вниз - скрываем кнопку
-                this.sidebarToggle.classList.add('hidden');
-            } else {
-                // Скролл вверх - показываем кнопку
-                this.sidebarToggle.classList.remove('hidden');
-            }
-            
-            lastScrollTop = scrollTop;
-        });
     }
     
     openSidebar() {
         this.sidebar.classList.add('active');
         this.sidebarBackdrop.classList.add('active');
         document.body.style.overflow = 'hidden';
+        
+        // Активируем бургер
+        if (this.burgerButton) {
+            this.burgerButton.classList.add('active');
+        }
         
         // Фокус на кнопку закрытия для доступности
         setTimeout(() => {
@@ -215,9 +202,16 @@ class SidebarMenu {
         this.sidebarBackdrop.classList.remove('active');
         document.body.style.overflow = '';
         
-        // Возвращаем фокус на кнопку открытия
+        // Деактивируем бургер
+        if (this.burgerButton) {
+            this.burgerButton.classList.remove('active');
+        }
+        
+        // Возвращаем фокус на бургер
         setTimeout(() => {
-            this.sidebarToggle.focus();
+            if (this.burgerButton) {
+                this.burgerButton.focus();
+            }
         }, 300);
         
         // Трекинг события
@@ -233,7 +227,7 @@ class SidebarMenu {
         const page = link.getAttribute('data-page');
         
         // Если это внешняя ссылка или текущая страница, закрываем меню
-        if (href.startsWith('http') || href === window.location.pathname) {
+        if (href.startsWith('http') || href === window.location.pathname.split('/').pop()) {
             this.closeSidebar();
         }
         
@@ -253,17 +247,18 @@ class SidebarMenu {
     
     getCurrentPage() {
         const path = window.location.pathname;
+        const filename = path.split('/').pop();
         
-        if (path === '/' || path === '/index.html') return 'home';
-        if (path.includes('program')) return 'program';
-        if (path.includes('pricing')) return 'pricing';
-        if (path.includes('cases')) return 'cases';
-        if (path.includes('services')) return 'services';
-        if (path.includes('contacts')) return 'contacts';
-        if (path.includes('faq')) return 'faq';
-        if (path.includes('oferta')) return 'oferta';
-        if (path.includes('privacy')) return 'privacy';
-        if (path.includes('course')) return 'course';
+        if (filename === '' || filename === 'index.html') return 'home';
+        if (filename === 'program.html') return 'program';
+        if (filename === 'pricing.html') return 'pricing';
+        if (filename === 'cases.html') return 'cases';
+        if (filename === 'services.html') return 'services';
+        if (filename === 'contacts.html') return 'contacts';
+        if (filename === 'faq.html') return 'faq';
+        if (filename === 'oferta.html') return 'oferta';
+        if (filename === 'privacy.html') return 'privacy';
+        if (path.includes('courses/')) return 'course';
         
         return 'home';
     }

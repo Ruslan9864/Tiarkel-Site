@@ -194,44 +194,14 @@ body {
 .nav-backdrop { position: fixed; inset: 0; background: rgba(4, 17, 27, 0.8); backdrop-filter: blur(2px); opacity: 0; visibility: hidden; transition: opacity .3s ease, visibility .3s ease; z-index: 1100; }
 .nav-backdrop.active { opacity: 1; visibility: visible; }
 
-.nav-drawer { 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100vh; 
-    background: rgba(10, 10, 15, 0.95); 
-    backdrop-filter: blur(10px); 
-    transform: translateX(-100%); 
-    transition: transform .3s ease; 
-    z-index: 1200; 
-    display: flex; 
-    flex-direction: column; 
-    padding: 2rem; 
-    box-sizing: border-box;
+/* Скрываем старое выпадающее меню - теперь используется боковое меню */
+.nav-drawer {
+    display: none !important;
 }
 
-.nav-drawer.active { transform: translateX(0); }
-
-.drawer-close { 
-    position: absolute; 
-    top: 2rem; 
-    right: 2rem; 
-    width: 44px; 
-    height: 44px; 
-    background: transparent; 
-    border: 1px solid rgba(255, 255, 255, 0.3); 
-    border-radius: 8px; 
-    color: #ffffff; 
-    font-size: 1.5rem; 
-    cursor: pointer; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    transition: all var(--animation-duration) var(--animation-timing);
+.nav-backdrop {
+    display: none !important;
 }
-
-.drawer-close:hover { border-color: #bfd732; color: #bfd732; }
 
 .nav-menu-container {
     flex: 1;
@@ -7324,7 +7294,6 @@ img[loading="lazy"].loaded {
 .sidebar-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
     color: #fff;
     text-decoration: none;
     font-weight: 700;
@@ -7502,38 +7471,7 @@ img[loading="lazy"].loaded {
 }
 
 /* Sidebar Toggle Button */
-.sidebar-toggle {
-    position: fixed;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background: rgba(10, 10, 15, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    z-index: 1400;
-    backdrop-filter: blur(10px);
-}
-
-.sidebar-toggle:hover {
-    background: var(--brand-green);
-    color: #0a0a0f;
-    border-color: var(--brand-green);
-    transform: translateY(-50%) scale(1.1);
-}
-
-.sidebar-toggle.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
+/* Удалено - теперь используется верхний бургер */
 
 /* Sidebar Backdrop */
 .sidebar-backdrop {
@@ -7562,13 +7500,6 @@ img[loading="lazy"].loaded {
         left: -280px;
     }
     
-    .sidebar-toggle {
-        left: 15px;
-        width: 45px;
-        height: 45px;
-        font-size: 18px;
-    }
-    
     .sidebar-header {
         padding: 15px;
     }
@@ -7587,13 +7518,6 @@ img[loading="lazy"].loaded {
     .sidebar {
         width: 260px;
         left: -260px;
-    }
-    
-    .sidebar-toggle {
-        left: 10px;
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
     }
     
     .sidebar-menu a {
@@ -7631,24 +7555,5 @@ img[loading="lazy"].loaded {
 .sidebar-menu li:nth-child(8) a { --sidebar-item-index: 7; }
 .sidebar-menu li:nth-child(9) a { --sidebar-item-index: 8; }
 .sidebar-menu li:nth-child(10) a { --sidebar-item-index: 9; }
-
-/* Hide sidebar toggle when sidebar is open */
-.sidebar.active + .sidebar-toggle {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* Ensure sidebar is above other elements */
-.sidebar {
-    z-index: 1500;
-}
-
-.sidebar-backdrop {
-    z-index: 1400;
-}
-
-.sidebar-toggle {
-    z-index: 1300;
-}
 
 /* ===== SIDEBAR MENU STYLES ===== */

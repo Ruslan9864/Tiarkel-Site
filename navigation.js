@@ -131,7 +131,9 @@ class Navigation {
             }
         });
 
-        // Mobile menu toggle
+        // Отключаем старое мобильное меню - теперь используется боковое меню
+        // Mobile menu toggle - DISABLED
+        /*
         const mobileToggle = document.querySelector('.mobile-menu-toggle');
         const navDrawer = document.getElementById('nav-drawer');
         const navBackdrop = document.querySelector('.nav-backdrop');
@@ -154,6 +156,7 @@ class Navigation {
                 this.closeMobileMenu();
             });
         }
+        */
 
         // Language switcher (if exists)
         const languageSwitcher = document.querySelector('.language-switcher');

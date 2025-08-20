@@ -1,6 +1,31 @@
-# Performance Optimization for Tiarkel Site
+# 301 Redirects for old anchors to new course page
+RewriteEngine On
 
-# Enable Gzip compression
+# Redirect old anchors to new course page anchors
+RewriteRule ^#program$ /courses/osnovnoy-kurs.html#program [R=301,L]
+RewriteRule ^#modules$ /courses/osnovnoy-kurs.html#program [R=301,L]
+RewriteRule ^#tariffs$ /courses/osnovnoy-kurs.html#pricing [R=301,L]
+RewriteRule ^#pricing$ /courses/osnovnoy-kurs.html#pricing [R=301,L]
+RewriteRule ^#faq$ /courses/osnovnoy-kurs.html#faq [R=301,L]
+RewriteRule ^#reviews$ /courses/osnovnoy-kurs.html#reviews [R=301,L]
+RewriteRule ^#cta$ /courses/osnovnoy-kurs.html#contact [R=301,L]
+RewriteRule ^#contacts$ /courses/osnovnoy-kurs.html#contact [R=301,L]
+RewriteRule ^#contact$ /courses/osnovnoy-kurs.html#contact [R=301,L]
+RewriteRule ^#about$ /courses/osnovnoy-kurs.html#about [R=301,L]
+
+# Redirect old index.html with anchors to course page
+RewriteRule ^index\.html#(.*)$ /courses/osnovnoy-kurs.html#$1 [R=301,L]
+
+# Redirect old courses/ to new file
+RewriteRule ^courses/$ /courses/osnovnoy-kurs.html [R=301,L]
+RewriteRule ^courses/index\.html$ /courses/osnovnoy-kurs.html [R=301,L]
+
+# Ensure proper MIME types
+AddType text/css .css
+AddType application/javascript .js
+AddType image/svg+xml .svg
+
+# Enable compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/plain
     AddOutputFilterByType DEFLATE text/html
@@ -11,102 +36,16 @@
     AddOutputFilterByType DEFLATE application/rss+xml
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/x-javascript
-    AddOutputFilterByType DEFLATE application/json
-    AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
-# Browser caching for static assets
+# Cache control
 <IfModule mod_expires.c>
     ExpiresActive on
-    
-    # Images
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType image/avif "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
-    ExpiresByType image/x-icon "access plus 1 year"
-    
-    # CSS and JavaScript
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
-    ExpiresByType text/javascript "access plus 1 month"
-    
-    # Fonts
-    ExpiresByType font/woff "access plus 1 year"
-    ExpiresByType font/woff2 "access plus 1 year"
-    ExpiresByType application/font-woff "access plus 1 year"
-    ExpiresByType application/font-woff2 "access plus 1 year"
-    ExpiresByType application/x-font-ttf "access plus 1 year"
-    ExpiresByType font/ttf "access plus 1 year"
-    ExpiresByType font/otf "access plus 1 year"
-    
-    # HTML
-    ExpiresByType text/html "access plus 1 hour"
-    
-    # Data
-    ExpiresByType application/json "access plus 1 day"
-    ExpiresByType application/xml "access plus 1 day"
-    ExpiresByType text/xml "access plus 1 day"
-</IfModule>
-
-# Cache control headers
-<IfModule mod_headers.c>
-    # Cache static assets
-    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|webp|avif|svg|ico|woff|woff2|ttf|otf)$">
-        Header set Cache-Control "public, max-age=31536000, immutable"
-    </FilesMatch>
-    
-    # Cache HTML files
-    <FilesMatch "\.(html|htm)$">
-        Header set Cache-Control "public, max-age=3600"
-    </FilesMatch>
-    
-    # Security headers
-    Header always set X-Content-Type-Options nosniff
-    Header always set X-Frame-Options DENY
-    Header always set X-XSS-Protection "1; mode=block"
-    Header always set Referrer-Policy "strict-origin-when-cross-origin"
-    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
-    
-    # Performance headers
-    Header always set Vary "Accept-Encoding"
-</IfModule>
-
-# URL rewriting for clean URLs
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    
-    # Remove trailing slashes
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)/$ /$1 [L,R=301]
-    
-    # Force HTTPS (uncomment if using HTTPS)
-    # RewriteCond %{HTTPS} off
-    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-    
-    # Remove www (uncomment if needed)
-    # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-    # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-</IfModule>
-
-# Prevent access to sensitive files
-<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak)$">
-    Order Allow,Deny
-    Deny from all
-</FilesMatch>
-
-# Prevent access to hidden files
-<FilesMatch "^\.">
-    Order Allow,Deny
-    Deny from all
-</FilesMatch>
-
-# Optimize for mobile
-<IfModule mod_headers.c>
-    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|webp|avif|svg)$">
-        Header set Accept-Ranges bytes
-    </FilesMatch>
 </IfModule> 

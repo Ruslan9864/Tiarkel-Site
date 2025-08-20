@@ -1,502 +1,489 @@
-// Services Page Functionality
-class ServicesPage {
-    constructor() {
-        this.portfolioData = this.getPortfolioData();
-        this.serviceData = this.getServiceData();
-        this.init();
-    }
+// Services Page JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    initializeServicesPage();
+});
 
-    init() {
-        this.bindEvents();
-        this.initializeAnalytics();
-        // Form tracking is now handled by FormsManager
-        // this.initializeFormTracking();
-    }
+function initializeServicesPage() {
+    // Initialize UTM parameters
+    initializeUTMParameters();
+    
+    // Initialize portfolio modals
+    initializePortfolioModals();
+    
+    // Initialize request modals
+    initializeRequestModals();
+    
+    // Initialize form handlers
+    initializeFormHandlers();
+    
+    // Track page view
+    trackPageView();
+    
+    // Initialize animations
+    initializeAnimations();
+}
 
-    getPortfolioData() {
-        return {
-            branding1: {
-                title: 'Кофейня "Утро"',
-                category: 'Брендинг',
-                description: 'Полный брендинг для кофейни: логотип, фирменный стиль, упаковка, меню',
-                image: 'images/service-branding-1.webp',
-                details: [
-                    'Логотип с элементами кофе и утра',
-                    'Фирменные цвета: тёплые коричневые тона',
-                    'Упаковка для кофе и выпечки',
-                    'Дизайн меню и визиток'
-                ]
-            },
-            branding2: {
-                title: 'Салон "Красота"',
-                category: 'Брендинг',
-                description: 'Элегантный брендинг для салона красоты с акцентом на женственность',
-                image: 'images/service-branding-2.webp',
-                details: [
-                    'Логотип с цветочными элементами',
-                    'Фирменный стиль в пастельных тонах',
-                    'Дизайн визиток и буклетов',
-                    'Оформление салона'
-                ]
-            },
-            branding3: {
-                title: 'IT-стартап "TechFlow"',
-                category: 'Брендинг',
-                description: 'Современный брендинг для IT-компании с технологичным подходом',
-                image: 'images/service-branding-3.webp',
-                details: [
-                    'Логотип с технологичными элементами',
-                    'Фирменный стиль в синих тонах',
-                    'Презентационные материалы',
-                    'Веб-дизайн'
-                ]
-            },
-            smm1: {
-                title: 'Косметика "Beauty"',
-                category: 'SMM-дизайн',
-                description: 'Визуал для Instagram косметического бренда',
-                image: 'images/service-smm-1.webp',
-                details: [
-                    'Набор постов для Instagram',
-                    'Сторис и карусели',
-                    'Рекламные баннеры',
-                    'Анимированные элементы'
-                ]
-            },
-            smm2: {
-                title: 'E-com "ShopStyle"',
-                category: 'SMM-дизайн',
-                description: 'Рекламные материалы для интернет-магазина',
-                image: 'images/service-smm-2.webp',
-                details: [
-                    'Баннеры для соцсетей',
-                    'Карточки товаров',
-                    'Рекламные креативы',
-                    'Email-рассылки'
-                ]
-            },
-            smm3: {
-                title: 'Ресторан "Вкусно"',
-                category: 'SMM-дизайн',
-                description: 'Визуал для ресторана с акцентом на еду',
-                image: 'images/service-smm-3.webp',
-                details: [
-                    'Фотографии блюд',
-                    'Посты о событиях',
-                    'Сторис с рецептами',
-                    'Промо-материалы'
-                ]
-            },
-            video1: {
-                title: 'Анимация логотипа',
-                category: 'Видео',
-                description: 'Анимированный логотип для бренда',
-                image: 'images/service-video-1.webp',
-                details: [
-                    'Motion-дизайн логотипа',
-                    'Различные варианты анимации',
-                    'Форматы для соцсетей',
-                    'Версии для веб-сайта'
-                ]
-            },
-            video2: {
-                title: 'Reels для бренда',
-                category: 'Видео',
-                description: 'Короткие видео для Instagram Reels',
-                image: 'images/service-video-2.webp',
-                details: [
-                    'Серия Reels для бренда',
-                    'Трендовые эффекты',
-                    'Музыкальное сопровождение',
-                    'Оптимизация под алгоритмы'
-                ]
-            },
-            video3: {
-                title: 'Motion-графика',
-                category: 'Видео',
-                description: 'Анимированная графика для презентаций',
-                image: 'images/service-video-3.webp',
-                details: [
-                    'Анимированные элементы',
-                    'Переходы и эффекты',
-                    'Типографика в движении',
-                    'Инфографика'
-                ]
-            },
-            print1: {
-                title: 'Визитки и буклеты',
-                category: 'Полиграфия',
-                description: 'Печатные материалы для компании',
-                image: 'images/service-print-1.webp',
-                details: [
-                    'Дизайн визиток',
-                    'Информационные буклеты',
-                    'Подготовка к печати',
-                    'Различные форматы'
-                ]
-            },
-            print2: {
-                title: 'Наружная реклама',
-                category: 'Полиграфия',
-                description: 'Баннеры и вывески для наружной рекламы',
-                image: 'images/service-print-2.webp',
-                details: [
-                    'Дизайн баннеров',
-                    'Вывески и указатели',
-                    'Рекламные щиты',
-                    'Световые короба'
-                ]
-            },
-            print3: {
-                title: 'Упаковка товаров',
-                category: 'Полиграфия',
-                description: 'Дизайн упаковки для различных товаров',
-                image: 'images/service-print-3.webp',
-                details: [
-                    'Дизайн коробок',
-                    'Этикетки и наклейки',
-                    '3D-мокапы',
-                    'Подготовка к производству'
-                ]
-            }
-        };
-    }
+function initializeUTMParameters() {
+    const utmParams = getUTMParameters();
+    
+    // Set UTM parameters for main form
+    document.getElementById('utm_source').value = utmParams.utm_source || '';
+    document.getElementById('utm_medium').value = utmParams.utm_medium || '';
+    document.getElementById('utm_campaign').value = utmParams.utm_campaign || '';
+    document.getElementById('utm_content').value = utmParams.utm_content || '';
+    document.getElementById('utm_term').value = utmParams.utm_term || '';
+    
+    // Set UTM parameters for request form
+    document.getElementById('request_utm_source').value = utmParams.utm_source || '';
+    document.getElementById('request_utm_medium').value = utmParams.utm_medium || '';
+    document.getElementById('request_utm_campaign').value = utmParams.utm_campaign || '';
+    document.getElementById('request_utm_content').value = utmParams.utm_content || '';
+    document.getElementById('request_utm_term').value = utmParams.utm_term || '';
+}
 
-    getServiceData() {
-        return {
-            branding: {
-                title: 'Брендинг и айдентика',
-                description: 'Создание уникального образа вашего бренда',
-                price: 'от $300',
-                features: [
-                    'Логотип и фирменный знак',
-                    'Брендбук и гайдлайны',
-                    'Фирменные цвета и шрифты',
-                    'Носители бренда',
-                    'Срок выполнения: 2-3 недели'
-                ]
-            },
-            smm: {
-                title: 'SMM-дизайн и реклама',
-                description: 'Визуал для социальных сетей и рекламные материалы',
-                price: 'от $100',
-                features: [
-                    'Визуал для Instagram',
-                    'Рекламные баннеры',
-                    'Карусели и сторис',
-                    'Анимированные элементы',
-                    'Срок выполнения: 1-2 недели'
-                ]
-            },
-            video: {
-                title: 'Видео и анимация',
-                description: 'Создание динамичного видеоконтента',
-                price: 'от $200',
-                features: [
-                    'Reels и короткие видео',
-                    'Motion-графика',
-                    'Анимированные логотипы',
-                    'Презентационные ролики',
-                    'Срок выполнения: 2-4 недели'
-                ]
-            },
-            print: {
-                title: 'Полиграфия и офлайн-реклама',
-                description: 'Материалы для печати и наружной рекламы',
-                price: 'от $150',
-                features: [
-                    'Визитки и буклеты',
-                    'Наружная реклама',
-                    'Упаковка товаров',
-                    'Каталоги и презентации',
-                    'Срок выполнения: 1-3 недели'
-                ]
-            }
-        };
-    }
+function initializePortfolioModals() {
+    // Portfolio data
+    const portfolioData = {
+        branding1: {
+            title: 'Ресторан "Вкус"',
+            description: 'Полный брендинг для ресторана современной кухни. Разработан логотип, фирменный стиль, меню и рекламные материалы.',
+            image: 'images/service-branding-1.svg',
+            details: [
+                'Логотип с элементами кулинарной тематики',
+                'Фирменный стиль в теплых тонах',
+                'Дизайн меню и визиток',
+                'Рекламные баннеры для соцсетей'
+            ],
+            results: 'Увеличение посещаемости на 40% после ребрендинга'
+        },
+        branding2: {
+            title: 'IT-стартап "TechFlow"',
+            description: 'Создание современного брендинга для IT-компании. Минималистичный дизайн отражает технологичность и инновационность.',
+            image: 'images/service-branding-2.svg',
+            details: [
+                'Логотип с технологическими элементами',
+                'Фирменный стиль в синих тонах',
+                'Презентационные материалы',
+                'Веб-дизайн для сайта'
+            ],
+            results: 'Успешный запуск продукта с узнаваемым брендом'
+        },
+        branding3: {
+            title: 'Фитнес-клуб "Power"',
+            description: 'Энергичный брендинг для фитнес-клуба. Дизайн передает динамику и силу, привлекая активную аудиторию.',
+            image: 'images/service-branding-3.svg',
+            details: [
+                'Логотип с элементами движения',
+                'Фирменный стиль в ярких тонах',
+                'Дизайн клубных карт',
+                'Рекламные материалы'
+            ],
+            results: 'Увеличение продаж абонементов на 60%'
+        },
+        smm1: {
+            title: 'Косметика "Beauty"',
+            description: 'SMM-визуал для косметического бренда. Создан контент-план и дизайн постов для Instagram и Facebook.',
+            image: 'images/service-smm-1.svg',
+            details: [
+                '30 постов для Instagram',
+                '15 сторис-шаблонов',
+                'Рекламные баннеры',
+                'Контент-план на месяц'
+            ],
+            results: 'Увеличение вовлеченности на 60%'
+        },
+        smm2: {
+            title: 'Онлайн-школа "EduPro"',
+            description: 'Рекламные материалы для онлайн-школы. Созданы баннеры для различных рекламных каналов.',
+            image: 'images/service-smm-2.svg',
+            details: [
+                'Баннеры для Google Ads',
+                'Реклама для соцсетей',
+                'Email-рассылки',
+                'Лендинг-страница'
+            ],
+            results: 'Увеличение конверсии на 45%'
+        },
+        smm3: {
+            title: 'Кофейня "Aroma"',
+            description: 'Карусели и посты для кофейни. Создан визуал, отражающий уютную атмосферу заведения.',
+            image: 'images/service-smm-3.svg',
+            details: [
+                'Карусели для Instagram',
+                'Посты о кофе и атмосфере',
+                'Сторис с акциями',
+                'Рекламные материалы'
+            ],
+            results: 'Увеличение заказов через соцсети на 80%'
+        },
+        video1: {
+            title: 'Фитнес-тренер "FitLife"',
+            description: 'Reels для фитнес-тренера. Созданы короткие видео с упражнениями и мотивацией.',
+            image: 'images/service-video-1.svg',
+            details: [
+                '10 Reels с упражнениями',
+                'Мотивационные видео',
+                'Анимация логотипа',
+                'Титры и переходы'
+            ],
+            results: 'Увеличение подписчиков на 200%'
+        },
+        video2: {
+            title: 'Банк "FinancePro"',
+            description: 'Motion-графика для банка. Созданы анимированные ролики для объяснения финансовых продуктов.',
+            image: 'images/service-video-2.svg',
+            details: [
+                'Motion-графика для продуктов',
+                'Анимированные инфографики',
+                'Корпоративные ролики',
+                'Рекламные видео'
+            ],
+            results: 'Увеличение понимания продуктов на 70%'
+        },
+        video3: {
+            title: 'Ресторан "Gourmet"',
+            description: 'Короткие видео для ресторана. Созданы ролики о блюдах и атмосфере заведения.',
+            image: 'images/service-video-3.svg',
+            details: [
+                'Видео о блюдах',
+                'Атмосферные ролики',
+                'Анимация меню',
+                'Рекламные видео'
+            ],
+            results: 'Увеличение бронирований на 50%'
+        },
+        print1: {
+            title: 'Стоматология "Smile"',
+            description: 'Визитки и полиграфия для стоматологической клиники. Создан комплект печатных материалов.',
+            image: 'images/service-print-1.svg',
+            details: [
+                'Дизайн визиток',
+                'Буклеты о услугах',
+                'Плакаты для клиники',
+                'Бланки документов'
+            ],
+            results: 'Увеличение узнаваемости бренда на 40%'
+        },
+        print2: {
+            title: 'Автосалон "AutoElite"',
+            description: 'Буклеты и каталоги для автосалона. Созданы материалы для презентации автомобилей.',
+            image: 'images/service-print-2.svg',
+            details: [
+                'Каталоги автомобилей',
+                'Буклеты о услугах',
+                'Плакаты для салона',
+                'Презентационные материалы'
+            ],
+            results: 'Увеличение продаж на 35%'
+        },
+        print3: {
+            title: 'ТЦ "MegaMall"',
+            description: 'Наружная реклама для торгового центра. Созданы баннеры и вывески.',
+            image: 'images/service-print-3.svg',
+            details: [
+                'Баннеры для фасада',
+                'Вывески магазинов',
+                'Указатели и навигация',
+                'Рекламные стенды'
+            ],
+            results: 'Увеличение посещаемости на 25%'
+        }
+    };
 
-    bindEvents() {
-        // Portfolio click events
-        document.querySelectorAll('.portfolio-item').forEach(item => {
-            item.addEventListener('click', (e) => {
-                const portfolioId = item.getAttribute('data-portfolio');
-                this.openPortfolioModal(portfolioId);
-            });
-        });
-        
-        // Service CTA click events
-        document.querySelectorAll('.service-cta').forEach(cta => {
-            cta.addEventListener('click', (e) => {
-                const serviceType = cta.getAttribute('data-service');
-                this.openServiceModal(serviceType);
-            });
-        });
-        
-        // Modal close events
-        document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('modal-backdrop')) {
-                this.closeServiceModal();
-                this.closePortfolioModal();
-            }
-        });
-        
-        // Escape key to close modals
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                this.closeServiceModal();
-                this.closePortfolioModal();
-            }
-        });
-        
-        // Form submission is now handled by FormsManager
-        // Removed: this.handleServiceFormSubmit(e);
-    }
+    // Store portfolio data globally
+    window.portfolioData = portfolioData;
+}
 
-    openServiceModal(serviceType = null) {
-        const modalBody = document.getElementById('serviceModalBody');
-        const serviceInfo = serviceType ? this.serviceData[serviceType] : null;
+function initializeRequestModals() {
+    // Request modal functionality
+    window.openRequestForm = function(service = '') {
+        const modal = document.getElementById('requestModal');
+        const serviceSelect = document.getElementById('requestForm').querySelector('select[name="service"]');
         
-        modalBody.innerHTML = this.generateServiceModalContent(serviceInfo, serviceType);
+        if (service && serviceSelect) {
+            serviceSelect.value = service;
+        }
         
-        const modal = document.getElementById('serviceModal');
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
         
-        this.trackServiceModalOpen(serviceType);
-    }
+        // Track event
+        trackEvent('request_modal_opened', {
+            service: service || 'general'
+        });
+    };
 
-    generateServiceModalContent(serviceInfo, serviceType) {
-        if (serviceInfo) {
-            return `
-                <div class="service-modal-header">
-                    <h2>${serviceInfo.title}</h2>
-                    <p>${serviceInfo.description}</p>
-                    <div class="service-price">${serviceInfo.price}</div>
-                </div>
-                
-                <div class="service-modal-content">
-                    <div class="service-features-list">
-                        <h3>Что входит в услугу:</h3>
-                        <ul>
-                            ${serviceInfo.features.map(feature => `<li>${feature}</li>`).join('')}
-                        </ul>
-                    </div>
-                    
-                    <form class="service-form" id="serviceModalForm">
-                        <input type="hidden" name="service_type" value="${serviceType}">
-                        <input type="hidden" name="utm_source" id="utm_source">
-                        <input type="hidden" name="utm_medium" id="utm_medium">
-                        <input type="hidden" name="utm_campaign" id="utm_campaign">
-                        
-                        <div class="form-group">
-                            <label for="modal_name">Ваше имя *</label>
-                            <input type="text" id="modal_name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="modal_email">Email *</label>
-                            <input type="email" id="modal_email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="modal_phone">Телефон</label>
-                            <input type="tel" id="modal_phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="modal_message">Опишите ваш проект</label>
-                            <textarea id="modal_message" name="message" rows="4" placeholder="Расскажите о ваших целях и требованиях"></textarea>
-                        </div>
-                        
-                        <div class="form-actions">
-                            <button type="submit" class="btn-primary btn-large">
-                                Отправить заявку
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            `;
-        } else {
-            return `
-                <div class="service-modal-header">
-                    <h2>Заказать услугу</h2>
-                    <p>Оставьте заявку и мы свяжемся с вами в течение 2 часов</p>
-                </div>
-                
-                <div class="service-modal-content">
-                    <form class="service-form" id="serviceModalForm">
-                        <input type="hidden" name="utm_source" id="utm_source">
-                        <input type="hidden" name="utm_medium" id="utm_medium">
-                        <input type="hidden" name="utm_campaign" id="utm_campaign">
-                        
-                        <div class="form-group">
-                            <label for="modal_name">Ваше имя *</label>
-                            <input type="text" id="modal_name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="modal_email">Email *</label>
-                            <input type="email" id="modal_email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="modal_phone">Телефон</label>
-                            <input type="tel" id="modal_phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="modal_service">Услуга *</label>
-                            <select id="modal_service" name="service" required>
-                                <option value="">Выберите услугу</option>
-                                <option value="branding">Брендинг и айдентика</option>
-                                <option value="smm">SMM-дизайн и реклама</option>
-                                <option value="video">Видео и анимация</option>
-                                <option value="print">Полиграфия и офлайн-реклама</option>
-                                <option value="other">Другое</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="modal_message">Опишите ваш проект</label>
-                            <textarea id="modal_message" name="message" rows="4" placeholder="Расскажите о ваших целях и требованиях"></textarea>
-                        </div>
-                        
-                        <div class="form-actions">
-                            <button type="submit" class="btn-primary btn-large">
-                                Отправить заявку
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            `;
-        }
-    }
-
-    closeServiceModal() {
-        const modal = document.getElementById('serviceModal');
+    window.closeRequestModal = function() {
+        const modal = document.getElementById('requestModal');
         modal.classList.remove('active');
         document.body.style.overflow = '';
-    }
-
-    openPortfolioModal(portfolioId) {
-        const portfolioInfo = this.portfolioData[portfolioId];
-        if (!portfolioInfo) return;
-
-        const modalBody = document.getElementById('portfolioModalBody');
-        modalBody.innerHTML = this.generatePortfolioModalContent(portfolioInfo);
         
-        const modal = document.getElementById('portfolioModal');
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        
-        this.trackPortfolioView(portfolioId);
-    }
+        // Track event
+        trackEvent('request_modal_closed');
+    };
+}
 
-    generatePortfolioModalContent(portfolioInfo) {
-        return `
-            <div class="portfolio-modal-header">
-                <h2>${portfolioInfo.title}</h2>
-                <span class="portfolio-category">${portfolioInfo.category}</span>
+function initializeFormHandlers() {
+    // Services form handler
+    window.handleServicesFormSubmit = function(event) {
+        event.preventDefault();
+        
+        const form = event.target;
+        const formData = new FormData(form);
+        
+        // Track form submission
+        trackEvent('services_form_submitted', {
+            service: formData.get('service'),
+            source: 'services_page'
+        });
+        
+        // Handle form submission
+        handleFormSubmission('servicesForm', formData);
+    };
+
+    // Request form handler
+    window.handleRequestFormSubmit = function(event) {
+        event.preventDefault();
+        
+        const form = event.target;
+        const formData = new FormData(form);
+        
+        // Track form submission
+        trackEvent('request_form_submitted', {
+            service: formData.get('service'),
+            source: 'request_modal'
+        });
+        
+        // Handle form submission
+        handleFormSubmission('requestForm', formData);
+    };
+}
+
+function initializeAnimations() {
+    // Add animation classes to elements
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-on-scroll');
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    const animatedElements = document.querySelectorAll('.service-category, .pricing-item, .testimonial-card');
+    animatedElements.forEach(el => observer.observe(el));
+}
+
+// Portfolio Modal Functions
+function openPortfolioModal(portfolioId) {
+    const modal = document.getElementById('portfolioModal');
+    const modalBody = document.getElementById('portfolioModalBody');
+    const portfolioData = window.portfolioData[portfolioId];
+    
+    if (!portfolioData) return;
+    
+    // Create modal content
+    modalBody.innerHTML = `
+        <div class="portfolio-modal-content">
+            <div class="portfolio-modal-image">
+                <img src="${portfolioData.image}" alt="${portfolioData.title}" loading="lazy">
             </div>
-            
-            <div class="portfolio-modal-content">
-                <div class="portfolio-image">
-                    <img src="${portfolioInfo.image}" alt="${portfolioInfo.title}" loading="lazy">
-                </div>
+            <div class="portfolio-modal-info">
+                <h2>${portfolioData.title}</h2>
+                <p class="portfolio-description">${portfolioData.description}</p>
                 
                 <div class="portfolio-details">
-                    <h3>Описание проекта</h3>
-                    <p>${portfolioInfo.description}</p>
-                    
                     <h3>Что было сделано:</h3>
                     <ul>
-                        ${portfolioInfo.details.map(detail => `<li>${detail}</li>`).join('')}
+                        ${portfolioData.details.map(detail => `<li>${detail}</li>`).join('')}
                     </ul>
                 </div>
                 
-                <div class="portfolio-cta">
-                    <button class="btn-primary" onclick="openServiceModal()">
+                <div class="portfolio-results">
+                    <h3>Результат:</h3>
+                    <p>${portfolioData.results}</p>
+                </div>
+                
+                <div class="portfolio-actions">
+                    <button class="btn-primary" onclick="openRequestForm('${portfolioData.title}')">
                         Заказать похожий проект
                     </button>
-                    <button class="btn-secondary" onclick="window.location.href='pricing.html'">
-                        Научиться делать так же
+                    <button class="btn-outline" onclick="window.location.href='pricing.html'">
+                        Научиться делать самому
                     </button>
                 </div>
             </div>
-        `;
-    }
-
-    closePortfolioModal() {
-        const modal = document.getElementById('portfolioModal');
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    initializeAnalytics() {
-        // Track page view
-        if (typeof trackEvent === 'function') {
-            trackEvent('page_view', {
-                page: 'services',
-                title: document.title,
-                timestamp: new Date().toISOString()
-            });
-        }
-    }
-
-    // Form tracking is now handled by FormsManager
-    // initializeFormTracking() { ... } - REMOVED
-
-    trackServiceModalOpen(serviceType) {
-        if (typeof trackEvent === 'function') {
-            trackEvent('service_modal_opened', {
-                service_type: serviceType || 'general',
-                timestamp: new Date().toISOString()
-            });
-        }
-    }
-
-    trackPortfolioView(portfolioId) {
-        if (typeof trackEvent === 'function') {
-            trackEvent('portfolio_viewed', {
-                portfolio_id: portfolioId,
-                timestamp: new Date().toISOString()
-            });
-        }
-    }
-
-    // Form submission tracking is now handled by FormsManager
-    // trackServiceFormSubmit(formData) { ... } - REMOVED
-
-    // Form field focus tracking is now handled by FormsManager
-    // trackFormFieldFocus(fieldName) { ... } - REMOVED
-}
-
-// Global functions for onclick handlers
-function openServiceModal(serviceType) {
-    if (window.servicesPage) {
-        window.servicesPage.openServiceModal(serviceType);
-    }
-}
-
-function closeServiceModal() {
-    if (window.servicesPage) {
-        window.servicesPage.closeServiceModal();
-    }
-}
-
-function openPortfolioModal(portfolioId) {
-    if (window.servicesPage) {
-        window.servicesPage.openPortfolioModal(portfolioId);
-    }
+        </div>
+    `;
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Track event
+    trackEvent('portfolio_modal_opened', {
+        portfolio_id: portfolioId,
+        portfolio_title: portfolioData.title
+    });
 }
 
 function closePortfolioModal() {
-    if (window.servicesPage) {
-        window.servicesPage.closePortfolioModal();
+    const modal = document.getElementById('portfolioModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    
+    // Track event
+    trackEvent('portfolio_modal_closed');
+}
+
+// Utility Functions
+function getUTMParameters() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return {
+        utm_source: urlParams.get('utm_source'),
+        utm_medium: urlParams.get('utm_medium'),
+        utm_campaign: urlParams.get('utm_campaign'),
+        utm_content: urlParams.get('utm_content'),
+        utm_term: urlParams.get('utm_term')
+    };
+}
+
+function handleFormSubmission(formId, formData) {
+    // Add form ID to form data
+    formData.append('form_id', formId);
+    formData.append('page', 'services');
+    
+    // Show loading state
+    const submitButton = document.querySelector(`#${formId} button[type="submit"]`);
+    const originalText = submitButton.textContent;
+    submitButton.textContent = 'Отправляем...';
+    submitButton.disabled = true;
+    
+    // Submit to Formspree
+    fetch('https://formspree.io/f/xpzgwqzg', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            showFormSuccess(formId);
+            trackEvent('form_submitted', {
+                form_id: formId,
+                service: formData.get('service')
+            });
+        } else {
+            throw new Error('Form submission failed');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        showFormError(formId, 'Произошла ошибка при отправке. Попробуйте еще раз.');
+    })
+    .finally(() => {
+        // Restore button state
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+    });
+}
+
+function showFormSuccess(formId) {
+    const form = document.getElementById(formId);
+    const formContainer = form.closest('.contact-container') || form.closest('.modal-body');
+    
+    formContainer.innerHTML = `
+        <div class="form-success">
+            <div class="success-icon">✅</div>
+            <h3>Спасибо за заявку!</h3>
+            <p>Мы свяжемся с вами в течение 24 часов для обсуждения проекта.</p>
+            <div class="success-actions">
+                <button class="btn-primary" onclick="window.location.href='pricing.html'">
+                    Пока ждёте — узнайте о курсе
+                </button>
+                <button class="btn-outline" onclick="location.reload()">
+                    Отправить ещё одну заявку
+                </button>
+            </div>
+        </div>
+    `;
+}
+
+function showFormError(formId, message) {
+    const form = document.getElementById(formId);
+    const errorDiv = form.querySelector('.form-error') || document.createElement('div');
+    
+    errorDiv.className = 'form-error';
+    errorDiv.textContent = message;
+    
+    if (!form.querySelector('.form-error')) {
+        form.insertBefore(errorDiv, form.firstChild);
+    }
+    
+    // Remove error after 5 seconds
+    setTimeout(() => {
+        if (errorDiv.parentNode) {
+            errorDiv.remove();
+        }
+    }, 5000);
+}
+
+// Analytics Functions
+function trackPageView() {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+            page_title: 'Services Page',
+            page_location: window.location.href
+        });
+    }
+    
+    if (typeof fbq !== 'undefined') {
+        fbq('track', 'PageView');
     }
 }
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    window.servicesPage = new ServicesPage();
-}); 
+function trackEvent(eventName, parameters = {}) {
+    // Google Analytics 4
+    if (typeof gtag !== 'undefined') {
+        gtag('event', eventName, {
+            event_category: 'Services Page',
+            ...parameters
+        });
+    }
+    
+    // Facebook Pixel
+    if (typeof fbq !== 'undefined') {
+        fbq('track', 'CustomEvent', {
+            event_name: eventName,
+            ...parameters
+        });
+    }
+    
+    // Console log for debugging
+    console.log('Event tracked:', eventName, parameters);
+}
+
+// Navigation Functions
+function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
+// Global functions for onclick handlers
+window.openPortfolioModal = openPortfolioModal;
+window.closePortfolioModal = closePortfolioModal;
+window.openRequestForm = openRequestForm;
+window.closeRequestModal = closeRequestModal;
+window.handleServicesFormSubmit = handleServicesFormSubmit;
+window.handleRequestFormSubmit = handleRequestFormSubmit;
+window.scrollToSection = scrollToSection; 

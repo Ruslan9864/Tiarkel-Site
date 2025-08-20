@@ -46,6 +46,11 @@
             "url": "faq.html"
           },
           {
+            "id": "contacts",
+            "title": "Контакты",
+            "url": "contacts.html"
+          },
+          {
             "id": "apply",
             "title": "Заявка на курс",
             "url": "#contact"
@@ -99,6 +104,11 @@
             "id": "faq",
             "title": "FAQ",
             "url": "faq.html"
+          },
+          {
+            "id": "contacts",
+            "title": "Aloqa",
+            "url": "contacts.html"
           },
           {
             "id": "apply",

@@ -165,6 +165,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize CTA button tracking
     initializeCTATracking();
     
+    // Initialize pricing page specific tracking
+    if (window.location.pathname.includes('pricing.html')) {
+        initializePricingCTATracking();
+    }
+    
     // Initialize scroll tracking
     initializeScrollTracking();
     
@@ -176,6 +181,20 @@ document.addEventListener('DOMContentLoaded', function() {
         page: window.location.pathname,
         title: document.title,
         timestamp: new Date().toISOString()
+    });
+    
+    // Close modal on backdrop click
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('modal-backdrop')) {
+            closePricingModal();
+        }
+    });
+    
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closePricingModal();
+        }
     });
 });
 
@@ -895,3 +914,189 @@ const optimizedScrollHandler = debounce(function() {
 }, 16);
 
 window.addEventListener('scroll', optimizedScrollHandler); 
+
+// Pricing page functions
+function handlePlanSelection(planName) {
+    // Track plan selection
+    trackEvent('plan_selected', {
+        plan: planName,
+        page: window.location.pathname,
+        timestamp: new Date().toISOString()
+    });
+    
+    // Show pricing modal
+    showPricingModal(planName);
+}
+
+function showPricingModal(selectedPlan) {
+    // Create modal HTML
+    const modalHTML = `
+        <div class="pricing-modal" id="pricingModal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <button class="modal-close" onclick="closePricingModal()" aria-label="Закрыть">×</button>
+                <div class="modal-header">
+                    <h3>Выбрать тариф ${selectedPlan}</h3>
+                    <p>Заполните форму и мы свяжемся с вами в течение 2 часов</p>
+                </div>
+                <form class="pricing-form" id="pricingForm" onsubmit="handlePricingFormSubmit(event)">
+                    <input type="hidden" name="selected_plan" value="${selectedPlan}">
+                    <input type="hidden" name="utm_source" id="utm_source">
+                    <input type="hidden" name="utm_medium" id="utm_medium">
+                    <input type="hidden" name="utm_campaign" id="utm_campaign">
+                    
+                    <div class="form-group">
+                        <label for="name">Ваше имя *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Дополнительная информация</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Расскажите о ваших целях"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary btn-large">
+                            Отправить заявку
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    // Add modal to page
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    
+    // Extract UTM parameters
+    extractUTMParameters();
+    
+    // Show modal with animation
+    setTimeout(() => {
+        document.getElementById('pricingModal').classList.add('active');
+    }, 10);
+    
+    // Track modal open
+    trackEvent('pricing_modal_opened', {
+        plan: selectedPlan,
+        timestamp: new Date().toISOString()
+    });
+}
+
+function closePricingModal() {
+    const modal = document.getElementById('pricingModal');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => {
+            modal.remove();
+        }, 300);
+    }
+}
+
+function handlePricingFormSubmit(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const formData = new FormData(form);
+    const selectedPlan = formData.get('selected_plan');
+    
+    // Validate form
+    if (!validateForm(form)) {
+        return;
+    }
+    
+    // Track form submission
+    trackEvent('pricing_form_submitted', {
+        plan: selectedPlan,
+        timestamp: new Date().toISOString()
+    });
+    
+    // Show success message
+    showPricingSuccess(selectedPlan);
+}
+
+function showPricingSuccess(planName) {
+    const modal = document.getElementById('pricingModal');
+    const modalContent = modal.querySelector('.modal-content');
+    
+    modalContent.innerHTML = `
+        <button class="modal-close" onclick="closePricingModal()" aria-label="Закрыть">×</button>
+        <div class="success-content">
+            <div class="success-icon">✅</div>
+            <h3>Спасибо за заявку!</h3>
+            <p>Мы получили вашу заявку на тариф <strong>${planName}</strong> и свяжемся с вами в течение 2 часов.</p>
+            <div class="success-details">
+                <p><strong>Что дальше:</strong></p>
+                <ul>
+                    <li>Наш менеджер свяжется с вами</li>
+                    <li>Ответит на все вопросы</li>
+                    <li>Поможет с оплатой</li>
+                    <li>Добавит в закрытый чат курса</li>
+                </ul>
+            </div>
+        </div>
+    `;
+    
+    // Track success
+    trackEvent('pricing_success', {
+        plan: planName,
+        timestamp: new Date().toISOString()
+    });
+}
+
+function extractUTMParameters() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmSource = urlParams.get('utm_source');
+    const utmMedium = urlParams.get('utm_medium');
+    const utmCampaign = urlParams.get('utm_campaign');
+    
+    if (utmSource) document.getElementById('utm_source').value = utmSource;
+    if (utmMedium) document.getElementById('utm_medium').value = utmMedium;
+    if (utmCampaign) document.getElementById('utm_campaign').value = utmCampaign;
+}
+
+// Enhanced CTA tracking for pricing page
+function initializePricingCTATracking() {
+    // Track all pricing CTA buttons
+    document.querySelectorAll('[data-cta^="pricing_"]').forEach(button => {
+        button.addEventListener('click', function() {
+            const ctaType = this.getAttribute('data-cta');
+            const planName = this.closest('.pricing-card')?.id?.toUpperCase() || 'unknown';
+            
+            trackCTAClick(ctaType, planName);
+        });
+    });
+    
+    // Track comparison table interactions
+    const comparisonTable = document.querySelector('.comparison-table');
+    if (comparisonTable) {
+        comparisonTable.addEventListener('click', function(e) {
+            if (e.target.closest('td')) {
+                trackEvent('comparison_table_clicked', {
+                    timestamp: new Date().toISOString()
+                });
+            }
+        });
+    }
+    
+    // Track FAQ interactions
+    document.querySelectorAll('.pricing-faq-section .faq-question').forEach(question => {
+        question.addEventListener('click', function() {
+            const questionText = this.querySelector('span').textContent;
+            trackEvent('pricing_faq_opened', {
+                question: questionText,
+                timestamp: new Date().toISOString()
+            });
+        });
+    });
+} 

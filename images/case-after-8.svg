@@ -1,0 +1,11 @@
+<svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="150" fill="#E3F2FD"/>
+  <rect x="20" y="20" width="160" height="110" fill="#FFFFFF" stroke="#2196F3" stroke-width="2"/>
+  <rect x="40" y="40" width="120" height="20" fill="#2196F3" rx="2"/>
+  <text x="100" y="54" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">Веб-дизайн</text>
+  <rect x="40" y="70" width="120" height="20" fill="#2196F3" rx="2"/>
+  <text x="100" y="84" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">$3000/месяц</text>
+  <rect x="40" y="100" width="120" height="20" fill="#2196F3" rx="2"/>
+  <text x="100" y="114" text-anchor="middle" font-family="Arial" font-size="10" fill="white">Digital агентство</text>
+  <text x="100" y="140" text-anchor="middle" font-family="Arial" font-size="10" fill="#2196F3" font-weight="bold">+150% к доходу</text>
+</svg> 

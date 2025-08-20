@@ -1,0 +1,73 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8D6E63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6D4C41;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F8F9FA;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="url(#bgGradient)" rx="12"/>
+  
+  <!-- Instagram carousel layout -->
+  <g transform="translate(20, 20)">
+    <!-- Main post area -->
+    <rect x="0" y="0" width="260" height="160" fill="#FFFFFF" rx="8"/>
+    
+    <!-- Coffee cup -->
+    <g transform="translate(80, 40)">
+      <ellipse cx="25" cy="35" rx="20" ry="15" fill="#8D6E63" stroke="#6D4C41" stroke-width="2"/>
+      <ellipse cx="25" cy="35" rx="15" ry="10" fill="#D7CCC8"/>
+      <rect x="40" y="25" width="8" height="20" fill="#8D6E63" rx="4"/>
+      <ellipse cx="44" cy="25" rx="4" ry="3" fill="#6D4C41"/>
+      
+      <!-- Steam -->
+      <path d="M 20 20 Q 25 15 30 20" stroke="#E0E0E0" stroke-width="2" fill="none"/>
+      <path d="M 25 18 Q 30 13 35 18" stroke="#E0E0E0" stroke-width="2" fill="none"/>
+      <path d="M 30 20 Q 35 15 40 20" stroke="#E0E0E0" stroke-width="2" fill="none"/>
+    </g>
+    
+    <!-- Coffee beans -->
+    <g transform="translate(160, 50)">
+      <ellipse cx="0" cy="0" rx="8" ry="4" fill="#5D4037" transform="rotate(45)"/>
+      <ellipse cx="15" cy="5" rx="6" ry="3" fill="#5D4037" transform="rotate(-30)"/>
+      <ellipse cx="25" cy="15" rx="7" ry="4" fill="#5D4037" transform="rotate(60)"/>
+      <ellipse cx="10" cy="20" rx="5" ry="3" fill="#5D4037" transform="rotate(-15)"/>
+    </g>
+    
+    <!-- Cozy atmosphere elements -->
+    <g transform="translate(40, 100)">
+      <!-- Plant -->
+      <circle cx="0" cy="0" r="8" fill="#4CAF50"/>
+      <circle cx="8" cy="-5" r="6" fill="#66BB6A"/>
+      <circle cx="-5" cy="-3" r="7" fill="#81C784"/>
+      
+      <!-- Book -->
+      <rect x="30" y="-10" width="15" height="20" fill="#FF9800" rx="2"/>
+      <rect x="32" y="-8" width="11" height="16" fill="#FFFFFF"/>
+      
+      <!-- Lamp -->
+      <rect x="60" y="-5" width="3" height="15" fill="#607D8B"/>
+      <ellipse cx="61.5" cy="-5" rx="8" ry="4" fill="#FFD700"/>
+    </g>
+    
+    <!-- Carousel dots -->
+    <circle cx="80" cy="150" r="3" fill="#8D6E63"/>
+    <circle cx="90" cy="150" r="3" fill="#D7CCC8"/>
+    <circle cx="100" cy="150" r="3" fill="#D7CCC8"/>
+    <circle cx="110" cy="150" r="3" fill="#D7CCC8"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="150" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="url(#textGradient)">
+    Aroma
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="25" cy="25" r="8" fill="#FFFFFF" opacity="0.2"/>
+  <circle cx="275" cy="25" r="10" fill="#FFFFFF" opacity="0.2"/>
+</svg> 

@@ -1,0 +1,105 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shop-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E8B57;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#228B22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shop-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#32CD32;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#2E8B57;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="url(#shop-bg)"/>
+  
+  <!-- E-commerce Store -->
+  <g transform="translate(20, 20)">
+    <!-- Header -->
+    <rect x="0" y="0" width="260" height="30" rx="4" fill="#32CD32" opacity="0.8"/>
+    <text x="130" y="20" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">
+      🛒 Online Store
+    </text>
+    
+    <!-- Search Bar -->
+    <rect x="0" y="40" width="200" height="25" rx="12" fill="#ffffff" opacity="0.9"/>
+    <text x="100" y="55" text-anchor="middle" fill="#666666" font-family="Inter, sans-serif" font-size="10">
+      🔍 Поиск товаров...
+    </text>
+    
+    <!-- Shopping Cart -->
+    <rect x="210" y="40" width="50" height="25" rx="12" fill="#32CD32"/>
+    <text x="235" y="55" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">
+      🛒 (3)
+    </text>
+    
+    <!-- Product Grid -->
+    <rect x="0" y="75" width="80" height="60" rx="4" fill="url(#shop-card)" stroke="#32CD32" stroke-width="1"/>
+    <text x="40" y="95" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">
+      📱 Смартфон
+    </text>
+    <text x="40" y="110" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      $299
+    </text>
+    <rect x="25" y="115" width="30" height="15" rx="7" fill="#32CD32"/>
+    <text x="40" y="125" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      В корзину
+    </text>
+    
+    <rect x="90" y="75" width="80" height="60" rx="4" fill="url(#shop-card)" stroke="#32CD32" stroke-width="1"/>
+    <text x="130" y="95" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">
+      💻 Ноутбук
+    </text>
+    <text x="130" y="110" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      $899
+    </text>
+    <rect x="115" y="115" width="30" height="15" rx="7" fill="#32CD32"/>
+    <text x="130" y="125" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      В корзину
+    </text>
+    
+    <rect x="180" y="75" width="80" height="60" rx="4" fill="url(#shop-card)" stroke="#32CD32" stroke-width="1"/>
+    <text x="220" y="95" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">
+      🎧 Наушники
+    </text>
+    <text x="220" y="110" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      $99
+    </text>
+    <rect x="205" y="115" width="30" height="15" rx="7" fill="#32CD32"/>
+    <text x="220" y="125" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      В корзину
+    </text>
+    
+    <!-- Categories -->
+    <rect x="0" y="145" width="50" height="20" rx="10" fill="#32CD32" opacity="0.7"/>
+    <text x="25" y="157" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      Электроника
+    </text>
+    
+    <rect x="60" y="145" width="50" height="20" rx="10" fill="#32CD32" opacity="0.7"/>
+    <text x="85" y="157" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      Одежда
+    </text>
+    
+    <rect x="120" y="145" width="50" height="20" rx="10" fill="#32CD32" opacity="0.7"/>
+    <text x="145" y="157" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      Спорт
+    </text>
+    
+    <rect x="180" y="145" width="50" height="20" rx="10" fill="#32CD32" opacity="0.7"/>
+    <text x="205" y="157" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      Книги
+    </text>
+    
+    <!-- Checkout Button -->
+    <rect x="80" y="175" width="100" height="20" rx="10" fill="#32CD32"/>
+    <text x="130" y="187" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9" font-weight="600">
+      ОФОРМИТЬ ЗАКАЗ
+    </text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <circle cx="50" cy="190" r="2" fill="#32CD32" opacity="0.6"/>
+  <circle cx="250" cy="40" r="3" fill="#32CD32" opacity="0.4"/>
+  <circle cx="280" cy="160" r="2" fill="#32CD32" opacity="0.6"/>
+</svg> 

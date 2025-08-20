@@ -1,0 +1,65 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00BCD4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0097A7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F8F9FA;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="url(#bgGradient)" rx="12"/>
+  
+  <!-- Print layout -->
+  <g transform="translate(20, 20)">
+    <!-- Business card -->
+    <rect x="0" y="0" width="80" height="50" fill="#FFFFFF" rx="4" stroke="#E0E0E0" stroke-width="1"/>
+    <text x="40" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#00BCD4">SMILE</text>
+    <text x="40" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Стоматология</text>
+    <text x="40" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">+7 (999) 123-45-67</text>
+    <text x="40" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">smile@clinic.ru</text>
+    
+    <!-- Tooth icon -->
+    <g transform="translate(15, 15)">
+      <path d="M 0 0 L 8 0 L 8 12 L 4 16 L 0 12 Z" fill="#00BCD4"/>
+      <rect x="2" y="2" width="4" height="8" fill="#FFFFFF"/>
+    </g>
+    
+    <!-- Brochure -->
+    <rect x="100" y="0" width="60" height="80" fill="#FFFFFF" rx="4" stroke="#E0E0E0" stroke-width="1"/>
+    <text x="130" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#00BCD4">УСЛУГИ</text>
+    <text x="110" y="30" font-family="Arial, sans-serif" font-size="8" fill="#333">• Лечение зубов</text>
+    <text x="110" y="40" font-family="Arial, sans-serif" font-size="8" fill="#333">• Протезирование</text>
+    <text x="110" y="50" font-family="Arial, sans-serif" font-size="8" fill="#333">• Отбеливание</text>
+    <text x="110" y="60" font-family="Arial, sans-serif" font-size="8" fill="#333">• Имплантация</text>
+    <text x="110" y="70" font-family="Arial, sans-serif" font-size="8" fill="#333">• Детская стоматология</text>
+    
+    <!-- Poster -->
+    <rect x="180" y="0" width="80" height="100" fill="#FFFFFF" rx="4" stroke="#E0E0E0" stroke-width="1"/>
+    <text x="220" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00BCD4">SMILE</text>
+    <text x="220" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Красивая улыбка</text>
+    <text x="220" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">за 1 день!</text>
+    
+    <!-- Large tooth -->
+    <g transform="translate(200, 60)">
+      <path d="M 0 0 L 16 0 L 16 24 L 8 32 L 0 24 Z" fill="#00BCD4"/>
+      <rect x="4" y="4" width="8" height="16" fill="#FFFFFF"/>
+    </g>
+    
+    <!-- Contact info -->
+    <text x="220" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">+7 (999) 123-45-67</text>
+    <text x="220" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">www.smile-clinic.ru</text>
+  </g>
+  
+  <!-- Text -->
+  <text x="150" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="url(#textGradient)">
+    Smile
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="25" cy="25" r="6" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="275" cy="25" r="8" fill="#FFFFFF" opacity="0.3"/>
+</svg> 

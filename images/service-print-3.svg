@@ -1,0 +1,92 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9C27B0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7B1FA2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F8F9FA;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="url(#bgGradient)" rx="12"/>
+  
+  <!-- Outdoor advertising layout -->
+  <g transform="translate(20, 20)">
+    <!-- Main banner -->
+    <rect x="0" y="0" width="260" height="160" fill="#FFFFFF" rx="4" stroke="#E0E0E0" stroke-width="1"/>
+    
+    <!-- Building illustration -->
+    <g transform="translate(30, 30)">
+      <!-- Main building -->
+      <rect x="0" y="0" width="60" height="40" fill="#9C27B0"/>
+      <rect x="5" y="5" width="8" height="8" fill="#FFFFFF"/>
+      <rect x="15" y="5" width="8" height="8" fill="#FFFFFF"/>
+      <rect x="25" y="5" width="8" height="8" fill="#FFFFFF"/>
+      <rect x="35" y="5" width="8" height="8" fill="#FFFFFF"/>
+      <rect x="45" y="5" width="8" height="8" fill="#FFFFFF"/>
+      
+      <rect x="5" y="15" width="8" height="8" fill="#FFFFFF"/>
+      <rect x="15" y="15" width="8" height="8" fill="#FFFFFF"/>
+      <rect x="25" y="15" width="8" height="8" fill="#FFFFFF"/>
+      <rect x="35" y="15" width="8" height="8" fill="#FFFFFF"/>
+      <rect x="45" y="15" width="8" height="8" fill="#FFFFFF"/>
+      
+      <rect x="5" y="25" width="8" height="8" fill="#FFFFFF"/>
+      <rect x="15" y="25" width="8" height="8" fill="#FFFFFF"/>
+      <rect x="25" y="25" width="8" height="8" fill="#FFFFFF"/>
+      <rect x="35" y="25" width="8" height="8" fill="#FFFFFF"/>
+      <rect x="45" y="25" width="8" height="8" fill="#FFFFFF"/>
+      
+      <!-- Entrance -->
+      <rect x="25" y="40" width="10" height="8" fill="#FFFFFF"/>
+    </g>
+    
+    <!-- Shopping icons -->
+    <g transform="translate(120, 40)">
+      <!-- Shopping bag -->
+      <rect x="0" y="8" width="12" height="15" fill="#9C27B0" rx="2"/>
+      <rect x="2" y="0" width="8" height="8" fill="#9C27B0" rx="4"/>
+      <rect x="4" y="2" width="4" height="4" fill="#FFFFFF"/>
+      
+      <!-- Price tag -->
+      <rect x="20" y="5" width="15" height="8" fill="#FF9800" rx="2"/>
+      <text x="27.5" y="11" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#FFFFFF">SALE</text>
+      
+      <!-- Star -->
+      <polygon points="40,5 42,10 47,10 43,13 45,18 40,15 35,18 37,13 33,10 38,10" fill="#FFD700"/>
+    </g>
+    
+    <!-- Main text -->
+    <text x="130" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#9C27B0">MEGA MALL</text>
+    <text x="130" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#666">Торговый центр</text>
+    
+    <!-- Features -->
+    <g transform="translate(50, 120)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="10" fill="#333">• 200+ магазинов</text>
+      <text x="0" y="12" font-family="Arial, sans-serif" font-size="10" fill="#333">• Рестораны и кафе</text>
+      <text x="0" y="24" font-family="Arial, sans-serif" font-size="10" fill="#333">• Развлекательный центр</text>
+    </g>
+    
+    <g transform="translate(180, 120)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="10" fill="#333">• Бесплатная парковка</text>
+      <text x="0" y="12" font-family="Arial, sans-serif" font-size="10" fill="#333">• Wi-Fi</text>
+      <text x="0" y="24" font-family="Arial, sans-serif" font-size="10" fill="#333">• Детская зона</text>
+    </g>
+    
+    <!-- Contact info -->
+    <text x="130" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">+7 (999) 123-45-67 • www.mega-mall.ru</text>
+    <text x="130" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">ул. Торговая, 100 • Ежедневно 10:00-22:00</text>
+  </g>
+  
+  <!-- Text -->
+  <text x="150" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="url(#textGradient)">
+    MegaMall
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="25" cy="25" r="6" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="275" cy="25" r="8" fill="#FFFFFF" opacity="0.3"/>
+</svg> 

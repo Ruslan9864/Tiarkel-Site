@@ -1,0 +1,791 @@
+<!-- Шаблоны форм для Tiarkel Site -->
+
+<!-- 1. Форма для главной страницы (короткая) -->
+<template id="hero-form-template">
+  <form data-form-type="course" id="hero-form" class="hero-form">
+    <div class="form-group">
+      <label for="hero-name">Имя *</label>
+      <input type="text" id="hero-name" name="name" required minlength="2" maxlength="50">
+    </div>
+    
+    <div class="form-group">
+      <label for="hero-phone">Телефон *</label>
+      <input type="tel" id="hero-phone" name="phone" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="hero-email">Email</label>
+      <input type="email" id="hero-email" name="email">
+    </div>
+    
+    <div class="form-group">
+      <label for="hero-product">Выберите тариф</label>
+      <select id="hero-product" name="product_id">
+        <option value="">Не выбрано</option>
+        <option value="lite">LITE - $239</option>
+        <option value="pro">PRO - $399</option>
+        <option value="studio">STUDIO - $479</option>
+        <option value="vip">VIP - $1099</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="hero-comment">Комментарий</label>
+      <textarea id="hero-comment" name="comment" rows="3" maxlength="500"></textarea>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent" required>
+        <span class="checkmark"></span>
+        Я согласен с <a href="/oferta.html" target="_blank">публичной офертой</a> и <a href="/privacy.html" target="_blank">политикой конфиденциальности</a> *
+      </label>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent_marketing">
+        <span class="checkmark"></span>
+        Согласен получать материалы и предложения
+      </label>
+    </div>
+    
+    <button type="submit" class="btn-primary" disabled>
+      Записаться на курс
+    </button>
+    
+    <div class="form-alternatives">
+      <p>Или свяжитесь с нами:</p>
+      <div class="alternative-buttons">
+        <a href="https://t.me/tatvorit" target="_blank" class="btn-secondary">
+          📱 Telegram
+        </a>
+        <a href="https://wa.me/998XXXXXXXXX" target="_blank" class="btn-secondary">
+          💬 WhatsApp
+        </a>
+      </div>
+    </div>
+  </form>
+</template>
+
+<!-- 2. Форма для страницы тарифов -->
+<template id="pricing-form-template">
+  <form data-form-type="course" id="pricing-form" class="pricing-form">
+    <div class="form-group">
+      <label for="pricing-name">Имя *</label>
+      <input type="text" id="pricing-name" name="name" required minlength="2" maxlength="50">
+    </div>
+    
+    <div class="form-group">
+      <label for="pricing-phone">Телефон *</label>
+      <input type="tel" id="pricing-phone" name="phone" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="pricing-email">Email</label>
+      <input type="email" id="pricing-email" name="email">
+    </div>
+    
+    <div class="form-group">
+      <label for="pricing-product">Выбранный тариф *</label>
+      <select id="pricing-product" name="product_id" required>
+        <option value="">Выберите тариф</option>
+        <option value="lite">LITE - $239 (6 месяцев)</option>
+        <option value="pro">PRO - $399 (12 месяцев)</option>
+        <option value="studio">STUDIO - $479 (пожизненно)</option>
+        <option value="vip">VIP - $1099 (пожизненно)</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="pricing-comment">Дополнительная информация</label>
+      <textarea id="pricing-comment" name="comment" rows="4" maxlength="500" placeholder="Расскажите о своих целях, опыте, вопросах..."></textarea>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent" required>
+        <span class="checkmark"></span>
+        Я согласен с <a href="/oferta.html" target="_blank">публичной офертой</a> и <a href="/privacy.html" target="_blank">политикой конфиденциальности</a> *
+      </label>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent_marketing">
+        <span class="checkmark"></span>
+        Согласен получать материалы и предложения
+      </label>
+    </div>
+    
+    <button type="submit" class="btn-primary" disabled>
+      Записаться на курс
+    </button>
+  </form>
+</template>
+
+<!-- 3. Форма для страницы программы -->
+<template id="program-form-template">
+  <form data-form-type="course" id="program-form" class="program-form">
+    <div class="form-group">
+      <label for="program-name">Имя *</label>
+      <input type="text" id="program-name" name="name" required minlength="2" maxlength="50">
+    </div>
+    
+    <div class="form-group">
+      <label for="program-phone">Телефон *</label>
+      <input type="tel" id="program-phone" name="phone" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="program-email">Email</label>
+      <input type="email" id="program-email" name="email">
+    </div>
+    
+    <div class="form-group">
+      <label for="program-product">Интересующий тариф</label>
+      <select id="program-product" name="product_id">
+        <option value="">Не выбрано</option>
+        <option value="lite">LITE - $239</option>
+        <option value="pro">PRO - $399</option>
+        <option value="studio">STUDIO - $479</option>
+        <option value="vip">VIP - $1099</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="program-comment">Вопросы о программе</label>
+      <textarea id="program-comment" name="comment" rows="4" maxlength="500" placeholder="Какие модули вас больше всего интересуют? Есть ли вопросы по программе?"></textarea>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent" required>
+        <span class="checkmark"></span>
+        Я согласен с <a href="/oferta.html" target="_blank">публичной офертой</a> и <a href="/privacy.html" target="_blank">политикой конфиденциальности</a> *
+      </label>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent_marketing">
+        <span class="checkmark"></span>
+        Согласен получать материалы и предложения
+      </label>
+    </div>
+    
+    <button type="submit" class="btn-primary" disabled>
+      Хочу на курс
+    </button>
+  </form>
+</template>
+
+<!-- 4. Форма для страницы услуг (заказ услуги) -->
+<template id="service-order-form-template">
+  <form data-form-type="service" id="service-order-form" class="service-form">
+    <div class="form-group">
+      <label for="service-name">Имя *</label>
+      <input type="text" id="service-name" name="name" required minlength="2" maxlength="50">
+    </div>
+    
+    <div class="form-group">
+      <label for="service-phone">Телефон *</label>
+      <input type="tel" id="service-phone" name="phone" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="service-email">Email</label>
+      <input type="email" id="service-email" name="email">
+    </div>
+    
+    <div class="form-group">
+      <label for="service-product">Тип услуги *</label>
+      <select id="service-product" name="product_id" required>
+        <option value="">Выберите услугу</option>
+        <option value="branding">Брендинг и айдентика</option>
+        <option value="smm">SMM-дизайн и реклама</option>
+        <option value="video">Видео и анимация</option>
+        <option value="print">Полиграфия и офлайн-реклама</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="service-comment">Описание задачи *</label>
+      <textarea id="service-comment" name="comment" rows="5" maxlength="1000" required placeholder="Опишите ваш проект, цели, требования, бюджет..."></textarea>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent" required>
+        <span class="checkmark"></span>
+        Я согласен с <a href="/oferta.html" target="_blank">публичной офертой</a> и <a href="/privacy.html" target="_blank">политикой конфиденциальности</a> *
+      </label>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent_marketing">
+        <span class="checkmark"></span>
+        Согласен получать материалы и предложения
+      </label>
+    </div>
+    
+    <button type="submit" class="btn-primary" disabled>
+      Заказать услугу
+    </button>
+  </form>
+</template>
+
+<!-- 5. Форма для страницы услуг (расчет стоимости) -->
+<template id="service-calc-form-template">
+  <form data-form-type="service" id="service-calc-form" class="service-form">
+    <div class="form-group">
+      <label for="calc-name">Имя *</label>
+      <input type="text" id="calc-name" name="name" required minlength="2" maxlength="50">
+    </div>
+    
+    <div class="form-group">
+      <label for="calc-phone">Телефон *</label>
+      <input type="tel" id="calc-phone" name="phone" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="calc-email">Email</label>
+      <input type="email" id="calc-email" name="email">
+    </div>
+    
+    <div class="form-group">
+      <label for="calc-product">Интересующая услуга</label>
+      <select id="calc-product" name="product_id">
+        <option value="">Выберите услугу</option>
+        <option value="branding">Брендинг и айдентика</option>
+        <option value="smm">SMM-дизайн и реклама</option>
+        <option value="video">Видео и анимация</option>
+        <option value="print">Полиграфия и офлайн-реклама</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="calc-comment">Краткое описание проекта</label>
+      <textarea id="calc-comment" name="comment" rows="4" maxlength="500" placeholder="Опишите кратко ваш проект для расчета стоимости..."></textarea>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent" required>
+        <span class="checkmark"></span>
+        Я согласен с <a href="/oferta.html" target="_blank">публичной офертой</a> и <a href="/privacy.html" target="_blank">политикой конфиденциальности</a> *
+      </label>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent_marketing">
+        <span class="checkmark"></span>
+        Согласен получать материалы и предложения
+      </label>
+    </div>
+    
+    <button type="submit" class="btn-primary" disabled>
+      Получить расчет
+    </button>
+  </form>
+</template>
+
+<!-- 6. Форма для страницы контактов (полная) -->
+<template id="contact-form-template">
+  <form data-form-type="contact" id="contact-form" class="contact-form">
+    <div class="form-group">
+      <label for="contact-name">Имя *</label>
+      <input type="text" id="contact-name" name="name" required minlength="2" maxlength="50">
+    </div>
+    
+    <div class="form-group">
+      <label for="contact-phone">Телефон *</label>
+      <input type="tel" id="contact-phone" name="phone" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="contact-email">Email</label>
+      <input type="email" id="contact-email" name="email">
+    </div>
+    
+    <div class="form-group">
+      <label for="contact-product">Тип запроса</label>
+      <select id="contact-product" name="product_id">
+        <option value="">Выберите тип</option>
+        <option value="course">Вопрос о курсе</option>
+        <option value="service">Заказ услуги</option>
+        <option value="partnership">Сотрудничество</option>
+        <option value="other">Другое</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="contact-comment">Сообщение *</label>
+      <textarea id="contact-comment" name="comment" rows="6" maxlength="1000" required placeholder="Опишите ваш вопрос или задачу..."></textarea>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent" required>
+        <span class="checkmark"></span>
+        Я согласен с <a href="/oferta.html" target="_blank">публичной офертой</a> и <a href="/privacy.html" target="_blank">политикой конфиденциальности</a> *
+      </label>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent_marketing">
+        <span class="checkmark"></span>
+        Согласен получать материалы и предложения
+      </label>
+    </div>
+    
+    <button type="submit" class="btn-primary" disabled>
+      Отправить сообщение
+    </button>
+  </form>
+</template>
+
+<!-- 7. Модальная форма для быстрых заявок -->
+<template id="modal-form-template">
+  <div class="modal-form-overlay" id="modal-form-overlay">
+    <div class="modal-form-container">
+      <div class="modal-form-header">
+        <h3 id="modal-form-title">Заявка</h3>
+        <button type="button" class="modal-close" onclick="closeModalForm()">×</button>
+      </div>
+      
+      <form data-form-type="course" id="modal-form" class="modal-form">
+        <div class="form-group">
+          <label for="modal-name">Имя *</label>
+          <input type="text" id="modal-name" name="name" required minlength="2" maxlength="50">
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-phone">Телефон *</label>
+          <input type="tel" id="modal-phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-email">Email</label>
+          <input type="email" id="modal-email" name="email">
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-product">Тариф</label>
+          <select id="modal-product" name="product_id">
+            <option value="">Не выбрано</option>
+            <option value="lite">LITE - $239</option>
+            <option value="pro">PRO - $399</option>
+            <option value="studio">STUDIO - $479</option>
+            <option value="vip">VIP - $1099</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-comment">Комментарий</label>
+          <textarea id="modal-comment" name="comment" rows="3" maxlength="500"></textarea>
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="consent" required>
+            <span class="checkmark"></span>
+            Я согласен с <a href="/oferta.html" target="_blank">публичной офертой</a> и <a href="/privacy.html" target="_blank">политикой конфиденциальности</a> *
+          </label>
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="consent_marketing">
+            <span class="checkmark"></span>
+            Согласен получать материалы и предложения
+          </label>
+        </div>
+        
+        <button type="submit" class="btn-primary" disabled>
+          Отправить заявку
+        </button>
+      </form>
+    </div>
+  </div>
+</template>
+
+<!-- 8. Узбекские версии форм -->
+<template id="hero-form-uz-template">
+  <form data-form-type="course" id="hero-form-uz" class="hero-form">
+    <div class="form-group">
+      <label for="hero-name-uz">Ism *</label>
+      <input type="text" id="hero-name-uz" name="name" required minlength="2" maxlength="50">
+    </div>
+    
+    <div class="form-group">
+      <label for="hero-phone-uz">Telefon *</label>
+      <input type="tel" id="hero-phone-uz" name="phone" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="hero-email-uz">Email</label>
+      <input type="email" id="hero-email-uz" name="email">
+    </div>
+    
+    <div class="form-group">
+      <label for="hero-product-uz">Tarifni tanlang</label>
+      <select id="hero-product-uz" name="product_id">
+        <option value="">Tanlanmagan</option>
+        <option value="lite">LITE - $239</option>
+        <option value="pro">PRO - $399</option>
+        <option value="studio">STUDIO - $479</option>
+        <option value="vip">VIP - $1099</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="hero-comment-uz">Izoh</label>
+      <textarea id="hero-comment-uz" name="comment" rows="3" maxlength="500"></textarea>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent" required>
+        <span class="checkmark"></span>
+        Men <a href="/uz/oferta.html" target="_blank">ommaviy taklif</a> va <a href="/uz/privacy.html" target="_blank">maxfiylik siyosati</a> bilan roziman *
+      </label>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent_marketing">
+        <span class="checkmark"></span>
+        Materiallar va takliflar olishga roziman
+      </label>
+    </div>
+    
+    <button type="submit" class="btn-primary" disabled>
+      Kursga yozilish
+    </button>
+    
+    <div class="form-alternatives">
+      <p>Yoki biz bilan bog'laning:</p>
+      <div class="alternative-buttons">
+        <a href="https://t.me/tatvorit" target="_blank" class="btn-secondary">
+          📱 Telegram
+        </a>
+        <a href="https://wa.me/998XXXXXXXXX" target="_blank" class="btn-secondary">
+          💬 WhatsApp
+        </a>
+      </div>
+    </div>
+  </form>
+</template>
+
+<!-- Стили для форм -->
+<style>
+/* Общие стили форм */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #623c97;
+  box-shadow: 0 0 0 3px rgba(98, 60, 151, 0.1);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #dc3545;
+}
+
+.field-error {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Чекбоксы */
+.checkbox-group {
+  margin-bottom: 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.checkbox-label a {
+  color: #623c97;
+  text-decoration: underline;
+}
+
+.checkbox-label a:hover {
+  color: #4a148c;
+}
+
+/* Кнопки */
+.btn-primary {
+  width: 100%;
+  padding: 14px 24px;
+  background: #623c97;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #4a148c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(98, 60, 151, 0.3);
+}
+
+.btn-primary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 20px;
+  background: transparent;
+  color: #623c97;
+  border: 2px solid #623c97;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #623c97;
+  color: #fff;
+}
+
+/* Альтернативные кнопки */
+.form-alternatives {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.form-alternatives p {
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.alternative-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Модальная форма */
+.modal-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-form-overlay.active {
+  display: flex;
+}
+
+.modal-form-container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-form-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .modal-form-container {
+    padding: 1.5rem;
+    width: 95%;
+  }
+  
+  .alternative-buttons {
+    flex-direction: column;
+  }
+  
+  .btn-secondary {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 14px;
+    font-size: 16px; /* Предотвращает зум на iOS */
+  }
+  
+  .btn-primary {
+    padding: 12px 20px;
+  }
+}
+</style>
+
+<!-- JavaScript для модальных форм -->
+<script>
+// Функции для работы с модальными формами
+function openModalForm(title = 'Заявка', prefillData = {}) {
+  const overlay = document.getElementById('modal-form-overlay');
+  const titleElement = document.getElementById('modal-form-title');
+  const form = document.getElementById('modal-form');
+  
+  if (titleElement) titleElement.textContent = title;
+  
+  // Заполняем форму предустановленными данными
+  if (prefillData.product_id) {
+    const productSelect = form.querySelector('select[name="product_id"]');
+    if (productSelect) productSelect.value = prefillData.product_id;
+  }
+  
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  
+  // Фокус на первое поле
+  const firstInput = form.querySelector('input');
+  if (firstInput) firstInput.focus();
+}
+
+function closeModalForm() {
+  const overlay = document.getElementById('modal-form-overlay');
+  const form = document.getElementById('modal-form');
+  
+  overlay.classList.remove('active');
+  document.body.style.overflow = '';
+  
+  // Сброс формы
+  form.reset();
+  
+  // Очистка ошибок
+  const errors = form.querySelectorAll('.field-error');
+  errors.forEach(error => error.remove());
+  
+  const errorFields = form.querySelectorAll('.error');
+  errorFields.forEach(field => field.classList.remove('error'));
+}
+
+// Закрытие по клику вне формы
+document.addEventListener('click', (e) => {
+  const overlay = document.getElementById('modal-form-overlay');
+  if (e.target === overlay) {
+    closeModalForm();
+  }
+});
+
+// Закрытие по Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeModalForm();
+  }
+});
+
+// Функция для клонирования шаблонов форм
+function cloneFormTemplate(templateId, targetId, locale = 'ru') {
+  const template = document.getElementById(templateId);
+  const target = document.getElementById(targetId);
+  
+  if (template && target) {
+    const clone = template.content.cloneNode(true);
+    target.appendChild(clone);
+    
+    // Инициализация формы после клонирования
+    if (window.tiarkelForms) {
+      window.tiarkelForms.initializeForms();
+    }
+  }
+}
+</script> 

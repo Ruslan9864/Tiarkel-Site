@@ -1,0 +1,99 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="portfolio-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4B0082;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8A2BE2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="portfolio-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9370DB;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#4B0082;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="url(#portfolio-bg)"/>
+  
+  <!-- Designer Portfolio -->
+  <g transform="translate(20, 20)">
+    <!-- Header -->
+    <rect x="0" y="0" width="260" height="30" rx="4" fill="#9370DB" opacity="0.8"/>
+    <text x="130" y="20" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">
+      🎨 Elena Design
+    </text>
+    
+    <!-- Hero Section -->
+    <rect x="0" y="40" width="260" height="50" rx="4" fill="url(#portfolio-card)" stroke="#9370DB" stroke-width="1"/>
+    <text x="130" y="60" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="700">
+      Веб-дизайнер & UI/UX
+    </text>
+    <text x="130" y="75" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">
+      Создаю современные цифровые решения
+    </text>
+    
+    <!-- Portfolio Grid -->
+    <rect x="0" y="100" width="80" height="50" rx="4" fill="url(#portfolio-card)" stroke="#9370DB" stroke-width="1"/>
+    <text x="40" y="115" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">
+      🏠 Лендинг
+    </text>
+    <text x="40" y="130" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      E-commerce
+    </text>
+    <text x="40" y="145" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      +15% конверсия
+    </text>
+    
+    <rect x="90" y="100" width="80" height="50" rx="4" fill="url(#portfolio-card)" stroke="#9370DB" stroke-width="1"/>
+    <text x="130" y="115" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">
+      📱 Мобильное приложение
+    </text>
+    <text x="130" y="130" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      FinTech
+    </text>
+    <text x="130" y="145" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      4.8★ рейтинг
+    </text>
+    
+    <rect x="180" y="100" width="80" height="50" rx="4" fill="url(#portfolio-card)" stroke="#9370DB" stroke-width="1"/>
+    <text x="220" y="115" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">
+      🎨 Брендинг
+    </text>
+    <text x="220" y="130" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      Startup
+    </text>
+    <text x="220" y="145" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      Полный пакет
+    </text>
+    
+    <!-- Skills -->
+    <rect x="0" y="160" width="50" height="20" rx="10" fill="#9370DB" opacity="0.7"/>
+    <text x="25" y="172" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      Figma
+    </text>
+    
+    <rect x="60" y="160" width="50" height="20" rx="10" fill="#9370DB" opacity="0.7"/>
+    <text x="85" y="172" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      HTML/CSS
+    </text>
+    
+    <rect x="120" y="160" width="50" height="20" rx="10" fill="#9370DB" opacity="0.7"/>
+    <text x="145" y="172" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      JavaScript
+    </text>
+    
+    <rect x="180" y="160" width="50" height="20" rx="10" fill="#9370DB" opacity="0.7"/>
+    <text x="205" y="172" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
+      WordPress
+    </text>
+    
+    <!-- Contact Button -->
+    <rect x="80" y="185" width="100" height="20" rx="10" fill="#9370DB"/>
+    <text x="130" y="197" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9" font-weight="600">
+      СВЯЗАТЬСЯ
+    </text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <circle cx="50" cy="190" r="2" fill="#9370DB" opacity="0.6"/>
+  <circle cx="250" cy="40" r="3" fill="#9370DB" opacity="0.4"/>
+  <circle cx="280" cy="160" r="2" fill="#9370DB" opacity="0.6"/>
+</svg> 

@@ -3,23 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Услуги дизайна - Школа Татьяны Аракеловой</title>
-    <meta name="description" content="Профессиональные услуги графического дизайна: логотипы, фирменный стиль, упаковка, реклама.">
+    <title>Услуги дизайна — Tiarkel | Руслан Рустамов</title>
+    <meta name="description" content="Профессиональные услуги дизайна от Tiarkel: брендинг, логотипы, фирменный стиль, упаковка, реклама. Создаем качественные решения для вашего бизнеса.">
+    <meta name="author" content="Руслан Рустамов">
+    <link rel="canonical" href="https://ruslan9864.github.io/Tiarkel-Site/services.html">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Tiarkel">
+    <meta property="og:title" content="Услуги дизайна — Tiarkel | Руслан Рустамов">
+    <meta property="og:description" content="Профессиональные услуги дизайна: брендинг, логотипы, фирменный стиль, упаковка, реклама.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ruslan9864.github.io/Tiarkel-Site/services.html">
+    <meta property="og:image" content="https://ruslan9864.github.io/Tiarkel-Site/assets/og/og-services.jpg">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Услуги дизайна — Tiarkel">
+    <meta name="twitter:description" content="Профессиональные услуги дизайна: брендинг, логотипы, фирменный стиль.">
+    <meta name="twitter:image" content="https://ruslan9864.github.io/Tiarkel-Site/assets/og/og-services.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Услуги дизайна Tiarkel",
+        "description": "Профессиональные услуги дизайна от Tiarkel: брендинг, логотипы, фирменный стиль, упаковка, реклама.",
+        "url": "https://ruslan9864.github.io/Tiarkel-Site/services.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tiarkel",
+            "url": "https://ruslan9864.github.io/Tiarkel-Site/",
+            "brand": {
+                "@type": "Brand",
+                "name": "Tiarkel"
+            }
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Руслан Рустамов",
+            "url": "https://ruslan9864.github.io/Tiarkel-Site/"
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="nav">
-                <button class="burger mobile-menu-toggle" aria-label="Открыть меню">
+                <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
                 <div class="nav-center">
-                    <a href="index.html" class="logo">
-                        <img src="Logo.svg" alt="Логотип" class="logo-img" />
-                        <div class="logo-descriptor">Школа Татьяны Аракеловой</div>
+                    <a href="index.html" class="logo" aria-label="На главную">
+                        <img src="Logo.svg" alt="Tiarkel — бренд-дизайн и обучение" class="logo-img" loading="eager" />
+                        <div class="logo-descriptor">Tiarkel — Школа брендинга и дизайна</div>
                     </a>
                 </div>
                 <div class="nav-right">
@@ -29,19 +70,20 @@
                             <path d="M8 1L15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
-                    <button class="btn-secondary" id="header-cta">Заказать дизайн</button>
+                    <button class="btn-primary" id="header-cta" onclick="scrollToSection('contact')">Записаться</button>
                 </div>
             </nav>
-            <div class="nav-drawer" id="nav-drawer">
-                <button class="drawer-close">×</button>
+            <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Основное меню">
+                <button class="drawer-close" aria-label="Закрыть меню">×</button>
                 <div class="nav-menu-container">
                     <ul class="nav-menu">
                         <li><a href="index.html">Главная</a></li>
+                        <li><a href="index.html#about">О курсе</a></li>
+                        <li><a href="index.html#program">Программа</a></li>
+                        <li><a href="index.html#reviews">Отзывы</a></li>
                         <li><a href="cases.html">Работы учеников</a></li>
-                        <li><a href="program.html">Программа</a></li>
-                        <li><a href="courses/osnovnoy-kurs.html">Основной курс</a></li>
                         <li><a href="services.html" aria-current="page">Услуги дизайна</a></li>
-                        <li><a href="#contact">Обратная связь</a></li>
+                        <li><a href="index.html#contact">Записаться</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,227 +91,98 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-left">
-                    <h1 class="hero-title">
-                        Услуги<br>Графического Дизайна
-                    </h1>
-                    <p class="hero-subtitle">
-                        Профессиональные дизайн-решения<br>
-                        для развития вашего бизнеса
-                    </p>
-                    <div class="hero-badges">
-                        <span class="badge">ЛОГОТИПЫ</span>
-                        <span class="badge">ФИРМЕННЫЙ СТИЛЬ</span>
-                        <span class="badge">УПАКОВКА</span>
-                        <span class="badge">РЕКЛАМА</span>
-                    </div>
-                </div>
-                <div class="hero-right">
-                    <div class="hero-card">
-                        <h2>ДИЗАЙН<br>УСЛУГИ</h2>
-                        <p class="hero-description">
-                            Создаем качественные дизайн-решения,
-                            которые помогают бизнесу расти и развиваться
-                        </p>
-                        <button class="btn-primary btn-large">Заказать консультацию</button>
-                        <div class="hero-info">
-                            <p>от 110$ за проект</p>
-                            <p>срок от 3 дней</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Main Content -->
-    <main class="main">
+    <main class="main" id="main">
         <div class="container">
-            <!-- Services Overview -->
-            <section class="services-overview">
-                <h2 class="section-title">НАШИ УСЛУГИ</h2>
-                <p class="section-subtitle">Полный спектр дизайн-услуг для вашего бизнеса</p>
+            <section class="services-overview" aria-label="Услуги дизайна">
+                <h1 class="section-title">УСЛУГИ ДИЗАЙНА</h1>
+                <p class="section-subtitle">Профессиональные решения для вашего бизнеса</p>
                 
                 <div class="services-grid">
-                    <!-- Logo Design -->
-                    <div class="service-card featured">
-                        <div class="service-icon">
-                            <div class="icon-square logo-icon"><span class="icon-text">L</span></div>
-                        </div>
-                        <h3>Разработка логотипов</h3>
-                        <p class="service-description">
-                            Создаем уникальные и запоминающиеся логотипы, которые отражают суть вашего бренда.
-                        </p>
-                        <div class="service-features">
-                            <div class="feature">
-                                <span class="feature-icon">✓</span>
-                                <span>1-5 вариантов логотипа</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✓</span>
-                                <span>Векторные форматы</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✓</span>
-                                <span>Адаптация под носители</span>
-                            </div>
-                        </div>
+                    <div class="service-card">
+                        <div class="service-icon logo-icon">🎨</div>
+                        <h3>Логотипы и брендинг</h3>
+                        <p class="service-description">Создание уникальных логотипов и разработка бренд-стратегии</p>
+                        <ul class="service-features">
+                            <li><span class="feature-icon">✓</span>Анализ конкурентов</li>
+                            <li><span class="feature-icon">✓</span>Концепция бренда</li>
+                            <li><span class="feature-icon">✓</span>Векторные логотипы</li>
+                        </ul>
                         <div class="service-price">
                             <span class="price-from">от</span>
-                            <span class="price-amount">$110</span>
+                            <span class="price-amount">$500</span>
                         </div>
-                        <button class="btn-primary">Заказать логотип</button>
                     </div>
-
-                    <!-- Brand Identity -->
+                    
                     <div class="service-card">
-                        <div class="service-icon">
-                            <div class="icon-square brand-icon"><span class="icon-text">B</span></div>
-                        </div>
+                        <div class="service-icon brand-icon">🏢</div>
                         <h3>Фирменный стиль</h3>
-                        <p class="service-description">
-                            Разрабатываем комплексную айдентику бренда: цветовую палитру, типографику, графические элементы.
-                        </p>
-                        <div class="service-features">
-                            <div class="feature">
-                                <span class="feature-icon">✓</span>
-                                <span>Логотип + айдентика</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✓</span>
-                                <span>Цветовая палитра</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✓</span>
-                                <span>Гайдлайн</span>
-                            </div>
-                        </div>
+                        <p class="service-description">Полный комплект фирменной айдентики для компании</p>
+                        <ul class="service-features">
+                            <li><span class="feature-icon">✓</span>Брендбук</li>
+                            <li><span class="feature-icon">✓</span>Визитки и бланки</li>
+                            <li><span class="feature-icon">✓</span>Презентации</li>
+                        </ul>
                         <div class="service-price">
                             <span class="price-from">от</span>
                             <span class="price-amount">$800</span>
                         </div>
-                        <button class="btn-primary">Заказать айдентику</button>
                     </div>
-
-                    <!-- Packaging -->
+                    
                     <div class="service-card">
-                        <div class="service-icon">
-                            <div class="icon-square package-icon"><span class="icon-text">P</span></div>
-                        </div>
-                        <h3>Дизайн упаковки</h3>
-                        <p class="service-description">
-                            Создаем привлекательную и функциональную упаковку, которая выделяет ваш продукт на полке.
-                        </p>
-                        <div class="service-features">
-                            <div class="feature">
-                                <span class="feature-icon">✓</span>
-                                <span>Концепция упаковки</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✓</span>
-                                <span>3D визуализация</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✓</span>
-                                <span>Макет для печати</span>
-                            </div>
-                        </div>
+                        <div class="service-icon package-icon">📦</div>
+                        <h3>Упаковка и этикетки</h3>
+                        <p class="service-description">Дизайн упаковки для продуктов и товаров</p>
+                        <ul class="service-features">
+                            <li><span class="feature-icon">✓</span>3D-мокапы</li>
+                            <li><span class="feature-icon">✓</span>Подготовка к печати</li>
+                            <li><span class="feature-icon">✓</span>Различные форматы</li>
+                        </ul>
                         <div class="service-price">
                             <span class="price-from">от</span>
-                            <span class="price-amount">$250</span>
+                            <span class="price-amount">$300</span>
                         </div>
-                        <button class="btn-primary">Заказать упаковку</button>
                     </div>
-
-                    <!-- Advertising -->
+                    
                     <div class="service-card">
-                        <div class="service-icon">
-                            <div class="icon-square ad-icon"><span class="icon-text">A</span></div>
-                        </div>
+                        <div class="service-icon ad-icon">📢</div>
                         <h3>Рекламные материалы</h3>
-                        <p class="service-description">
-                            Разрабатываем эффективные рекламные материалы: баннеры, листовки, буклеты.
-                        </p>
-                        <div class="service-features">
-                            <div class="feature">
-                                <span class="feature-icon">✓</span>
-                                <span>Баннеры и плакаты</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✓</span>
-                                <span>Листовки и буклеты</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✓</span>
-                                <span>Социальные сети</span>
-                            </div>
-                        </div>
+                        <p class="service-description">Создание эффективной рекламы для всех каналов</p>
+                        <ul class="service-features">
+                            <li><span class="feature-icon">✓</span>Баннеры для соцсетей</li>
+                            <li><span class="feature-icon">✓</span>Наружная реклама</li>
+                            <li><span class="feature-icon">✓</span>Печатные материалы</li>
+                        </ul>
                         <div class="service-price">
                             <span class="price-from">от</span>
-                            <span class="price-amount">$40</span>
+                            <span class="price-amount">$200</span>
                         </div>
-                        <button class="btn-primary">Заказать рекламу</button>
                     </div>
                 </div>
             </section>
-
-            <!-- Process Section -->
-            <section class="process-section">
+            
+            <section class="process-section" aria-label="Как мы работаем">
                 <h2 class="section-title">КАК МЫ РАБОТАЕМ</h2>
-                <p class="section-subtitle">Прозрачный процесс работы над вашим проектом</p>
-                
                 <div class="process-grid">
                     <div class="process-step">
-                        <div class="step-number">01</div>
+                        <div class="step-number">1</div>
                         <h3>Брифинг</h3>
-                        <p>Изучаем ваши потребности, цели и задачи. Определяем концепцию проекта.</p>
+                        <p>Изучаем ваши потребности и цели проекта</p>
                     </div>
-                    
                     <div class="process-step">
-                        <div class="step-number">02</div>
+                        <div class="step-number">2</div>
                         <h3>Концепция</h3>
-                        <p>Разрабатываем несколько концепций дизайна. Представляем варианты для выбора.</p>
+                        <p>Разрабатываем несколько вариантов концепции</p>
                     </div>
-                    
                     <div class="process-step">
-                        <div class="step-number">03</div>
-                        <h3>Разработка</h3>
-                        <p>Создаем финальный дизайн на основе выбранной концепции.</p>
+                        <div class="step-number">3</div>
+                        <h3>Реализация</h3>
+                        <p>Создаем финальный дизайн и готовим к использованию</p>
                     </div>
-                    
                     <div class="process-step">
-                        <div class="step-number">04</div>
-                        <h3>Правки</h3>
-                        <p>Вносим необходимые корректировки. Работаем до полного удовлетворения.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">05</div>
-                        <h3>Финальная подготовка</h3>
-                        <p>Подготавливаем все файлы в нужных форматах.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">06</div>
-                        <h3>Передача</h3>
-                        <p>Передаем готовый проект. Обеспечиваем поддержку и консультации.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section class="contact-section" id="contact">
-                <div class="contact-container">
-                    <div class="contact-left">
-                        <h2 class="contact-title">ГОТОВЫ НАЧАТЬ ПРОЕКТ?</h2>
-                        <p class="contact-subtitle">Оставьте заявку и получите бесплатную консультацию</p>
-                    </div>
-                    <div class="contact-right">
-                        <button class="btn-contact">ОТПРАВИТЬ ЗАЯВКУ</button>
+                        <div class="step-number">4</div>
+                        <h3>Поддержка</h3>
+                        <p>Помогаем с внедрением и дальнейшими правками</p>
                     </div>
                 </div>
             </section>
@@ -283,14 +196,24 @@
                 <div class="footer-social">
                     <h3>НАШИ СОЦСЕТИ</h3>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/tiarkel/" class="social-link">Instagram</a>
-                        <a href="https://t.me/tatvorit" class="social-link">TELEGRAM</a>
-                        <a href="https://www.behance.net/1db30958" class="social-link">behance</a>
-                        <a href="https://www.pinterest.com/tiaara98/" class="social-link">Pinterest</a>
+                        <a href="https://www.instagram.com/tiarkel/" class="social-link" aria-label="Instagram">
+                            <span class="social-icon">📷</span>Instagram
+                        </a>
+                        <a href="https://t.me/tatvorit" class="social-link" aria-label="Telegram">
+                            <span class="social-icon">✈️</span>TELEGRAM
+                        </a>
+                        <a href="https://www.behance.net/1db30958" class="social-link" aria-label="Behance">
+                            <span class="social-icon">🎨</span>behance
+                        </a>
+                        <a href="https://www.pinterest.com/tiaara98/" class="social-link" aria-label="Pinterest">
+                            <span class="social-icon">📌</span>Pinterest
+                        </a>
                     </div>
                 </div>
                 <div class="footer-legal">
                     <a href="#" class="legal-link">Договор оферты</a>
+                    <a href="#" class="legal-link">Политика конфиденциальности</a>
+                    <p class="copyright">© Tiarkel, 2025. Все права защищены.</p>
                 </div>
             </div>
         </div>

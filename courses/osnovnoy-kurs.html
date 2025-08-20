@@ -3,27 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Основной курс - Школа Татьяны Аракеловой</title>
-    <meta name="description" content="Полный курс графического дизайна с нуля до профессионала. 3 месяца обучения, 15 работ в портфолио, персональные кураторы. Старт 22 августа.">
-    <link rel="canonical" href="/courses/">
+    <title>Основной курс — Tiarkel | Руслан Рустамов</title>
+    <meta name="description" content="Основной курс Tiarkel: 156 уроков, 6 этапов обучения, портфолио 15 работ. От основ до профессионального уровня в графическом дизайне.">
+    <meta name="author" content="Руслан Рустамов">
+    <link rel="canonical" href="https://ruslan9864.github.io/Tiarkel-Site/courses/osnovnoy-kurs.html">
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Основной курс - Школа Татьяны Аракеловой">
-    <meta property="og:description" content="Полный курс графического дизайна с нуля до профессионала. 3 месяца обучения, 15 работ в портфолио.">
+    <meta property="og:site_name" content="Tiarkel">
+    <meta property="og:title" content="Основной курс — Tiarkel | Руслан Рустамов">
+    <meta property="og:description" content="Основной курс Tiarkel: 156 уроков, 6 этапов обучения, портфолио 15 работ.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/courses/">
-    <meta property="og:image" content="../images/og-course.jpg">
+    <meta property="og:url" content="https://ruslan9864.github.io/Tiarkel-Site/courses/osnovnoy-kurs.html">
+    <meta property="og:image" content="https://ruslan9864.github.io/Tiarkel-Site/assets/og/og-course.jpg">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Основной курс - Школа Татьяны Аракеловой">
-    <meta name="twitter:description" content="Полный курс графического дизайна с нуля до профессионала.">
+    <meta name="twitter:title" content="Основной курс — Tiarkel">
+    <meta name="twitter:description" content="156 уроков, 6 этапов обучения, портфолио 15 работ.">
+    <meta name="twitter:image" content="https://ruslan9864.github.io/Tiarkel-Site/assets/og/og-course.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Tiarkel — Основной курс по брендингу и дизайну",
+        "description": "Основной курс Tiarkel: 156 уроков, 6 этапов обучения, портфолио 15 работ. От основ до профессионального уровня в графическом дизайне.",
+        "inLanguage": ["ru","uz"],
+        "provider": {
+            "@type": "Organization",
+            "name": "Tiarkel",
+            "url": "https://ruslan9864.github.io/Tiarkel-Site/",
+            "brand": {
+                "@type": "Brand",
+                "name": "Tiarkel"
+            }
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Руслан Рустамов",
+            "url": "https://ruslan9864.github.io/Tiarkel-Site/"
+        },
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "Full-time",
+            "startDate": "2025-09-01",
+            "endDate": "2025-12-01",
+            "location": {
+                "@type": "Place",
+                "name": "Online"
+            }
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "239",
+            "highPrice": "1099",
+            "offerCount": "4",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "name": "LITE",
+                    "price": "239",
+                    "priceCurrency": "USD",
+                    "url": "https://ruslan9864.github.io/Tiarkel-Site/pricing.html#lite"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "PRO",
+                    "price": "399",
+                    "priceCurrency": "USD",
+                    "url": "https://ruslan9864.github.io/Tiarkel-Site/pricing.html#pro"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "STUDIO",
+                    "price": "479",
+                    "priceCurrency": "USD",
+                    "url": "https://ruslan9864.github.io/Tiarkel-Site/pricing.html#studio"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "VIP",
+                    "price": "1099",
+                    "priceCurrency": "USD",
+                    "url": "https://ruslan9864.github.io/Tiarkel-Site/pricing.html#vip"
+                }
+            ]
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="nav">
                 <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
@@ -31,12 +106,18 @@
                 </button>
                 <div class="nav-center">
                     <a href="../index.html" class="logo" aria-label="На главную">
-                        <img src="../Logo.svg" alt="Логотип" class="logo-img" />
-                        <div class="logo-descriptor">Школа Татьяны Аракеловой</div>
+                        <img src="../Logo.svg" alt="Tiarkel — бренд-дизайн и обучение" class="logo-img" loading="eager" />
+                        <div class="logo-descriptor">Tiarkel — Школа брендинга и дизайна</div>
                     </a>
                 </div>
                 <div class="nav-right">
-                    <button class="btn-secondary" id="header-cta">Кнопка</button>
+                    <button class="language-switcher" aria-label="Переключить язык">
+                        <span class="language-indicator">RU</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 1L15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="btn-primary" id="header-cta" onclick="scrollToSection('contact')">Записаться</button>
                 </div>
             </nav>
             <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Основное меню">
@@ -44,13 +125,12 @@
                 <div class="nav-menu-container">
                     <ul class="nav-menu">
                         <li><a href="../index.html">Главная</a></li>
-                        <li><a href="../cases.html">Работы учеников</a></li>
+                        <li><a href="../index.html#about">О курсе</a></li>
                         <li><a href="../program.html">Программа</a></li>
-                        <li><a href="osnovnoy-kurs.html" aria-current="page">Основной курс</a></li>
+                        <li><a href="../index.html#reviews">Отзывы</a></li>
+                        <li><a href="../cases.html">Работы учеников</a></li>
                         <li><a href="../services.html">Услуги дизайна</a></li>
-                        <li><a href="#pricing">Тарифы</a></li>
-                        <li><a href="#reviews">Отзывы</a></li>
-                        <li><a href="#contact">Обратная связь</a></li>
+                        <li><a href="../index.html#contact">Записаться</a></li>
                     </ul>
                 </div>
             </div>
@@ -59,26 +139,30 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-left">
                     <h1 class="hero-title">
-                        Дизайн Школа<br>Татьяны Аракеловой</span>
+                        Tiarkel — <br>Основной курс<br>графического дизайна
                     </h1>
+                    <p class="hero-subtitle">
+                        Освой профессию за 3 месяца и создавай проекты мирового уровня
+                    </p>
                     <div class="hero-badges">
+                        <span class="badge">156 УРОКОВ</span>
+                        <span class="badge">15 РАБОТ В ПОРТФОЛИО</span>
                         <span class="badge">ПОДДЕРЖКА НАСТАВНИКА</span>
-                        <span class="badge">ПРАКТИКА НА РЕАЛЬНЫХ ПРОЕКТАХ</span>
-                        <span class="badge">ПОРТФОЛИО - 15 работ</span>
                         <span class="badge">НАБОР ОТКРЫТ</span>
                     </div>
+                    <button class="btn-primary btn-large" onclick="scrollToSection('contact')">Записаться на курс</button>
                 </div>
                 <div class="hero-right">
                     <div class="hero-card">
                         <h2>ДИЗАЙНА<br>ЛАБОРАТОРИЯ</h2>
                         <div class="hero-badges-mobile">
-                            <span class="badge">ПОДДЕРЖКА НАСТАВНИКА</span>
-                            <span class="badge">ПРАКТИКА НА РЕАЛЬНЫХ ПРОЕКТАХ</span>
+                            <span class="badge">156 УРОКОВ</span>
+                            <span class="badge">15 РАБОТ В ПОРТФОЛИО</span>
                         </div>
                         <p class="hero-description">
                             За 3 месяца освой навыки,
@@ -96,14 +180,35 @@
     </section>
 
     <!-- Main Content -->
-    <main class="main">
+    <main class="main" id="main">
         <div class="container">
-            <!-- Hero Description -->
-            <section class="hero-desc">
-                <p class="hero-desc-text">
-                    Освой профессию за 3 месяца и создавай проекты мирового уровня<br>
-                    благодаря которым ты выйдешь + $2000 на графическом дизайне
-                </p>
+            <!-- Course Overview Section -->
+            <section class="course-overview-section" aria-label="Обзор курса">
+                <h2 class="section-title">О КУРСЕ</h2>
+                <p class="section-subtitle">Подробная информация о программе обучения</p>
+                
+                <div class="course-stats">
+                    <div class="stat-item">
+                        <h3>156</h3>
+                        <p>уроков</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>6</h3>
+                        <p>этапов</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>15</h3>
+                        <p>работ в портфолио</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>3</h3>
+                        <p>месяца</p>
+                    </div>
+                </div>
+                
+                <div class="course-description">
+                    <p>Основной курс Tiarkel — это комплексная программа обучения графическому дизайну, которая поможет вам освоить профессию с нуля и создать качественное портфолио для начала карьеры.</p>
+                </div>
             </section>
 
             <!-- Tools Section -->
@@ -145,6 +250,42 @@
                         </div>
                         <span class="tool-name">Canva Pro</span>
                     </div>
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <div class="icon-square ae-icon"><span class="icon-text">Ae</span></div>
+                        </div>
+                        <span class="tool-name">Adobe After Effects</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <div class="icon-square pr-icon"><span class="icon-text">Pr</span></div>
+                        </div>
+                        <span class="tool-name">Adobe Premiere Pro</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <div class="icon-square xd-icon"><span class="icon-text">Xd</span></div>
+                        </div>
+                        <span class="tool-name">Adobe XD</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <div class="icon-square sketch-icon"><span class="icon-text">Sk</span></div>
+                        </div>
+                        <span class="tool-name">Sketch</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <div class="icon-square blender-icon"><span class="icon-text">Bl</span></div>
+                        </div>
+                        <span class="tool-name">Blender</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <div class="icon-square cinema-icon"><span class="icon-text">C4D</span></div>
+                        </div>
+                        <span class="tool-name">Cinema 4D</span>
+                    </div>
                 </div>
             </section>
 
@@ -169,17 +310,23 @@
                         </p>
                         <div class="vacancies-grid">
                             <div class="vacancy-item">Графический дизайнер</div>
-                            <div class="vacancy-item">Дизайнер-иллюстратор</div>
-                            <div class="vacancy-item">Веб-дизайнер</div>
                             <div class="vacancy-item">UI/UX дизайнер</div>
-                            <div class="vacancy-item">Дизайнер упаковки</div>
-                            <div class="vacancy-item">Арт-директор</div>
-                            <div class="vacancy-item">Дизайнер полиграфии</div>
+                            <div class="vacancy-item">Веб-дизайнер</div>
+                            <div class="vacancy-item">Дизайнер-иллюстратор</div>
                             <div class="vacancy-item">Бренд-дизайнер</div>
+                            <div class="vacancy-item">Дизайнер упаковки</div>
+                            <div class="vacancy-item">SMM дизайнер</div>
+                            <div class="vacancy-item">Дизайнер полиграфии</div>
+                            <div class="vacancy-item">Арт-директор</div>
                             <div class="vacancy-item">Дизайнер рекламы</div>
                             <div class="vacancy-item">Верстальщик</div>
                             <div class="vacancy-item">Дизайнер презентаций</div>
-                            <div class="vacancy-item">SMM дизайнер</div>
+                            <div class="vacancy-item">Моушн-дизайнер</div>
+                            <div class="vacancy-item">3D дизайнер</div>
+                            <div class="vacancy-item">Дизайнер интерфейсов</div>
+                            <div class="vacancy-item">Дизайнер логотипов</div>
+                            <div class="vacancy-item">Дизайнер баннеров</div>
+                            <div class="vacancy-item">Дизайнер каталогов</div>
                         </div>
                     </div>
 
@@ -194,17 +341,17 @@
                         </p>
                         <div class="earnings-tiers">
                             <div class="earning-tier junior">
-                                <div class="tier-bar junior-bar"></div>
+                                <div class="tier-bar junior-bar" style="width: 30%;"></div>
                                 <span class="tier-name">Junior</span>
                                 <span class="tier-salary">$700+</span>
                             </div>
                             <div class="earning-tier middle">
-                                <div class="tier-bar middle-bar"></div>
+                                <div class="tier-bar middle-bar" style="width: 60%;"></div>
                                 <span class="tier-name">Middle</span>
                                 <span class="tier-salary">$1500+</span>
                             </div>
                             <div class="earning-tier senior">
-                                <div class="tier-bar senior-bar"></div>
+                                <div class="tier-bar senior-bar" style="width: 100%;"></div>
                                 <span class="tier-name">Senior</span>
                                 <span class="tier-salary">$2500+</span>
                             </div>
@@ -215,19 +362,52 @@
                     <div class="profession-item card card--services">
                         <h3>/ КАКИЕ СМОЖЕТЕ ПРЕДОСТАВЛЯТЬ УСЛУГИ</h3>
                         <div class="services-divider"></div>
-                        <ul class="services-list">
-                            <li>Разработка фирменного стиля <span class="service-price">от 800$</span></li>
-                            <li>Разработка 1 варианта логотипа <span class="service-price">от 110$</span></li>
-                            <li>Разработка 5 вариантов логотипа <span class="service-price">от 250$</span></li>
-                            <li>Анимация логотипа <span class="service-price">от 150$</span></li>
-                            <li>Редизайн логотипа <span class="service-price">от 120$</span></li>
-                            <li>Создание печатной продукции <span class="service-price">от 25-80$</span></li>
-                            <li>Создание графики для маркет-плейсов <span class="service-price">от 50$</span></li>
-                            <li>Рекламные баннеры <span class="service-price">от 40$</span></li>
-                            <li>Дизайн презентации <span class="service-price">от 110$</span></li>
-                            <li>Создание иллюстрации <span class="service-price">от 250$</span></li>
-                            <li>Верстка многостраничной продукции <span class="service-price">от 300$</span></li>
-                        </ul>
+                        <div class="services-grid">
+                            <div class="service-item">
+                                <span class="service-name">Разработка фирменного стиля</span>
+                                <span class="service-price">от 800$</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Разработка 1 варианта логотипа</span>
+                                <span class="service-price">от 110$</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Разработка 5 вариантов логотипа</span>
+                                <span class="service-price">от 250$</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Анимация логотипа</span>
+                                <span class="service-price">от 150$</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Редизайн логотипа</span>
+                                <span class="service-price">от 120$</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Создание печатной продукции</span>
+                                <span class="service-price">от 25-80$</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Создание графики для маркет-плейсов</span>
+                                <span class="service-price">от 50$</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Рекламные баннеры</span>
+                                <span class="service-price">от 40$</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Дизайн презентации</span>
+                                <span class="service-price">от 110$</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Создание иллюстрации</span>
+                                <span class="service-price">от 250$</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Верстка многостраничной продукции</span>
+                                <span class="service-price">от 300$</span>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Resume -->
@@ -250,6 +430,22 @@
                             <div class="tool-icon">
                                 <div class="icon-square affinity-icon"><span class="icon-symbol">∞</span></div>
                                 <span class="tool-name">Affinity Designer</span>
+                            </div>
+                            <div class="tool-icon">
+                                <div class="icon-square figma-icon"><span class="icon-text">F</span></div>
+                                <span class="tool-name">Figma</span>
+                            </div>
+                            <div class="tool-icon">
+                                <div class="icon-square canva-icon"><span class="icon-text">C</span></div>
+                                <span class="tool-name">Canva Pro</span>
+                            </div>
+                            <div class="tool-icon">
+                                <div class="icon-square ae-icon"><span class="icon-text">Ae</span></div>
+                                <span class="tool-name">Adobe After Effects</span>
+                            </div>
+                            <div class="tool-icon">
+                                <div class="icon-square pr-icon"><span class="icon-text">Pr</span></div>
+                                <span class="tool-name">Adobe Premiere Pro</span>
                             </div>
                         </div>
                         <h4 class="resume-subtitle">КЛЮЧЕВЫЕ НАВЫКИ, КОТОРЫЕ ОСВОИТЕ:</h4>
@@ -286,7 +482,7 @@
                     <!-- About School -->
                     <div class="profession-item card card--about">
                         <p class="about-school">
-                            / Наша школа – ваш надежный наставник в освоении графического дизайна с нуля. Мы понимаем ваши страхи, сомнения и готовы предоставить все необходимые ресурсы и поддержку для вашего успеха.
+                            <strong>/ Наша школа – ваш надежный наставник в освоении графического дизайна с нуля.</strong> Мы понимаем ваши страхи, сомнения и готовы предоставить все необходимые ресурсы и поддержку для вашего успеха.
                         </p>
                     </div>
                 </div>
@@ -738,10 +934,25 @@
                 <div class="contact-container">
                     <div class="contact-left">
                         <h2 class="contact-title">ОСТАЛИСЬ ВОПРОСЫ?</h2>
-                        <p class="contact-subtitle">напишите в поддержку</p>
+                        <p class="contact-subtitle">Не стесняйтесь спрашивать — мы всегда на связи!</p>
+                        <div class="contact-features">
+                            <div class="contact-feature">
+                                <span class="feature-icon">💬</span>
+                                <span>Быстрые ответы в Telegram</span>
+                            </div>
+                            <div class="contact-feature">
+                                <span class="feature-icon">📧</span>
+                                <span>Поддержка 24/7</span>
+                            </div>
+                            <div class="contact-feature">
+                                <span class="feature-icon">🎯</span>
+                                <span>Персональная консультация</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="contact-right">
-                        <button class="btn-contact">НАПИСАТЬ</button>
+                        <button class="btn-contact">НАПИСАТЬ В ПОДДЕРЖКУ</button>
+                        <p class="contact-note">Ответим в течение 2 часов</p>
                     </div>
                 </div>
             </section>
@@ -755,19 +966,30 @@
                 <div class="footer-social">
                     <h3>НАШИ СОЦСЕТИ</h3>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/tiarkel/" class="social-link">Instagram</a>
-                        <a href="https://t.me/tatvorit" class="social-link">TELEGRAM</a>
-                        <a href="https://www.behance.net/1db30958" class="social-link">behance</a>
-                        <a href="https://www.pinterest.com/tiaara98/" class="social-link">Pinterest</a>
+                        <a href="https://www.instagram.com/tiarkel/" class="social-link" aria-label="Instagram">
+                            <span class="social-icon">📷</span>Instagram
+                        </a>
+                        <a href="https://t.me/tatvorit" class="social-link" aria-label="Telegram">
+                            <span class="social-icon">✈️</span>TELEGRAM
+                        </a>
+                        <a href="https://www.behance.net/1db30958" class="social-link" aria-label="Behance">
+                            <span class="social-icon">🎨</span>behance
+                        </a>
+                        <a href="https://www.pinterest.com/tiaara98/" class="social-link" aria-label="Pinterest">
+                            <span class="social-icon">📌</span>Pinterest
+                        </a>
                     </div>
                 </div>
                 <div class="footer-legal">
                     <a href="#" class="legal-link">Договор оферты</a>
+                    <a href="#" class="legal-link">Политика конфиденциальности</a>
+                    <p class="copyright">© Tiarkel, 2025. Все права защищены.</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="../script.js"></script>
+    <script src="../navigation.js"></script>
 </body>
 </html> 

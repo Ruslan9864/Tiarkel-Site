@@ -3,13 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ — ДИЗАЙНА ЛАБОРАТОРИЯ</title>
+    <title>FAQ — Часто задаваемые вопросы | Tiarkel</title>
+    <meta name="description" content="Ответы на часто задаваемые вопросы о курсе Tiarkel: формат обучения, программы, поддержка, трудоустройство. Все, что нужно знать перед поступлением.">
+    <meta name="author" content="Руслан Рустамов">
+    <link rel="canonical" href="https://ruslan9864.github.io/Tiarkel-Site/faq.html">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Tiarkel">
+    <meta property="og:title" content="FAQ — Часто задаваемые вопросы | Tiarkel">
+    <meta property="og:description" content="Ответы на часто задаваемые вопросы о курсе Tiarkel: формат обучения, программы, поддержка.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ruslan9864.github.io/Tiarkel-Site/faq.html">
+    <meta property="og:image" content="https://ruslan9864.github.io/Tiarkel-Site/assets/og/og-faq.jpg">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FAQ — Часто задаваемые вопросы | Tiarkel">
+    <meta name="twitter:description" content="Ответы на часто задаваемые вопросы о курсе Tiarkel.">
+    <meta name="twitter:image" content="https://ruslan9864.github.io/Tiarkel-Site/assets/og/og-faq.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Нужны ли навыки дизайна для начала обучения?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Нет, курс рассчитан на начинающих. Начинаем с основ и постепенно переходим к сложным темам. Главное — желание учиться и практиковаться."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Какие программы нужны для обучения?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Adobe Illustrator, Photoshop, InDesign. Поможем с установкой и настройкой программ. Также изучаем Figma и другие современные инструменты."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Сколько времени нужно уделять обучению?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Рекомендуем 2-3 часа в день для комфортного прохождения курса. Но можешь заниматься в своём темпе — все уроки доступны в записи."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Помогаете ли с трудоустройством?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Да, в тарифах PRO и VIP помогаем с составлением портфолио, резюме и поиском первых заказов. Также у нас есть карьерный канал с вакансиями."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Можно ли получить возврат средств?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Да, в течение 7 дней после покупки курса можешь вернуть средства, если курс не подошёл. Подробные условия в договоре оферты."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Есть ли поддержка после окончания курса?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Да, у тебя остается доступ к материалам курса и общему чату. В тарифах PRO и VIP — персональная поддержка куратора."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="nav">
                 <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
@@ -17,8 +92,8 @@
                 </button>
                 <div class="nav-center">
                     <a href="index.html" class="logo" aria-label="На главную">
-                        <img src="Logo.svg" alt="Логотип" class="logo-img" />
-                        <div class="logo-descriptor">Школа Татьяны Аракеловой</div>
+                        <img src="Logo.svg" alt="Tiarkel — бренд-дизайн и обучение" class="logo-img" loading="eager" />
+                        <div class="logo-descriptor">Tiarkel — Школа брендинга и дизайна</div>
                     </a>
                 </div>
                 <div class="nav-right">
@@ -28,7 +103,7 @@
                             <path d="M8 1L15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
-                    <button class="btn-primary" id="header-cta">Записаться</button>
+                    <button class="btn-primary" id="header-cta" onclick="scrollToSection('contact')">Записаться</button>
                 </div>
             </nav>
             <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Основное меню">
@@ -36,11 +111,12 @@
                 <div class="nav-menu-container">
                     <ul class="nav-menu">
                         <li><a href="index.html">Главная</a></li>
-                        <li><a href="program.html">Программа</a></li>
-                        <li><a href="cases.html">Кейсы</a></li>
-                        <li><a href="pricing.html">Тарифы</a></li>
-                        <li><a href="faq.html" aria-current="page">FAQ</a></li>
-                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="index.html#about">О курсе</a></li>
+                        <li><a href="index.html#program">Программа</a></li>
+                        <li><a href="index.html#reviews">Отзывы</a></li>
+                        <li><a href="cases.html">Работы учеников</a></li>
+                        <li><a href="services.html">Услуги дизайна</a></li>
+                        <li><a href="index.html#contact">Записаться</a></li>
                     </ul>
                 </div>
             </div>
@@ -48,91 +124,103 @@
         </div>
     </header>
 
-    <main class="main" style="padding-top: 100px;">
+    <!-- Main Content -->
+    <main class="main" id="main">
         <div class="container">
-            <section class="faq-section">
+            <section class="faq-section" aria-label="Часто задаваемые вопросы">
                 <h1 class="section-title">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h1>
-                <p class="section-subtitle">Ответы на популярные вопросы о курсе</p>
+                <p class="section-subtitle">Ответы на самые популярные вопросы о курсе</p>
                 
                 <div class="faq-accordion">
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>Сколько длится курс?</span>
-                            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </summary>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Нужны ли навыки дизайна для начала обучения?</span>
+                            <span class="faq-arrow">▼</span>
+                        </button>
                         <div class="faq-answer">
-                            <p>Курс длится 3 месяца и включает 156 уроков (91 теория + 65 практики).</p>
+                            <p>Нет, курс рассчитан на начинающих. Начинаем с основ и постепенно переходим к сложным темам. Главное — желание учиться и практиковаться.</p>
                         </div>
-                    </details>
+                    </div>
                     
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>Нужны ли навыки дизайна для начала?</span>
-                            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>Нет, курс подходит для начинающих. Мы начинаем с основ и постепенно переходим к сложным проектам.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="faq-item">
-                        <summary class="faq-question">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
                             <span>Какие программы нужны для обучения?</span>
-                            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </summary>
+                            <span class="faq-arrow">▼</span>
+                        </button>
                         <div class="faq-answer">
-                            <p>Adobe Illustrator, Photoshop, InDesign. Мы помогаем с установкой и настройкой всех программ.</p>
+                            <p>Adobe Illustrator, Photoshop, InDesign. Поможем с установкой и настройкой программ. Также изучаем Figma и другие современные инструменты.</p>
                         </div>
-                    </details>
+                    </div>
                     
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>Сколько работ будет в портфолио?</span>
-                            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </summary>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Сколько времени нужно уделять обучению?</span>
+                            <span class="faq-arrow">▼</span>
+                        </button>
                         <div class="faq-answer">
-                            <p>За время обучения вы создадите 15 качественных работ для портфолио.</p>
+                            <p>Рекомендуем 2-3 часа в день для комфортного прохождения курса. Но можешь заниматься в своём темпе — все уроки доступны в записи.</p>
                         </div>
-                    </details>
+                    </div>
                     
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>Есть ли поддержка после курса?</span>
-                            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </summary>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Помогаете ли с трудоустройством?</span>
+                            <span class="faq-arrow">▼</span>
+                        </button>
                         <div class="faq-answer">
-                            <p>Да, у вас будет доступ к материалам курса и поддержка в закрытом комьюнити.</p>
+                            <p>Да, в тарифах PRO и VIP помогаем с составлением портфолио, резюме и поиском первых заказов. Также у нас есть карьерный канал с вакансиями.</p>
                         </div>
-                    </details>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Можно ли получить возврат средств?</span>
+                            <span class="faq-arrow">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Да, в течение 7 дней после покупки курса можешь вернуть средства, если курс не подошёл. Подробные условия в договоре оферты.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Есть ли поддержка после окончания курса?</span>
+                            <span class="faq-arrow">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Да, у тебя остается доступ к материалам курса и общему чату. В тарифах PRO и VIP — персональная поддержка куратора.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-social">
                     <h3>НАШИ СОЦСЕТИ</h3>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/tiarkel/" class="social-link">Instagram</a>
-                        <a href="https://t.me/tatvorit" class="social-link">TELEGRAM</a>
-                        <a href="https://www.behance.net/1db30958" class="social-link">behance</a>
-                        <a href="https://www.pinterest.com/tiaara98/" class="social-link">Pinterest</a>
+                        <a href="https://www.instagram.com/tiarkel/" class="social-link" aria-label="Instagram">
+                            <span class="social-icon">📷</span>Instagram
+                        </a>
+                        <a href="https://t.me/tatvorit" class="social-link" aria-label="Telegram">
+                            <span class="social-icon">✈️</span>TELEGRAM
+                        </a>
+                        <a href="https://www.behance.net/1db30958" class="social-link" aria-label="Behance">
+                            <span class="social-icon">🎨</span>behance
+                        </a>
+                        <a href="https://www.pinterest.com/tiaara98/" class="social-link" aria-label="Pinterest">
+                            <span class="social-icon">📌</span>Pinterest
+                        </a>
                     </div>
                 </div>
                 <div class="footer-legal">
                     <a href="#" class="legal-link">Договор оферты</a>
+                    <a href="#" class="legal-link">Политика конфиденциальности</a>
+                    <p class="copyright">© Tiarkel, 2025. Все права защищены.</p>
                 </div>
             </div>
         </div>

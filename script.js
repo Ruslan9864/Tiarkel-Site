@@ -6,6 +6,55 @@ function scrollToSection(sectionId) {
             behavior: 'smooth',
             block: 'start'
         });
+        
+        // Track scroll event for analytics
+        trackEvent('scroll_to_section', {
+            section: sectionId,
+            timestamp: new Date().toISOString()
+        });
+    }
+}
+
+// Analytics tracking function
+function trackEvent(eventName, parameters = {}) {
+    // Google Analytics 4
+    if (typeof gtag !== 'undefined') {
+        gtag('event', eventName, parameters);
+    }
+    
+    // Facebook Pixel
+    if (typeof fbq !== 'undefined') {
+        fbq('track', eventName, parameters);
+    }
+    
+    // Console log for debugging
+    console.log('Event tracked:', eventName, parameters);
+}
+
+// CTA button click tracking
+function trackCTAClick(ctaType, destination) {
+    trackEvent('cta_click', {
+        cta_type: ctaType,
+        destination: destination,
+        page: window.location.pathname,
+        timestamp: new Date().toISOString()
+    });
+}
+
+// Enhanced scroll to section with CTA tracking
+function scrollToSectionWithTracking(sectionId, ctaType = 'navigation') {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+        
+        trackEvent('scroll_to_section', {
+            section: sectionId,
+            cta_type: ctaType,
+            timestamp: new Date().toISOString()
+        });
     }
 }
 
@@ -27,6 +76,13 @@ function toggleFAQ(button) {
     if (!isOpen) {
         content.classList.add('active');
         icon.textContent = '−';
+        
+        // Track FAQ open event
+        const question = button.querySelector('span').textContent;
+        trackEvent('faq_opened', {
+            question: question,
+            timestamp: new Date().toISOString()
+        });
     }
 }
 
@@ -48,16 +104,12 @@ function toggleProgram(button) {
     if (!isOpen) {
         content.classList.add('active');
         icon.textContent = '−';
-    }
-}
-
-// Smooth scroll to section
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+        
+        // Track program section open event
+        const section = button.querySelector('span').textContent;
+        trackEvent('program_section_opened', {
+            section: section,
+            timestamp: new Date().toISOString()
         });
     }
 }
@@ -106,6 +158,115 @@ function isValidEmail(email) {
 function isValidPhone(phone) {
     const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
     return phoneRegex.test(phone);
+}
+
+// Initialize event listeners when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize CTA button tracking
+    initializeCTATracking();
+    
+    // Initialize scroll tracking
+    initializeScrollTracking();
+    
+    // Initialize form tracking
+    initializeFormTracking();
+    
+    // Track page view
+    trackEvent('page_view', {
+        page: window.location.pathname,
+        title: document.title,
+        timestamp: new Date().toISOString()
+    });
+});
+
+// Initialize CTA button tracking
+function initializeCTATracking() {
+    // Track all CTA buttons with data-cta attribute
+    document.querySelectorAll('[data-cta]').forEach(button => {
+        button.addEventListener('click', function(e) {
+            const ctaType = this.getAttribute('data-cta');
+            const destination = this.getAttribute('href') || this.getAttribute('onclick') || 'unknown';
+            
+            trackCTAClick(ctaType, destination);
+        });
+    });
+    
+    // Track hero CTA buttons specifically
+    const heroPricingBtn = document.querySelector('[data-cta="hero_pricing"]');
+    const heroProgramBtn = document.querySelector('[data-cta="hero_program"]');
+    const reviewsCasesBtn = document.querySelector('[data-cta="reviews_cases"]');
+    
+    if (heroPricingBtn) {
+        heroPricingBtn.addEventListener('click', function() {
+            trackCTAClick('hero_pricing', 'pricing.html');
+        });
+    }
+    
+    if (heroProgramBtn) {
+        heroProgramBtn.addEventListener('click', function() {
+            trackCTAClick('hero_program', '#program');
+        });
+    }
+    
+    if (reviewsCasesBtn) {
+        reviewsCasesBtn.addEventListener('click', function() {
+            trackCTAClick('reviews_cases', 'cases.html');
+        });
+    }
+}
+
+// Initialize scroll tracking
+function initializeScrollTracking() {
+    let scrollDepth = 0;
+    const scrollThresholds = [25, 50, 75, 90];
+    
+    window.addEventListener('scroll', function() {
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        
+        scrollThresholds.forEach(threshold => {
+            if (scrollPercent >= threshold && scrollDepth < threshold) {
+                scrollDepth = threshold;
+                trackEvent('scroll_depth', {
+                    depth: threshold,
+                    timestamp: new Date().toISOString()
+                });
+            }
+        });
+    });
+}
+
+// Initialize form tracking
+function initializeFormTracking() {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (validateForm(this)) {
+                trackEvent('form_submitted', {
+                    form_type: 'contact',
+                    timestamp: new Date().toISOString()
+                });
+                
+                // Here you would typically submit the form data
+                // For now, we'll just show a success message
+                showSuccessMessage('Спасибо! Мы свяжемся с вами в ближайшее время.');
+            }
+        });
+    }
+}
+
+// Show success message
+function showSuccessMessage(message) {
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.innerHTML = `
+            <div class="success-message">
+                <h3>✅ ${message}</h3>
+                <p>Мы получили вашу заявку и ответим в течение 2 часов.</p>
+            </div>
+        `;
+    }
 }
 
 // Smooth scrolling for navigation links

@@ -2,6 +2,12 @@
   "ru": {
     "main_sections": [
       {
+        "id": "home",
+        "title": "Главная",
+        "url": "index.html",
+        "sub_sections": []
+      },
+      {
         "id": "about-course",
         "title": "О курсе",
         "url": "#about",
@@ -20,9 +26,9 @@
         "sub_sections": []
       },
       {
-        "id": "projects",
-        "title": "Проекты учеников",
-        "url": "projects.html",
+        "id": "services",
+        "title": "Услуги дизайна",
+        "url": "services.html",
         "sub_sections": []
       },
       {
@@ -45,53 +51,17 @@
             "url": "#contact"
           }
         ]
-      },
-      {
-        "id": "portfolio",
-        "title": "Портфолио",
-        "sub_sections": [
-          {
-            "id": "studio-works",
-            "title": "Работы студии (кейсы)",
-            "url": "cases.html"
-          },
-          {
-            "id": "student-projects",
-            "title": "Проекты студентов",
-            "url": "projects.html"
-          },
-          {
-            "id": "design-services",
-            "title": "Услуги дизайна",
-            "url": "services.html"
-          }
-        ]
-      },
-      {
-        "id": "about-school",
-        "title": "О школе",
-        "sub_sections": [
-          {
-            "id": "about-tiarkel",
-            "title": "О Tiarkel",
-            "url": "about.html"
-          },
-          {
-            "id": "contacts",
-            "title": "Контакты",
-            "url": "contacts.html"
-          },
-          {
-            "id": "social",
-            "title": "Соцсети",
-            "url": "#social"
-          }
-        ]
       }
     ]
   },
   "uz": {
     "main_sections": [
+      {
+        "id": "home",
+        "title": "Bosh sahifa",
+        "url": "index.html",
+        "sub_sections": []
+      },
       {
         "id": "about-course",
         "title": "Kurs haqida",
@@ -111,18 +81,18 @@
         "sub_sections": []
       },
       {
-        "id": "projects",
-        "title": "O'quvchilar loyihalari",
-        "url": "projects.html",
+        "id": "services",
+        "title": "Dizayn xizmatlari",
+        "url": "services.html",
         "sub_sections": []
       },
       {
         "id": "pricing",
-        "title": "Narxlar va ro'yxat",
+        "title": "Tariflar va ro'yxatdan o'tish",
         "sub_sections": [
           {
             "id": "tariffs",
-            "title": "Narxlar",
+            "title": "Tariflar",
             "url": "pricing.html"
           },
           {
@@ -134,48 +104,6 @@
             "id": "apply",
             "title": "Kursga ariza",
             "url": "#contact"
-          }
-        ]
-      },
-      {
-        "id": "portfolio",
-        "title": "Portfolio",
-        "sub_sections": [
-          {
-            "id": "studio-works",
-            "title": "Studiya ishlari (ishlar)",
-            "url": "cases.html"
-          },
-          {
-            "id": "student-projects",
-            "title": "Talabalar loyihalari",
-            "url": "projects.html"
-          },
-          {
-            "id": "design-services",
-            "title": "Dizayn xizmatlari",
-            "url": "services.html"
-          }
-        ]
-      },
-      {
-        "id": "about-school",
-        "title": "Maktab haqida",
-        "sub_sections": [
-          {
-            "id": "about-tiarkel",
-            "title": "Tiarkel haqida",
-            "url": "about.html"
-          },
-          {
-            "id": "contacts",
-            "title": "Aloqa",
-            "url": "contacts.html"
-          },
-          {
-            "id": "social",
-            "title": "Ijtimoiy tarmoqlar",
-            "url": "#social"
           }
         ]
       }

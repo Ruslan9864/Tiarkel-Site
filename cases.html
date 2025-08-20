@@ -1,113 +1,172 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Кейсы учеников — ДИЗАЙНА ЛАБОРАТОРИЯ</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кейсы студентов — Tiarkel | Руслан Рустамов</title>
+    <meta name="description" content="Реальные работы учеников Tiarkel: портфолио проектов, результаты обучения, истории успеха. Увидите, что создают наши студенты.">
+    <meta name="author" content="Руслан Рустамов">
+    <link rel="canonical" href="https://ruslan9864.github.io/Tiarkel-Site/cases.html">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Tiarkel">
+    <meta property="og:title" content="Кейсы студентов — Tiarkel | Руслан Рустамов">
+    <meta property="og:description" content="Реальные работы учеников Tiarkel: портфолио проектов, результаты обучения.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ruslan9864.github.io/Tiarkel-Site/cases.html">
+    <meta property="og:image" content="https://ruslan9864.github.io/Tiarkel-Site/assets/og/og-cases.jpg">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Кейсы студентов — Tiarkel">
+    <meta name="twitter:description" content="Реальные работы учеников Tiarkel: портфолио проектов.">
+    <meta name="twitter:image" content="https://ruslan9864.github.io/Tiarkel-Site/assets/og/og-cases.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Кейсы студентов Tiarkel",
+        "description": "Реальные работы учеников Tiarkel: портфолио проектов, результаты обучения, истории успеха.",
+        "url": "https://ruslan9864.github.io/Tiarkel-Site/cases.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tiarkel",
+            "url": "https://ruslan9864.github.io/Tiarkel-Site/",
+            "brand": {
+                "@type": "Brand",
+                "name": "Tiarkel"
+            }
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Руслан Рустамов",
+            "url": "https://ruslan9864.github.io/Tiarkel-Site/"
+        }
+    }
+    </script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <nav class="nav">
-        <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="nav-center">
-          <a href="index.html" class="logo" aria-label="На главную">
-            <img src="Logo.svg" alt="Логотип" class="logo-img" />
-            <div class="logo-descriptor">Школа Татьяны Аракеловой</div>
-          </a>
-        </div>
-        <div class="nav-right">
-          <button class="language-switcher" aria-label="Переключить язык">
-            <span class="language-indicator">RU</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M8 1L15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="btn-secondary" id="header-cta">Кнопка</button>
-        </div>
-      </nav>
-      <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Основное меню">
-        <button class="drawer-close" aria-label="Закрыть меню">×</button>
-        <div class="nav-menu-container">
-          <ul class="nav-menu">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="cases.html" aria-current="page">Работы учеников</a></li>
-            <li><a href="program.html">Программа</a></li>
-            <li><a href="courses/osnovnoy-kurs.html">Основной курс</a></li>
-            <li><a href="services.html">Услуги дизайна</a></li>
-            <li><a href="courses/osnovnoy-kurs.html#pricing">Тарифы</a></li>
-            <li><a href="courses/osnovnoy-kurs.html#reviews">Отзывы</a></li>
-            <li><a href="courses/osnovnoy-kurs.html#contact">Обратная связь</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="nav-backdrop"></div>
-    </div>
-  </header>
-
-  <main class="main" style="padding-top: 100px;">
-    <div class="container">
-      <section class="cases-section">
-        <h1 class="section-title">КЕЙСЫ УЧЕНИКОВ</h1>
-        <p class="scroll-hint">листай в сторону</p>
-        <p class="cases-description">
-          Наши студенты успешно находят первую оплачиваемую работу в графическом дизайне, достигают стабильного дохода,
-          получают работу в ведущих компаниях и запускают собственные дизайнерские студии.
-        </p>
-        <div class="cases-slider">
-          <div class="case-item">
-            <div class="case-header">
-              <h4>ЕКАТЕРИНА ДАЛИНЧУК</h4>
-              <p>До курса уже работала в профессии, но хотела повысить доход. На обучении улучшила навыки работы в программах и поняла как донести миссию бренда через графический дизайн. После курса повысила чек в два раза и к ней спокойно идут клиенты за эту цену.</p>
-              <div class="case-income"><strong>Доход: от 2000$/мес</strong></div>
-              <a href="https://www.instagram.com/tiarkel/" class="case-link">подробнее в инстаграм</a>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="nav-center">
+                    <a href="index.html" class="logo" aria-label="На главную">
+                        <img src="Logo.svg" alt="Tiarkel — бренд-дизайн и обучение" class="logo-img" loading="eager" />
+                        <div class="logo-descriptor">Tiarkel — Школа брендинга и дизайна</div>
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <button class="language-switcher" aria-label="Переключить язык">
+                        <span class="language-indicator">RU</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 1L15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="btn-primary" id="header-cta" onclick="scrollToSection('contact')">Записаться</button>
+                </div>
+            </nav>
+            <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Основное меню">
+                <button class="drawer-close" aria-label="Закрыть меню">×</button>
+                <div class="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="index.html#about">О курсе</a></li>
+                        <li><a href="index.html#program">Программа</a></li>
+                        <li><a href="index.html#reviews">Отзывы</a></li>
+                        <li><a href="cases.html" aria-current="page">Работы учеников</a></li>
+                        <li><a href="services.html">Услуги дизайна</a></li>
+                        <li><a href="index.html#contact">Записаться</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="case-item">
-            <div class="case-header">
-              <h4>Анна Полищук</h4>
-              <p>Работала администратором сайта интернет магазина, зарабатывала 450$. Сейчас делает анимационную рекламу для соц.сетей телекоммуникационной компании Telenor в Норвегии.</p>
-              <div class="case-income"><strong>Доход: до 2500€/мес</strong></div>
-              <a href="https://www.instagram.com/tiarkel/" class="case-link">подробнее в инстаграм</a>
-            </div>
-          </div>
-          <div class="case-item">
-            <div class="case-header">
-              <h4>Нина Соколова</h4>
-              <p>Из SMM-специалиста в графического дизайнера. После курсов доход и чек повысились в три раза.</p>
-              <div class="case-income"><strong>Доход: 2000$/мес</strong></div>
-              <a href="https://www.instagram.com/tiarkel/" class="case-link">подробнее в инстаграм</a>
-            </div>
-          </div>
+            <div class="nav-backdrop"></div>
         </div>
-      </section>
-    </div>
-  </main>
+    </header>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-social">
-          <h3>НАШИ СОЦСЕТИ</h3>
-          <div class="social-links">
-            <a href="https://www.instagram.com/tiarkel/" class="social-link">Instagram</a>
-            <a href="https://t.me/tatvorit" class="social-link">TELEGRAM</a>
-            <a href="https://www.behance.net/1db30958" class="social-link">behance</a>
-            <a href="https://www.pinterest.com/tiaara98/" class="social-link">Pinterest</a>
-          </div>
+    <!-- Main Content -->
+    <main class="main" id="main">
+        <div class="container">
+            <section class="cases-section" aria-label="Кейсы студентов">
+                <h1 class="section-title">КЕЙСЫ СТУДЕНТОВ</h1>
+                <p class="section-subtitle">Реальные работы наших учеников</p>
+                
+                <div class="cases-grid">
+                    <div class="case-item">
+                        <div class="case-image">
+                            <img src="images/case-1.jpg" alt="Кейс студента - Логотип для кафе" loading="lazy">
+                        </div>
+                        <div class="case-content">
+                            <h3>Логотип для кафе</h3>
+                            <p>Студент: Анна Петрова</p>
+                            <p>Создан современный логотип для кафе с использованием векторной графики</p>
+                        </div>
+                    </div>
+                    
+                    <div class="case-item">
+                        <div class="case-image">
+                            <img src="images/case-2.jpg" alt="Кейс студента - Фирменный стиль" loading="lazy">
+                        </div>
+                        <div class="case-content">
+                            <h3>Фирменный стиль</h3>
+                            <p>Студент: Михаил Иванов</p>
+                            <p>Разработан полный фирменный стиль для IT-компании</p>
+                        </div>
+                    </div>
+                    
+                    <div class="case-item">
+                        <div class="case-image">
+                            <img src="images/case-3.jpg" alt="Кейс студента - Упаковка продукта" loading="lazy">
+                        </div>
+                        <div class="case-content">
+                            <h3>Упаковка продукта</h3>
+                            <p>Студент: Елена Сидорова</p>
+                            <p>Создана упаковка для косметического бренда</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="footer-legal">
-          <a href="#" class="legal-link">Договор оферты</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </main>
 
-  <script src="script.js"></script>
-  <script src="navigation.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <h3>НАШИ СОЦСЕТИ</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/tiarkel/" class="social-link" aria-label="Instagram">
+                            <span class="social-icon">📷</span>Instagram
+                        </a>
+                        <a href="https://t.me/tatvorit" class="social-link" aria-label="Telegram">
+                            <span class="social-icon">✈️</span>TELEGRAM
+                        </a>
+                        <a href="https://www.behance.net/1db30958" class="social-link" aria-label="Behance">
+                            <span class="social-icon">🎨</span>behance
+                        </a>
+                        <a href="https://www.pinterest.com/tiaara98/" class="social-link" aria-label="Pinterest">
+                            <span class="social-icon">📌</span>Pinterest
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-legal">
+                    <a href="#" class="legal-link">Договор оферты</a>
+                    <a href="#" class="legal-link">Политика конфиденциальности</a>
+                    <p class="copyright">© Tiarkel, 2025. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="navigation.js"></script>
 </body>
 </html> 

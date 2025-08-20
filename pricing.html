@@ -3,13 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тарифы — ДИЗАЙНА ЛАБОРАТОРИЯ</title>
+    <title>Тарифы и цены на курс Tiarkel — LITE, PRO, STUDIO, VIP</title>
+    <meta name="description" content="4 тарифа обучения брендингу и дизайну: LITE, PRO, STUDIO, VIP. Выбирай оптимальный вариант — от $239. Рассрочка и поддержка включены.">
+    <meta name="author" content="Руслан Рустамов">
+    <link rel="canonical" href="https://ruslan9864.github.io/Tiarkel-Site/pricing.html">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Tiarkel">
+    <meta property="og:title" content="Тарифы и цены на курс Tiarkel — LITE, PRO, STUDIO, VIP">
+    <meta property="og:description" content="4 тарифа обучения брендингу и дизайну: LITE, PRO, STUDIO, VIP. Выбирай оптимальный вариант — от $239.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ruslan9864.github.io/Tiarkel-Site/pricing.html">
+    <meta property="og:image" content="https://ruslan9864.github.io/Tiarkel-Site/assets/og/og-pricing.jpg">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Тарифы и цены на курс Tiarkel">
+    <meta name="twitter:description" content="4 тарифа: LITE, PRO, STUDIO, VIP. От $239 с рассрочкой.">
+    <meta name="twitter:image" content="https://ruslan9864.github.io/Tiarkel-Site/assets/og/og-pricing.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Tiarkel — Курс по брендингу и дизайну",
+        "description": "Практический курс с портфолио 10–12 работ, треками SMM и Видео. Наставничество, ревью и карьерные инструменты.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Tiarkel"
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "239",
+            "highPrice": "1099",
+            "offerCount": "4",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "name": "LITE",
+                    "description": "Стартовый пакет",
+                    "price": "239",
+                    "priceCurrency": "USD",
+                    "url": "https://ruslan9864.github.io/Tiarkel-Site/pricing.html#lite"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "PRO",
+                    "description": "Самый популярный",
+                    "price": "399",
+                    "priceCurrency": "USD",
+                    "url": "https://ruslan9864.github.io/Tiarkel-Site/pricing.html#pro"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "STUDIO",
+                    "description": "Для команд и студий",
+                    "price": "479",
+                    "priceCurrency": "USD",
+                    "url": "https://ruslan9864.github.io/Tiarkel-Site/pricing.html#studio"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "VIP",
+                    "description": "Максимальный результат",
+                    "price": "1099",
+                    "priceCurrency": "USD",
+                    "url": "https://ruslan9864.github.io/Tiarkel-Site/pricing.html#vip"
+                }
+            ]
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="nav">
                 <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
@@ -17,8 +89,8 @@
                 </button>
                 <div class="nav-center">
                     <a href="index.html" class="logo" aria-label="На главную">
-                        <img src="Logo.svg" alt="Логотип" class="logo-img" />
-                        <div class="logo-descriptor">Школа Татьяны Аракеловой</div>
+                        <img src="Logo.svg" alt="Tiarkel — бренд-дизайн и обучение" class="logo-img" loading="eager" />
+                        <div class="logo-descriptor">Tiarkel — Школа брендинга и дизайна</div>
                     </a>
                 </div>
                 <div class="nav-right">
@@ -28,7 +100,7 @@
                             <path d="M8 1L15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
-                    <button class="btn-primary" id="header-cta">Записаться</button>
+                    <button class="btn-primary" id="header-cta" onclick="scrollToSection('contact')">Записаться</button>
                 </div>
             </nav>
             <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Основное меню">
@@ -36,10 +108,12 @@
                 <div class="nav-menu-container">
                     <ul class="nav-menu">
                         <li><a href="index.html">Главная</a></li>
-                        <li><a href="program.html">Программа</a></li>
-                        <li><a href="cases.html">Кейсы</a></li>
-                        <li><a href="pricing.html" aria-current="page">Тарифы</a></li>
-                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="index.html#about">О курсе</a></li>
+                        <li><a href="index.html#program">Программа</a></li>
+                        <li><a href="index.html#reviews">Отзывы</a></li>
+                        <li><a href="cases.html">Работы учеников</a></li>
+                        <li><a href="services.html">Услуги дизайна</a></li>
+                        <li><a href="index.html#contact">Записаться</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,67 +121,333 @@
         </div>
     </header>
 
-    <main class="main" style="padding-top: 100px;">
+    <!-- Main Content -->
+    <main class="main" id="main">
         <div class="container">
-            <section class="pricing-section">
-                <h1 class="section-title">ТАРИФЫ КУРСА</h1>
-                <p class="section-subtitle">Выберите подходящий вариант обучения</p>
+            <!-- Hero Section -->
+            <section class="pricing-hero" aria-label="Тарифы курса">
+                <h1 class="section-title">ТАРИФЫ И ЦЕНЫ</h1>
+                <p class="section-subtitle">Выберите оптимальный вариант для ваших целей</p>
                 
+                <!-- Psychological Triggers -->
+                <div class="pricing-triggers">
+                    <div class="trigger-item">
+                        <span class="trigger-icon">💳</span>
+                        <span class="trigger-text">Можно начать с рассрочки</span>
+                    </div>
+                    <div class="trigger-item">
+                        <span class="trigger-icon">🛡️</span>
+                        <span class="trigger-text">Вернём деньги в течение 7 дней</span>
+                    </div>
+                    <div class="trigger-item">
+                        <span class="trigger-icon">🎯</span>
+                        <span class="trigger-text">85% студентов выбирают PRO</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Cards Section -->
+            <section class="pricing-cards-section" aria-label="Тарифные планы">
                 <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3>БАЗОВЫЙ</h3>
+                    <!-- VIP - Anchor Price -->
+                    <div class="pricing-card vip-card" id="vip">
+                        <div class="card-header">
+                            <h3>VIP</h3>
+                            <div class="card-subtitle">Максимальный результат</div>
+                        </div>
+                        <div class="price-container">
                             <div class="price">
-                                <span class="price-amount">$997</span>
-                                <span class="price-period">за курс</span>
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">1099</span>
                             </div>
+                            <div class="price-installment">от $367 × 3 месяца</div>
                         </div>
                         <ul class="pricing-features">
-                            <li>✓ Доступ к 156 урокам</li>
-                            <li>✓ Поддержка в чате</li>
-                            <li>✓ Проверка 15 работ</li>
-                            <li>✓ Сертификат</li>
+                            <li><span class="feature-icon">✅</span>Пожизненный доступ к курсу</li>
+                            <li><span class="feature-icon">✅</span>156 базовых уроков + все треки</li>
+                            <li><span class="feature-icon">✅</span>Проверка всех работ</li>
+                            <li><span class="feature-icon">✅</span>Персональный куратор</li>
+                            <li><span class="feature-icon">✅</span>Карьерный канал</li>
+                            <li><span class="feature-icon">✅</span>Индивидуальные консультации</li>
+                            <li><span class="feature-icon">✅</span>Видео/моушн трек</li>
+                            <li><span class="feature-icon">✅</span>Помощь в трудоустройстве</li>
+                            <li><span class="feature-icon">✅</span>Приоритетная поддержка</li>
                         </ul>
-                        <button class="btn-primary">Выбрать тариф</button>
+                        <button class="btn-secondary btn-pricing" data-cta="pricing_vip" onclick="handlePlanSelection('VIP')" aria-label="Выбрать тариф VIP">
+                            Выбрать тариф
+                        </button>
                     </div>
                     
-                    <div class="pricing-card featured">
-                        <div class="pricing-badge">ПОПУЛЯРНЫЙ</div>
-                        <div class="pricing-header">
-                            <h3>ПРЕМИУМ</h3>
+                    <!-- PRO - Target Plan -->
+                    <div class="pricing-card pro-card featured" id="pro">
+                        <div class="card-header">
+                            <div class="popular-badge">САМЫЙ ПОПУЛЯРНЫЙ</div>
+                            <h3>PRO</h3>
+                            <div class="card-subtitle">Оптимальный выбор</div>
+                        </div>
+                        <div class="price-container">
                             <div class="price">
-                                <span class="price-amount">$1497</span>
-                                <span class="price-period">за курс</span>
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">399</span>
                             </div>
+                            <div class="price-installment">от $133 × 3 месяца</div>
                         </div>
                         <ul class="pricing-features">
-                            <li>✓ Все из базового тарифа</li>
-                            <li>✓ Персональный куратор</li>
-                            <li>✓ Индивидуальные консультации</li>
-                            <li>✓ Помощь с трудоустройством</li>
-                            <li>✓ Доступ к закрытому комьюнити</li>
+                            <li><span class="feature-icon">✅</span>Доступ к курсу на 12 месяцев</li>
+                            <li><span class="feature-icon">✅</span>156 базовых уроков + SMM-трек</li>
+                            <li><span class="feature-icon">✅</span>Проверка всех работ</li>
+                            <li><span class="feature-icon">✅</span>Персональный куратор</li>
+                            <li><span class="feature-icon">✅</span>Карьерный канал</li>
+                            <li><span class="feature-icon">✅</span>Помощь в трудоустройстве</li>
+                            <li><span class="feature-icon">✅</span>Сертификат</li>
+                            <li><span class="feature-icon">✅</span>Поддержка 24/7</li>
                         </ul>
-                        <button class="btn-primary">Выбрать тариф</button>
+                        <button class="btn-primary btn-pricing" data-cta="pricing_pro" onclick="handlePlanSelection('PRO')" aria-label="Выбрать тариф PRO">
+                            Выбрать тариф
+                        </button>
+                    </div>
+                    
+                    <!-- STUDIO - Decoy Plan -->
+                    <div class="pricing-card studio-card" id="studio">
+                        <div class="card-header">
+                            <h3>STUDIO</h3>
+                            <div class="card-subtitle">Для команд и студий</div>
+                        </div>
+                        <div class="price-container">
+                            <div class="price">
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">479</span>
+                            </div>
+                            <div class="price-installment">от $160 × 3 месяца</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><span class="feature-icon">✅</span>Пожизненный доступ к курсу</li>
+                            <li><span class="feature-icon">✅</span>156 базовых уроков + все треки</li>
+                            <li><span class="feature-icon">✅</span>Проверка всех работ</li>
+                            <li><span class="feature-icon">✅</span>Персональный куратор</li>
+                            <li><span class="feature-icon">✅</span>Индивидуальные консультации</li>
+                            <li><span class="feature-icon">✅</span>Сертификат</li>
+                            <li><span class="feature-icon">❌</span><span class="feature-disabled">Карьерный трек</span></li>
+                            <li><span class="feature-icon">❌</span><span class="feature-disabled">Помощь в трудоустройстве</span></li>
+                        </ul>
+                        <button class="btn-secondary btn-pricing" data-cta="pricing_studio" onclick="handlePlanSelection('STUDIO')" aria-label="Выбрать тариф STUDIO">
+                            Выбрать тариф
+                        </button>
+                    </div>
+                    
+                    <!-- LITE - Entry Plan -->
+                    <div class="pricing-card lite-card" id="lite">
+                        <div class="card-header">
+                            <h3>LITE</h3>
+                            <div class="card-subtitle">Стартовый пакет</div>
+                        </div>
+                        <div class="price-container">
+                            <div class="price">
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">239</span>
+                            </div>
+                            <div class="price-installment">от $80 × 3 месяца</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><span class="feature-icon">✅</span>Доступ к курсу на 6 месяцев</li>
+                            <li><span class="feature-icon">✅</span>156 базовых уроков</li>
+                            <li><span class="feature-icon">✅</span>Проверка 5 работ</li>
+                            <li><span class="feature-icon">✅</span>Общий чат</li>
+                            <li><span class="feature-icon">✅</span>Сертификат</li>
+                            <li><span class="feature-icon">❌</span><span class="feature-disabled">SMM-трек</span></li>
+                            <li><span class="feature-icon">❌</span><span class="feature-disabled">Персональный куратор</span></li>
+                            <li><span class="feature-icon">❌</span><span class="feature-disabled">Карьерный канал</span></li>
+                        </ul>
+                        <button class="btn-secondary btn-pricing" data-cta="pricing_lite" onclick="handlePlanSelection('LITE')" aria-label="Выбрать тариф LITE">
+                            Выбрать тариф
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comparison Table Section -->
+            <section class="comparison-section" aria-label="Сравнение тарифов">
+                <h2 class="section-title">СРАВНЕНИЕ ТАРИФОВ</h2>
+                <div class="comparison-table-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Функции</th>
+                                <th>LITE</th>
+                                <th>PRO</th>
+                                <th>STUDIO</th>
+                                <th>VIP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Доступ к курсу</td>
+                                <td>6 месяцев</td>
+                                <td>12 месяцев</td>
+                                <td>Пожизненно</td>
+                                <td>Пожизненно</td>
+                            </tr>
+                            <tr>
+                                <td>Базовые уроки</td>
+                                <td>✅ 156 уроков</td>
+                                <td>✅ 156 уроков</td>
+                                <td>✅ 156 уроков</td>
+                                <td>✅ 156 уроков</td>
+                            </tr>
+                            <tr>
+                                <td>SMM-трек</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Видео-трек</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Проверка работ</td>
+                                <td>5 работ</td>
+                                <td>Все работы</td>
+                                <td>Все работы</td>
+                                <td>Все работы</td>
+                            </tr>
+                            <tr>
+                                <td>Персональный куратор</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Карьерный трек</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Индивидуальные консультации</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Помощь в трудоустройстве</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="pricing-faq-section" aria-label="Часто задаваемые вопросы">
+                <h2 class="section-title">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Можно ли оплатить в рассрочку?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <p>Да, у нас есть два варианта рассрочки:</p>
+                            <ol>
+                                <li>Доверительная рассрочка на два платежа от нас. Первую часть оплачиваете сразу, а вторую половину на первом этапе.</li>
+                                <li>Рассрочка на 3-12 месяцев от банка.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Чем PRO лучше LITE?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <p>PRO включает:</p>
+                            <ul>
+                                <li>Доступ к курсу на 12 месяцев вместо 6</li>
+                                <li>SMM-трек (дополнительные уроки)</li>
+                                <li>Проверку всех работ вместо 5</li>
+                                <li>Персонального куратора</li>
+                                <li>Карьерный канал и помощь в трудоустройстве</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Что если я не успеваю по времени?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <p>У тарифов PRO и STUDIO есть страховка в виде дополнительных дней к дедлайну на каждом этапе курса. Для VIP тарифа нет дедлайнов — вы можете проходить курс в своем темпе в течение 5 месяцев.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Есть ли гарантия возврата денег?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <p>Да, мы предоставляем гарантию возврата денег в течение 7 дней с момента покупки, если вы не просмотрели обучающие материалы.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final CTA Section -->
+            <section class="pricing-cta-section" aria-label="Призыв к действию">
+                <div class="pricing-cta-content">
+                    <h2>ГОТОВЫ НАЧАТЬ ОБУЧЕНИЕ?</h2>
+                    <p>Выберите подходящий тариф и начните свой путь в дизайне уже сегодня</p>
+                    <div class="cta-buttons">
+                        <button class="btn-primary btn-large" data-cta="pricing_final_pro" onclick="handlePlanSelection('PRO')">
+                            Выбрать PRO (рекомендуемый)
+                        </button>
+                        <button class="btn-secondary btn-large" data-cta="pricing_final_compare" onclick="scrollToSection('comparison')">
+                            Сравнить все тарифы
+                        </button>
                     </div>
                 </div>
             </section>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-social">
                     <h3>НАШИ СОЦСЕТИ</h3>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/tiarkel/" class="social-link">Instagram</a>
-                        <a href="https://t.me/tatvorit" class="social-link">TELEGRAM</a>
-                        <a href="https://www.behance.net/1db30958" class="social-link">behance</a>
-                        <a href="https://www.pinterest.com/tiaara98/" class="social-link">Pinterest</a>
+                        <a href="https://www.instagram.com/tiarkel/" class="social-link" aria-label="Instagram">
+                            <span class="social-icon">📷</span>Instagram
+                        </a>
+                        <a href="https://t.me/tatvorit" class="social-link" aria-label="Telegram">
+                            <span class="social-icon">✈️</span>TELEGRAM
+                        </a>
+                        <a href="https://www.behance.net/1db30958" class="social-link" aria-label="Behance">
+                            <span class="social-icon">🎨</span>behance
+                        </a>
+                        <a href="https://www.pinterest.com/tiaara98/" class="social-link" aria-label="Pinterest">
+                            <span class="social-icon">📌</span>Pinterest
+                        </a>
                     </div>
                 </div>
                 <div class="footer-legal">
                     <a href="#" class="legal-link">Договор оферты</a>
+                    <a href="#" class="legal-link">Политика конфиденциальности</a>
+                    <p class="copyright">© Tiarkel, 2025. Все права защищены.</p>
                 </div>
             </div>
         </div>

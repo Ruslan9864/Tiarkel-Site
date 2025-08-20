@@ -1,69 +1,39 @@
-<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="coffee-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="coffee-card" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#D2691E;stop-opacity:0.1" />
-      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:0.1" />
+    <linearGradient id="logo1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#bfd732;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9acd32;stop-opacity:1" />
     </linearGradient>
   </defs>
   
   <!-- Background -->
-  <rect width="300" height="200" fill="url(#coffee-bg)"/>
+  <rect width="400" height="300" fill="url(#bg1)"/>
   
-  <!-- Coffee Shop Landing -->
-  <g transform="translate(20, 20)">
-    <!-- Header -->
-    <rect x="0" y="0" width="260" height="30" rx="4" fill="#D2691E" opacity="0.8"/>
-    <text x="130" y="20" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">
-      ☕ Coffee House
-    </text>
+  <!-- Logo Container -->
+  <g transform="translate(100, 75)">
+    <!-- Coffee Cup -->
+    <ellipse cx="100" cy="80" rx="60" ry="40" fill="url(#logo1)" opacity="0.9"/>
+    <ellipse cx="100" cy="120" rx="50" ry="30" fill="url(#logo1)" opacity="0.7"/>
+    <rect x="70" y="60" width="60" height="80" rx="30" fill="url(#logo1)" opacity="0.8"/>
     
-    <!-- Hero Section -->
-    <rect x="0" y="40" width="260" height="60" rx="4" fill="url(#coffee-card)" stroke="#D2691E" stroke-width="1"/>
-    <text x="130" y="60" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="700">
-      Лучший кофе в городе
-    </text>
-    <text x="130" y="80" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">
-      Заказать онлайн
-    </text>
+    <!-- Steam -->
+    <path d="M 85 50 Q 90 40 95 50 Q 100 40 105 50" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M 95 45 Q 100 35 105 45" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.6"/>
     
-    <!-- Menu Items -->
-    <rect x="10" y="110" width="70" height="40" rx="4" fill="#D2691E" opacity="0.6"/>
-    <text x="45" y="130" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      ☕ Эспрессо
-    </text>
-    <text x="45" y="145" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      $3.50
-    </text>
+    <!-- Handle -->
+    <ellipse cx="130" cy="100" rx="15" ry="25" fill="none" stroke="url(#logo1)" stroke-width="3"/>
     
-    <rect x="95" y="110" width="70" height="40" rx="4" fill="#D2691E" opacity="0.6"/>
-    <text x="130" y="130" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      🥛 Капучино
-    </text>
-    <text x="130" y="145" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      $4.50
-    </text>
-    
-    <rect x="180" y="110" width="70" height="40" rx="4" fill="#D2691E" opacity="0.6"/>
-    <text x="215" y="130" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      🍰 Торт
-    </text>
-    <text x="215" y="145" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      $6.00
-    </text>
-    
-    <!-- CTA Button -->
-    <rect x="80" y="160" width="100" height="25" rx="12" fill="#D2691E"/>
-    <text x="130" y="175" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="600">
-      ЗАКАЗАТЬ
-    </text>
+    <!-- Text -->
+    <text x="100" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff">CAFE</text>
+    <text x="100" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#bfd732">Tiarkel</text>
   </g>
   
-  <!-- Decorative Elements -->
-  <circle cx="50" cy="180" r="2" fill="#D2691E" opacity="0.6"/>
-  <circle cx="250" cy="30" r="3" fill="#D2691E" opacity="0.4"/>
-  <circle cx="280" cy="150" r="2" fill="#D2691E" opacity="0.6"/>
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="3" fill="#bfd732" opacity="0.6"/>
+  <circle cx="350" cy="80" r="2" fill="#bfd732" opacity="0.4"/>
+  <circle cx="320" cy="250" r="4" fill="#bfd732" opacity="0.5"/>
 </svg> 

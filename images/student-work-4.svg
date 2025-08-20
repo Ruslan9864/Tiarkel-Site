@@ -1,0 +1,84 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d2d3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#54a0ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="video1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9ff3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f368e0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg4)"/>
+  
+  <!-- Video Player -->
+  <g transform="translate(50, 50)">
+    <!-- Video Container -->
+    <rect x="0" y="0" width="300" height="200" rx="15" fill="#000000" opacity="0.9"/>
+    
+    <!-- Video Frame -->
+    <rect x="10" y="10" width="280" height="180" rx="8" fill="url(#video1)" opacity="0.3"/>
+    
+    <!-- Video Content -->
+    <g transform="translate(150, 100)">
+      <!-- Animated Elements -->
+      <circle cx="0" cy="0" r="30" fill="url(#video1)" opacity="0.8">
+        <animate attributeName="r" values="30;35;30" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Play Button -->
+      <polygon points="-10,-15 10,0 -10,15" fill="#ffffff" opacity="0.9"/>
+      
+      <!-- Motion Graphics -->
+      <g transform="translate(-80, -40)">
+        <rect x="0" y="0" width="20" height="20" rx="4" fill="#ff6b6b" opacity="0.7">
+          <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="25" y="0" width="20" height="20" rx="4" fill="#4ecdc4" opacity="0.7">
+          <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="50" y="0" width="20" height="20" rx="4" fill="#ff9ff3" opacity="0.7">
+          <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" begin="1s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      
+      <!-- Text Animation -->
+      <text x="0" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">
+        <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+        REELS & SHORTS
+      </text>
+    </g>
+    
+    <!-- Video Controls -->
+    <g transform="translate(10, 190)">
+      <!-- Progress Bar -->
+      <rect x="0" y="0" width="280" height="4" rx="2" fill="#333333" opacity="0.5"/>
+      <rect x="0" y="0" width="140" height="4" rx="2" fill="#ff6b6b"/>
+      
+      <!-- Time -->
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="10" fill="#ffffff">0:15</text>
+      <text x="260" y="15" font-family="Arial, sans-serif" font-size="10" fill="#ffffff">0:30</text>
+    </g>
+  </g>
+  
+  <!-- Video Info -->
+  <g transform="translate(50, 270)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">🎬 Видео контент</text>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.8">Reels, Shorts, Motion Design</text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="350" cy="50" r="3" fill="#ff9ff3" opacity="0.6"/>
+  <circle cx="50" cy="250" r="2" fill="#ff9ff3" opacity="0.4"/>
+  <circle cx="320" cy="280" r="4" fill="#ff9ff3" opacity="0.5"/>
+  
+  <!-- Floating elements -->
+  <circle cx="80" cy="80" r="2" fill="#ffffff" opacity="0.3">
+    <animate attributeName="cy" values="80;70;80" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="320" cy="120" r="1.5" fill="#ffffff" opacity="0.4">
+    <animate attributeName="cy" values="120;110;120" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg> 

@@ -1,99 +1,69 @@
-<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="portfolio-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4B0082;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#8A2BE2;stop-opacity:1" />
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ee5a52;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="portfolio-card" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#9370DB;stop-opacity:0.1" />
-      <stop offset="100%" style="stop-color:#4B0082;stop-opacity:0.1" />
+    <linearGradient id="smm1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9ff3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f368e0;stop-opacity:1" />
     </linearGradient>
   </defs>
   
   <!-- Background -->
-  <rect width="300" height="200" fill="url(#portfolio-bg)"/>
+  <rect width="400" height="300" fill="url(#bg3)"/>
   
-  <!-- Designer Portfolio -->
-  <g transform="translate(20, 20)">
+  <!-- Instagram Post -->
+  <g transform="translate(50, 50)">
+    <!-- Post Container -->
+    <rect x="0" y="0" width="300" height="200" rx="15" fill="#ffffff" opacity="0.95"/>
+    
     <!-- Header -->
-    <rect x="0" y="0" width="260" height="30" rx="4" fill="#9370DB" opacity="0.8"/>
-    <text x="130" y="20" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">
-      🎨 Elena Design
-    </text>
+    <circle cx="25" cy="25" r="15" fill="url(#smm1)"/>
+    <text x="25" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">T</text>
+    <text x="50" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333333">tiarkel_studio</text>
+    <text x="50" y="35" font-family="Arial, sans-serif" font-size="10" fill="#666666">2 часа назад</text>
     
-    <!-- Hero Section -->
-    <rect x="0" y="40" width="260" height="50" rx="4" fill="url(#portfolio-card)" stroke="#9370DB" stroke-width="1"/>
-    <text x="130" y="60" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="700">
-      Веб-дизайнер & UI/UX
-    </text>
-    <text x="130" y="75" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10">
-      Создаю современные цифровые решения
-    </text>
+    <!-- Main Image Area -->
+    <rect x="0" y="50" width="300" height="120" fill="url(#smm1)" opacity="0.3"/>
     
-    <!-- Portfolio Grid -->
-    <rect x="0" y="100" width="80" height="50" rx="4" fill="url(#portfolio-card)" stroke="#9370DB" stroke-width="1"/>
-    <text x="40" y="115" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">
-      🏠 Лендинг
-    </text>
-    <text x="40" y="130" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      E-commerce
-    </text>
-    <text x="40" y="145" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      +15% конверсия
-    </text>
+    <!-- Design Elements -->
+    <circle cx="75" cy="110" r="20" fill="url(#smm1)" opacity="0.8"/>
+    <circle cx="150" cy="110" r="20" fill="#ff6b6b" opacity="0.8"/>
+    <circle cx="225" cy="110" r="20" fill="#4ecdc4" opacity="0.8"/>
     
-    <rect x="90" y="100" width="80" height="50" rx="4" fill="url(#portfolio-card)" stroke="#9370DB" stroke-width="1"/>
-    <text x="130" y="115" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">
-      📱 Мобильное приложение
-    </text>
-    <text x="130" y="130" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      FinTech
-    </text>
-    <text x="130" y="145" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      4.8★ рейтинг
-    </text>
+    <!-- Text Overlay -->
+    <text x="150" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">КРЕАТИВНЫЙ</text>
+    <text x="150" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">ДИЗАЙН</text>
     
-    <rect x="180" y="100" width="80" height="50" rx="4" fill="url(#portfolio-card)" stroke="#9370DB" stroke-width="1"/>
-    <text x="220" y="115" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">
-      🎨 Брендинг
-    </text>
-    <text x="220" y="130" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      Startup
-    </text>
-    <text x="220" y="145" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      Полный пакет
-    </text>
+    <!-- Action Bar -->
+    <g transform="translate(10, 180)">
+      <circle cx="15" cy="10" r="8" fill="none" stroke="#333333" stroke-width="2"/>
+      <circle cx="15" cy="10" r="3" fill="#ff6b6b"/>
+      
+      <circle cx="40" cy="10" r="8" fill="none" stroke="#333333" stroke-width="2"/>
+      <path d="M 40 6 L 40 14 M 36 10 L 44 10" stroke="#333333" stroke-width="2"/>
+      
+      <circle cx="65" cy="10" r="8" fill="none" stroke="#333333" stroke-width="2"/>
+      <path d="M 65 6 L 65 14 M 61 10 L 69 10" stroke="#333333" stroke-width="2"/>
+      
+      <circle cx="90" cy="10" r="8" fill="none" stroke="#333333" stroke-width="2"/>
+      <path d="M 90 6 L 90 14 M 86 10 L 94 10" stroke="#333333" stroke-width="2"/>
+    </g>
     
-    <!-- Skills -->
-    <rect x="0" y="160" width="50" height="20" rx="10" fill="#9370DB" opacity="0.7"/>
-    <text x="25" y="172" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      Figma
-    </text>
+    <!-- Likes -->
+    <text x="10" y="200" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">1,234 лайков</text>
     
-    <rect x="60" y="160" width="50" height="20" rx="10" fill="#9370DB" opacity="0.7"/>
-    <text x="85" y="172" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      HTML/CSS
-    </text>
-    
-    <rect x="120" y="160" width="50" height="20" rx="10" fill="#9370DB" opacity="0.7"/>
-    <text x="145" y="172" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      JavaScript
-    </text>
-    
-    <rect x="180" y="160" width="50" height="20" rx="10" fill="#9370DB" opacity="0.7"/>
-    <text x="205" y="172" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="8">
-      WordPress
-    </text>
-    
-    <!-- Contact Button -->
-    <rect x="80" y="185" width="100" height="20" rx="10" fill="#9370DB"/>
-    <text x="130" y="197" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9" font-weight="600">
-      СВЯЗАТЬСЯ
+    <!-- Caption -->
+    <text x="10" y="215" font-family="Arial, sans-serif" font-size="11" fill="#333333">
+      <tspan x="10" dy="0">tiarkel_studio</tspan>
+      <tspan x="10" dy="15" fill="#666666">Создаем уникальный визуал для вашего бренда! ✨</tspan>
+      <tspan x="10" dy="15" fill="#666666">#дизайн #брендинг #креатив #tiarkel</tspan>
     </text>
   </g>
   
-  <!-- Decorative Elements -->
-  <circle cx="50" cy="190" r="2" fill="#9370DB" opacity="0.6"/>
-  <circle cx="250" cy="40" r="3" fill="#9370DB" opacity="0.4"/>
-  <circle cx="280" cy="160" r="2" fill="#9370DB" opacity="0.6"/>
+  <!-- Decorative elements -->
+  <circle cx="350" cy="50" r="3" fill="#ff9ff3" opacity="0.6"/>
+  <circle cx="50" cy="250" r="2" fill="#ff9ff3" opacity="0.4"/>
+  <circle cx="320" cy="280" r="4" fill="#ff9ff3" opacity="0.5"/>
 </svg> 

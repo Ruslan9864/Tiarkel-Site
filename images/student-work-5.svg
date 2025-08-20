@@ -1,0 +1,83 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="web1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg5)"/>
+  
+  <!-- Browser Window -->
+  <g transform="translate(50, 50)">
+    <!-- Browser Header -->
+    <rect x="0" y="0" width="300" height="30" rx="8" fill="#ecf0f1"/>
+    
+    <!-- Browser Controls -->
+    <circle cx="15" cy="15" r="6" fill="#e74c3c"/>
+    <circle cx="35" cy="15" r="6" fill="#f39c12"/>
+    <circle cx="55" cy="15" r="6" fill="#27ae60"/>
+    
+    <!-- URL Bar -->
+    <rect x="80" y="8" width="200" height="14" rx="7" fill="#ffffff"/>
+    <text x="90" y="18" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">tiarkel.com</text>
+    
+    <!-- Website Content -->
+    <rect x="0" y="30" width="300" height="170" fill="#ffffff"/>
+    
+    <!-- Navigation -->
+    <rect x="0" y="30" width="300" height="40" fill="url(#web1)"/>
+    <text x="20" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Tiarkel Studio</text>
+    
+    <!-- Nav Menu -->
+    <text x="200" y="50" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Главная</text>
+    <text x="240" y="50" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Услуги</text>
+    <text x="280" y="50" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Контакты</text>
+    
+    <!-- Hero Section -->
+    <rect x="20" y="80" width="260" height="60" rx="8" fill="url(#web1)" opacity="0.1"/>
+    <text x="150" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">Современный веб-дизайн</text>
+    <text x="150" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Создаем уникальные цифровые решения</text>
+    
+    <!-- Content Grid -->
+    <g transform="translate(20, 150)">
+      <!-- Card 1 -->
+      <rect x="0" y="0" width="80" height="40" rx="6" fill="#ecf0f1"/>
+      <text x="40" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">Лендинги</text>
+      <text x="40" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d">Высокая конверсия</text>
+      
+      <!-- Card 2 -->
+      <rect x="90" y="0" width="80" height="40" rx="6" fill="#ecf0f1"/>
+      <text x="130" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">E-commerce</text>
+      <text x="130" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d">Продающие сайты</text>
+      
+      <!-- Card 3 -->
+      <rect x="180" y="0" width="80" height="40" rx="6" fill="#ecf0f1"/>
+      <text x="220" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">Брендинг</text>
+      <text x="220" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d">Уникальный стиль</text>
+    </g>
+  </g>
+  
+  <!-- Website Info -->
+  <g transform="translate(50, 270)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">💻 Веб-дизайн</text>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.8">Лендинги, E-commerce, Корпоративные сайты</text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="350" cy="50" r="3" fill="#3498db" opacity="0.6"/>
+  <circle cx="50" cy="250" r="2" fill="#3498db" opacity="0.4"/>
+  <circle cx="320" cy="280" r="4" fill="#3498db" opacity="0.5"/>
+  
+  <!-- Code elements -->
+  <g transform="translate(320, 80)" opacity="0.3">
+    <text x="0" y="0" font-family="monospace" font-size="8" fill="#ffffff">&lt;div&gt;</text>
+    <text x="0" y="12" font-family="monospace" font-size="8" fill="#ffffff">&lt;/div&gt;</text>
+    <text x="0" y="24" font-family="monospace" font-size="8" fill="#ffffff">{}</text>
+  </g>
+</svg> 

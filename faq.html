@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — ДИЗАЙНА ЛАБОРАТОРИЯ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="nav-center">
+                    <a href="index.html" class="logo" aria-label="На главную">
+                        <img src="Logo.svg" alt="Логотип" class="logo-img" />
+                        <div class="logo-descriptor">Школа Татьяны Аракеловой</div>
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <button class="language-switcher" aria-label="Переключить язык">
+                        <span class="language-indicator">RU</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 1L15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="btn-primary" id="header-cta">Записаться</button>
+                </div>
+            </nav>
+            <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Основное меню">
+                <button class="drawer-close" aria-label="Закрыть меню">×</button>
+                <div class="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="program.html">Программа</a></li>
+                        <li><a href="cases.html">Кейсы</a></li>
+                        <li><a href="pricing.html">Тарифы</a></li>
+                        <li><a href="faq.html" aria-current="page">FAQ</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-backdrop"></div>
+        </div>
+    </header>
+
+    <main class="main" style="padding-top: 100px;">
+        <div class="container">
+            <section class="faq-section">
+                <h1 class="section-title">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h1>
+                <p class="section-subtitle">Ответы на популярные вопросы о курсе</p>
+                
+                <div class="faq-accordion">
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Сколько длится курс?</span>
+                            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Курс длится 3 месяца и включает 156 уроков (91 теория + 65 практики).</p>
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Нужны ли навыки дизайна для начала?</span>
+                            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Нет, курс подходит для начинающих. Мы начинаем с основ и постепенно переходим к сложным проектам.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Какие программы нужны для обучения?</span>
+                            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Adobe Illustrator, Photoshop, InDesign. Мы помогаем с установкой и настройкой всех программ.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Сколько работ будет в портфолио?</span>
+                            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>За время обучения вы создадите 15 качественных работ для портфолио.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Есть ли поддержка после курса?</span>
+                            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Да, у вас будет доступ к материалам курса и поддержка в закрытом комьюнити.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <h3>НАШИ СОЦСЕТИ</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/tiarkel/" class="social-link">Instagram</a>
+                        <a href="https://t.me/tatvorit" class="social-link">TELEGRAM</a>
+                        <a href="https://www.behance.net/1db30958" class="social-link">behance</a>
+                        <a href="https://www.pinterest.com/tiaara98/" class="social-link">Pinterest</a>
+                    </div>
+                </div>
+                <div class="footer-legal">
+                    <a href="#" class="legal-link">Договор оферты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="navigation.js"></script>
+</body>
+</html> 

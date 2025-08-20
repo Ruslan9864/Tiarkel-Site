@@ -589,88 +589,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Mobile menu toggle (burger + drawer)
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const drawer = document.querySelector('.nav-drawer');
-    const backdrop = document.querySelector('.nav-backdrop');
-    const drawerClose = document.querySelector('.drawer-close');
-    const navMenu = document.querySelector('.nav-menu');
-    const firstMenuItem = document.querySelector('.nav-menu a');
-
-    const closeDrawer = () => {
-        if (!drawer) return;
-        drawer.classList.remove('active');
-        backdrop && backdrop.classList.remove('active');
-        mobileMenuToggle && mobileMenuToggle.classList.remove('active');
-        mobileMenuToggle && mobileMenuToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-        
-        // Return focus to burger button
-        mobileMenuToggle && mobileMenuToggle.focus();
-    };
-
-    const openDrawer = () => {
-        if (!drawer) return;
-        drawer.classList.add('active');
-        backdrop && backdrop.classList.add('active');
-        mobileMenuToggle && mobileMenuToggle.classList.add('active');
-        mobileMenuToggle && mobileMenuToggle.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-        
-        // Focus first menu item
-        setTimeout(() => {
-            firstMenuItem && firstMenuItem.focus();
-        }, 300);
-    };
-
-    // Toggle menu
-    mobileMenuToggle && mobileMenuToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        const isOpen = drawer && drawer.classList.contains('active');
-        
-        if (isOpen) {
-            closeDrawer();
-        } else {
-            openDrawer();
-        }
-    });
-
-    // Close on backdrop click
-    backdrop && backdrop.addEventListener('click', closeDrawer);
-
-    // Close on close button click
-    drawerClose && drawerClose.addEventListener('click', closeDrawer);
-
-    // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && drawer && drawer.classList.contains('active')) {
-            closeDrawer();
-        }
-    });
-
-    // Focus trap for menu
-    if (drawer && navMenu) {
-        const focusableElements = navMenu.querySelectorAll('a, button');
-        const firstFocusable = focusableElements[0];
-        const lastFocusable = focusableElements[focusableElements.length - 1];
-
-        drawer.addEventListener('keydown', function(e) {
-            if (e.key === 'Tab') {
-                if (e.shiftKey) {
-                    if (document.activeElement === firstFocusable) {
-                        e.preventDefault();
-                        lastFocusable.focus();
-                    }
-                } else {
-                    if (document.activeElement === lastFocusable) {
-                        e.preventDefault();
-                        firstFocusable.focus();
-                    }
-                }
-            }
-        });
-    }
-
     // Header CTA button
     const headerCta = document.getElementById('header-cta');
     if (headerCta) {
@@ -689,7 +607,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Close menu after click
             setTimeout(() => {
-                closeDrawer();
+                // The mobile menu toggle logic is now handled by the navigation module
+                // This setTimeout is no longer needed here.
             }, 100);
         });
     });

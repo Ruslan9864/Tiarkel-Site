@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тарифы — ДИЗАЙНА ЛАБОРАТОРИЯ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="nav-center">
+                    <a href="index.html" class="logo" aria-label="На главную">
+                        <img src="Logo.svg" alt="Логотип" class="logo-img" />
+                        <div class="logo-descriptor">Школа Татьяны Аракеловой</div>
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <button class="language-switcher" aria-label="Переключить язык">
+                        <span class="language-indicator">RU</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 1L15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="btn-primary" id="header-cta">Записаться</button>
+                </div>
+            </nav>
+            <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Основное меню">
+                <button class="drawer-close" aria-label="Закрыть меню">×</button>
+                <div class="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="program.html">Программа</a></li>
+                        <li><a href="cases.html">Кейсы</a></li>
+                        <li><a href="pricing.html" aria-current="page">Тарифы</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-backdrop"></div>
+        </div>
+    </header>
+
+    <main class="main" style="padding-top: 100px;">
+        <div class="container">
+            <section class="pricing-section">
+                <h1 class="section-title">ТАРИФЫ КУРСА</h1>
+                <p class="section-subtitle">Выберите подходящий вариант обучения</p>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>БАЗОВЫЙ</h3>
+                            <div class="price">
+                                <span class="price-amount">$997</span>
+                                <span class="price-period">за курс</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>✓ Доступ к 156 урокам</li>
+                            <li>✓ Поддержка в чате</li>
+                            <li>✓ Проверка 15 работ</li>
+                            <li>✓ Сертификат</li>
+                        </ul>
+                        <button class="btn-primary">Выбрать тариф</button>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">ПОПУЛЯРНЫЙ</div>
+                        <div class="pricing-header">
+                            <h3>ПРЕМИУМ</h3>
+                            <div class="price">
+                                <span class="price-amount">$1497</span>
+                                <span class="price-period">за курс</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>✓ Все из базового тарифа</li>
+                            <li>✓ Персональный куратор</li>
+                            <li>✓ Индивидуальные консультации</li>
+                            <li>✓ Помощь с трудоустройством</li>
+                            <li>✓ Доступ к закрытому комьюнити</li>
+                        </ul>
+                        <button class="btn-primary">Выбрать тариф</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <h3>НАШИ СОЦСЕТИ</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/tiarkel/" class="social-link">Instagram</a>
+                        <a href="https://t.me/tatvorit" class="social-link">TELEGRAM</a>
+                        <a href="https://www.behance.net/1db30958" class="social-link">behance</a>
+                        <a href="https://www.pinterest.com/tiaara98/" class="social-link">Pinterest</a>
+                    </div>
+                </div>
+                <div class="footer-legal">
+                    <a href="#" class="legal-link">Договор оферты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="navigation.js"></script>
+</body>
+</html> 

@@ -4814,3 +4814,242 @@ img[loading="lazy"].loaded {
         transform: none;
     }
 }
+
+/* ===== PRICING PAGE STYLES ===== */
+.pricing-section {
+    padding: 80px 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.pricing-card {
+    background: white;
+    border: 2px solid rgba(98, 60, 151, 0.1);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.pricing-card:hover {
+    border-color: rgba(98, 60, 151, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(98, 60, 151, 0.1);
+}
+
+.pricing-card.featured {
+    border-color: #623c97;
+    background: linear-gradient(135deg, rgba(98, 60, 151, 0.05), rgba(123, 75, 184, 0.05));
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #623c97;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.pricing-header h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1e2430;
+}
+
+.price {
+    margin-bottom: 24px;
+}
+
+.price-amount {
+    font-size: 48px;
+    font-weight: 900;
+    color: #623c97;
+    display: block;
+}
+
+.price-period {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+}
+
+.pricing-features {
+    list-style: none;
+    margin: 0 0 32px 0;
+    padding: 0;
+    text-align: left;
+}
+
+.pricing-features li {
+    padding: 8px 0;
+    color: #1e2430;
+    font-weight: 500;
+}
+
+/* ===== FAQ PAGE STYLES ===== */
+.faq-section {
+    padding: 80px 0;
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 48px auto 0;
+}
+
+.faq-item {
+    border: 1px solid rgba(98, 60, 151, 0.1);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.faq-question {
+    background: white;
+    padding: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: #1e2430;
+    transition: all 0.3s ease;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.faq-question:hover {
+    background: rgba(98, 60, 151, 0.05);
+}
+
+.faq-arrow {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-item[open] .faq-arrow {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 24px 24px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ===== PROJECTS PAGE STYLES ===== */
+.projects-section {
+    padding: 80px 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid rgba(98, 60, 151, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(98, 60, 151, 0.1);
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(135deg, rgba(98, 60, 151, 0.1), rgba(123, 75, 184, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-placeholder {
+    color: #623c97;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.project-info {
+    padding: 24px;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1e2430;
+}
+
+.project-info p {
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: rgba(98, 60, 151, 0.1);
+    color: #623c97;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE STYLES FOR NEW PAGES ===== */
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .pricing-card {
+        padding: 24px;
+    }
+    
+    .price-amount {
+        font-size: 36px;
+    }
+    
+    .faq-question {
+        padding: 20px;
+        font-size: 16px;
+    }
+    
+    .faq-answer {
+        padding: 0 20px 20px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .project-image {
+        height: 160px;
+    }
+}

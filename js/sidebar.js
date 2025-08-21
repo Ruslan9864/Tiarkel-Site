@@ -3,6 +3,18 @@
  * Управляет открытием/закрытием и навигацией
  */
 
+// Определяем базовый путь для GitHub Pages
+const BASE_PATH = (() => {
+    const path = window.location.pathname;
+    if (path.includes('/Tiarkel-Site/')) {
+        return '/Tiarkel-Site/';
+    }
+    return './';
+})();
+
+// Логирование инициализации
+console.log(`Tiarkel nav init — base=${BASE_PATH} — env=${window.location.hostname === 'ruslan9864.github.io' ? 'gh' : 'local'}`);
+
 class SidebarMenu {
     constructor() {
         this.sidebar = null;
@@ -27,8 +39,8 @@ class SidebarMenu {
         const sidebarHTML = `
             <div class="sidebar" id="sidebar">
                 <div class="sidebar-header">
-                    <a href="index.html" class="sidebar-logo">
-                        <img src="Logo.svg" alt="Tiarkel">
+                    <a href="${BASE_PATH}index.html" class="sidebar-logo">
+                        <img src="${BASE_PATH}Logo.svg" alt="Tiarkel">
                     </a>
                     <button class="sidebar-close" id="sidebar-close" aria-label="Закрыть меню">
                         <span>×</span>
@@ -39,25 +51,25 @@ class SidebarMenu {
                     <div class="sidebar-section">
                         <div class="sidebar-section-title">Основные разделы</div>
                         <ul class="sidebar-menu">
-                            <li><a href="index.html" class="sidebar-link" data-page="home">
+                            <li><a href="${BASE_PATH}index.html" class="sidebar-link" data-page="home">
                                 <span class="sidebar-icon">🏠</span>
                                 <span class="sidebar-text">Главная</span>
                             </a></li>
-                            <li><a href="program.html" class="sidebar-link" data-page="program">
+                            <li><a href="${BASE_PATH}program.html" class="sidebar-link" data-page="program">
                                 <span class="sidebar-icon">📚</span>
                                 <span class="sidebar-text">Программа курса</span>
                             </a></li>
-                            <li><a href="pricing.html" class="sidebar-link" data-page="pricing">
+                            <li><a href="${BASE_PATH}pricing.html" class="sidebar-link" data-page="pricing">
                                 <span class="sidebar-icon">💰</span>
                                 <span class="sidebar-text">Тарифы</span>
                                 <span class="sidebar-badge">4 тарифа</span>
                             </a></li>
-                            <li><a href="cases.html" class="sidebar-link" data-page="cases">
+                            <li><a href="${BASE_PATH}cases.html" class="sidebar-link" data-page="cases">
                                 <span class="sidebar-icon">🎯</span>
                                 <span class="sidebar-text">Кейсы студентов</span>
                                 <span class="sidebar-badge">8 кейсов</span>
                             </a></li>
-                            <li><a href="services.html" class="sidebar-link" data-page="services">
+                            <li><a href="${BASE_PATH}services.html" class="sidebar-link" data-page="services">
                                 <span class="sidebar-icon">🎨</span>
                                 <span class="sidebar-text">Услуги студии</span>
                                 <span class="sidebar-badge">4 услуги</span>
@@ -68,11 +80,11 @@ class SidebarMenu {
                     <div class="sidebar-section">
                         <div class="sidebar-section-title">Информация</div>
                         <ul class="sidebar-menu">
-                            <li><a href="contacts.html" class="sidebar-link" data-page="contacts">
+                            <li><a href="${BASE_PATH}contacts.html" class="sidebar-link" data-page="contacts">
                                 <span class="sidebar-icon">📞</span>
                                 <span class="sidebar-text">Контакты</span>
                             </a></li>
-                            <li><a href="faq.html" class="sidebar-link" data-page="faq">
+                            <li><a href="${BASE_PATH}faq.html" class="sidebar-link" data-page="faq">
                                 <span class="sidebar-icon">❓</span>
                                 <span class="sidebar-text">FAQ</span>
                             </a></li>
@@ -82,11 +94,11 @@ class SidebarMenu {
                     <div class="sidebar-section">
                         <div class="sidebar-section-title">Документы</div>
                         <ul class="sidebar-menu">
-                            <li><a href="oferta.html" class="sidebar-link" data-page="oferta">
+                            <li><a href="${BASE_PATH}oferta.html" class="sidebar-link" data-page="oferta">
                                 <span class="sidebar-icon">📄</span>
                                 <span class="sidebar-text">Публичная оферта</span>
                             </a></li>
-                            <li><a href="privacy.html" class="sidebar-link" data-page="privacy">
+                            <li><a href="${BASE_PATH}privacy.html" class="sidebar-link" data-page="privacy">
                                 <span class="sidebar-icon">🔒</span>
                                 <span class="sidebar-text">Политика конфиденциальности</span>
                             </a></li>
@@ -96,7 +108,7 @@ class SidebarMenu {
                     <div class="sidebar-section">
                         <div class="sidebar-section-title">Курсы</div>
                         <ul class="sidebar-menu">
-                            <li><a href="courses/osnovnoy-kurs.html" class="sidebar-link" data-page="course">
+                            <li><a href="${BASE_PATH}courses/osnovnoy-kurs.html" class="sidebar-link" data-page="course">
                                 <span class="sidebar-icon">🎓</span>
                                 <span class="sidebar-text">Основной курс</span>
                                 <span class="sidebar-badge">LITE</span>
@@ -143,17 +155,23 @@ class SidebarMenu {
             this.burgerButton.addEventListener('click', () => {
                 this.openSidebar();
             });
+        } else {
+            console.warn('Burger button not found - sidebar may not work properly');
         }
         
         // Закрытие меню
-        this.sidebarClose.addEventListener('click', () => {
-            this.closeSidebar();
-        });
+        if (this.sidebarClose) {
+            this.sidebarClose.addEventListener('click', () => {
+                this.closeSidebar();
+            });
+        }
         
         // Закрытие по клику на backdrop
-        this.sidebarBackdrop.addEventListener('click', () => {
-            this.closeSidebar();
-        });
+        if (this.sidebarBackdrop) {
+            this.sidebarBackdrop.addEventListener('click', () => {
+                this.closeSidebar();
+            });
+        }
         
         // Закрытие по Escape
         document.addEventListener('keydown', (e) => {
@@ -163,22 +181,29 @@ class SidebarMenu {
         });
         
         // Обработка кликов по ссылкам
-        this.sidebar.addEventListener('click', (e) => {
-            if (e.target.closest('.sidebar-link')) {
-                const link = e.target.closest('.sidebar-link');
-                this.handleLinkClick(link);
-            }
-        });
-        
-        // Анимация элементов при открытии
-        this.sidebar.addEventListener('transitionend', () => {
-            if (this.isOpen()) {
-                this.animateMenuItems();
-            }
-        });
+        if (this.sidebar) {
+            this.sidebar.addEventListener('click', (e) => {
+                if (e.target.closest('.sidebar-link')) {
+                    const link = e.target.closest('.sidebar-link');
+                    this.handleLinkClick(link);
+                }
+            });
+            
+            // Анимация элементов при открытии
+            this.sidebar.addEventListener('transitionend', () => {
+                if (this.isOpen()) {
+                    this.animateMenuItems();
+                }
+            });
+        }
     }
     
     openSidebar() {
+        if (!this.sidebar || !this.sidebarBackdrop) {
+            console.error('Sidebar elements not found');
+            return;
+        }
+        
         this.sidebar.classList.add('active');
         this.sidebarBackdrop.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -190,7 +215,9 @@ class SidebarMenu {
         
         // Фокус на кнопку закрытия для доступности
         setTimeout(() => {
-            this.sidebarClose.focus();
+            if (this.sidebarClose) {
+                this.sidebarClose.focus();
+            }
         }, 300);
         
         // Трекинг события
@@ -198,6 +225,11 @@ class SidebarMenu {
     }
     
     closeSidebar() {
+        if (!this.sidebar || !this.sidebarBackdrop) {
+            console.error('Sidebar elements not found');
+            return;
+        }
+        
         this.sidebar.classList.remove('active');
         this.sidebarBackdrop.classList.remove('active');
         document.body.style.overflow = '';
@@ -219,7 +251,7 @@ class SidebarMenu {
     }
     
     isOpen() {
-        return this.sidebar.classList.contains('active');
+        return this.sidebar && this.sidebar.classList.contains('active');
     }
     
     handleLinkClick(link) {
@@ -239,6 +271,8 @@ class SidebarMenu {
     }
     
     highlightCurrentPage() {
+        if (!this.sidebar) return;
+        
         const currentLink = this.sidebar.querySelector(`[data-page="${this.currentPage}"]`);
         if (currentLink) {
             currentLink.classList.add('active');
@@ -264,6 +298,8 @@ class SidebarMenu {
     }
     
     animateMenuItems() {
+        if (!this.sidebar) return;
+        
         const menuItems = this.sidebar.querySelectorAll('.sidebar-menu a');
         
         menuItems.forEach((item, index) => {
@@ -274,6 +310,8 @@ class SidebarMenu {
     }
     
     setupKeyboardNavigation() {
+        if (!this.sidebar) return;
+        
         // Навигация по Tab
         this.sidebar.addEventListener('keydown', (e) => {
             if (e.key === 'Tab') {

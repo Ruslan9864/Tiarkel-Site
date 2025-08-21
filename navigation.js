@@ -1,4 +1,150 @@
 // Navigation Module
+
+// Определяем базовый путь для GitHub Pages
+const BASE_PATH = (() => {
+    const path = window.location.pathname;
+    if (path.includes('/Tiarkel-Site/')) {
+        return '/Tiarkel-Site/';
+    }
+    return './';
+})();
+
+// Fallback навигация при ошибке загрузки JSON
+const FALLBACK_NAVIGATION = {
+    ru: {
+        main_sections: [
+            {
+                id: "home",
+                title: "Главная",
+                url: `${BASE_PATH}index.html`,
+                sub_sections: []
+            },
+            {
+                id: "about-course",
+                title: "О курсе",
+                url: "#about",
+                sub_sections: []
+            },
+            {
+                id: "program",
+                title: "Программа курса",
+                url: `${BASE_PATH}program.html`,
+                sub_sections: []
+            },
+            {
+                id: "store",
+                title: "Магазин",
+                url: `${BASE_PATH}store/`,
+                sub_sections: []
+            },
+            {
+                id: "cases",
+                title: "Кейсы студентов",
+                url: `${BASE_PATH}cases.html`,
+                sub_sections: []
+            },
+            {
+                id: "services",
+                title: "Услуги дизайна",
+                url: `${BASE_PATH}services.html`,
+                sub_sections: []
+            },
+            {
+                id: "pricing",
+                title: "Тарифы и запись",
+                sub_sections: [
+                    {
+                        id: "tariffs",
+                        title: "Тарифы",
+                        url: `${BASE_PATH}pricing.html`
+                    },
+                    {
+                        id: "faq",
+                        title: "FAQ",
+                        url: `${BASE_PATH}faq.html`
+                    },
+                    {
+                        id: "contacts",
+                        title: "Контакты",
+                        url: `${BASE_PATH}contacts.html`
+                    },
+                    {
+                        id: "apply",
+                        title: "Заявка на курс",
+                        url: "#contact"
+                    }
+                ]
+            }
+        ]
+    },
+    uz: {
+        main_sections: [
+            {
+                id: "home",
+                title: "Bosh sahifa",
+                url: `${BASE_PATH}index.html`,
+                sub_sections: []
+            },
+            {
+                id: "about-course",
+                title: "Kurs haqida",
+                url: "#about",
+                sub_sections: []
+            },
+            {
+                id: "program",
+                title: "Kurs dasturi",
+                url: `${BASE_PATH}program.html`,
+                sub_sections: []
+            },
+            {
+                id: "store",
+                title: "Do'kon",
+                url: `${BASE_PATH}store/`,
+                sub_sections: []
+            },
+            {
+                id: "cases",
+                title: "Talabalar ishlari",
+                url: `${BASE_PATH}cases.html`,
+                sub_sections: []
+            },
+            {
+                id: "services",
+                title: "Dizayn xizmatlari",
+                url: `${BASE_PATH}services.html`,
+                sub_sections: []
+            },
+            {
+                id: "pricing",
+                title: "Tariflar va ro'yxatdan o'tish",
+                sub_sections: [
+                    {
+                        id: "tariffs",
+                        title: "Tariflar",
+                        url: `${BASE_PATH}pricing.html`
+                    },
+                    {
+                        id: "faq",
+                        title: "FAQ",
+                        url: `${BASE_PATH}faq.html`
+                    },
+                    {
+                        id: "contacts",
+                        title: "Aloqa",
+                        url: `${BASE_PATH}contacts.html`
+                    },
+                    {
+                        id: "apply",
+                        title: "Kursga ariza",
+                        url: "#contact"
+                    }
+                ]
+            }
+        ]
+    }
+};
+
 class Navigation {
     constructor() {
         this.currentLanguage = 'ru';
@@ -14,29 +160,40 @@ class Navigation {
             this.bindEvents();
         } catch (error) {
             console.error('Failed to initialize navigation:', error);
+            // Используем fallback навигацию
+            this.navigationData = FALLBACK_NAVIGATION;
+            this.renderNavigation();
+            this.bindEvents();
         }
     }
 
     async loadNavigationData() {
         try {
-            const response = await fetch('data/navigation.json');
+            const response = await fetch(`${BASE_PATH}data/navigation.json`);
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
             this.navigationData = await response.json();
         } catch (error) {
             console.error('Failed to load navigation data:', error);
+            console.log('Using fallback navigation');
             // Fallback to basic navigation
-            this.navigationData = {
-                ru: { main_sections: [] },
-                uz: { main_sections: [] }
-            };
+            this.navigationData = FALLBACK_NAVIGATION;
         }
     }
 
     renderNavigation() {
         const navDrawer = document.getElementById('nav-drawer');
-        if (!navDrawer) return;
+        if (!navDrawer) {
+            console.warn('Nav drawer not found');
+            return;
+        }
 
         const navMenuContainer = navDrawer.querySelector('.nav-menu-container');
-        if (!navMenuContainer) return;
+        if (!navMenuContainer) {
+            console.warn('Nav menu container not found');
+            return;
+        }
 
         const sections = this.navigationData[this.currentLanguage].main_sections;
         

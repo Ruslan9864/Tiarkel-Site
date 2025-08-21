@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин цифровых товаров для дизайнеров — Tiarkel</title>
+    <meta name="description" content="Качественные цифровые товары для дизайнеров: мокапы, UI-киты, шрифты, иконки, 3D-ассеты и многое другое. Профессиональные инструменты для ваших проектов.">
+    <meta name="author" content="Руслан Рустамов">
+    <link rel="canonical" href="https://tiarkel.com/store/">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../store-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../Logo.svg" as="image">
+    <link rel="preload" href="../styles.css" as="style">
+    <link rel="preload" href="../store-styles.css" as="style">
+    
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Tiarkel">
+    <meta property="og:title" content="Магазин цифровых товаров для дизайнеров — Tiarkel">
+    <meta property="og:description" content="Качественные цифровые товары для дизайнеров: мокапы, UI-киты, шрифты, иконки, 3D-ассеты и многое другое.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tiarkel.com/store/">
+    <meta property="og:image" content="https://tiarkel.com/images/og-store.jpg">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Магазин цифровых товаров для дизайнеров — Tiarkel">
+    <meta name="twitter:description" content="Качественные цифровые товары для дизайнеров.">
+    <meta name="twitter:image" content="https://tiarkel.com/images/og-store.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Магазин цифровых товаров Tiarkel",
+        "description": "Качественные цифровые товары для дизайнеров",
+        "url": "https://tiarkel.com/store/",
+        "numberOfItems": 6,
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "Product",
+                    "name": "Premium Branding Kit Mockups",
+                    "url": "https://tiarkel.com/store/product.html?id=mockup-branding-kit-01",
+                    "category": "Макеты"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "Product",
+                    "name": "Modern UI Kit",
+                    "url": "https://tiarkel.com/store/product.html?id=ui-kit-modern-01",
+                    "category": "UI-киты"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Главная навигация">
+                <div class="nav-brand">
+                    <a href="../index.html" aria-label="Tiarkel - Главная страница">
+                        <img src="../Logo.svg" alt="Tiarkel" width="120" height="40">
+                    </a>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn-primary" id="header-cta" onclick="scrollToSection('contact')">Записаться на курс</button>
+                </div>
+            </nav>
+            <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Главное меню">
+                <button class="drawer-close" aria-label="Закрыть меню">✕</button>
+                <div class="nav-menu-container">
+                    <ul class="nav-menu" id="nav-menu">
+                        <!-- Navigation will be loaded from navigation.json -->
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-backdrop"></div>
+        </div>
+    </header>
+
+    <!-- Store Header -->
+    <section class="store-header">
+        <div class="container">
+            <h1>Магазин Tiarkel</h1>
+            <p>Качественные цифровые товары для дизайнеров и разработчиков. Мокапы, UI-киты, шрифты, иконки и многое другое для ваших проектов.</p>
+        </div>
+    </section>
+
+    <!-- Store Controls -->
+    <section class="store-controls">
+        <div class="container">
+            <div class="store-search">
+                <input type="text" id="store-search" placeholder="Поиск по товарам..." aria-label="Поиск по товарам">
+            </div>
+            <div class="store-sort">
+                <label for="store-sort">Сортировка:</label>
+                <select id="store-sort">
+                    <option value="popular">Популярные</option>
+                    <option value="new">Новые</option>
+                    <option value="price-low">Цена: по возрастанию</option>
+                    <option value="price-high">Цена: по убыванию</option>
+                </select>
+            </div>
+            <div class="currency-toggle">
+                <label for="currency-toggle">USD</label>
+                <input type="checkbox" id="currency-toggle" aria-label="Переключить валюту">
+                <label for="currency-toggle">UZS</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Filters -->
+    <section class="store-filters">
+        <div class="container">
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <h3>Категории</h3>
+                    <div class="filter-options">
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-mockups" class="category-filter" value="mockups">
+                            <label for="cat-mockups">Макеты</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-templates" class="category-filter" value="templates">
+                            <label for="cat-templates">Шаблоны</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-fonts" class="category-filter" value="fonts">
+                            <label for="cat-fonts">Шрифты</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-icons" class="category-filter" value="icons">
+                            <label for="cat-icons">Иконки</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-3d" class="category-filter" value="3d">
+                            <label for="cat-3d">3D-ассеты</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-presets" class="category-filter" value="presets">
+                            <label for="cat-presets">LUT/Presets</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-branding" class="category-filter" value="branding">
+                            <label for="cat-branding">Branding Kits</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-ui" class="category-filter" value="ui">
+                            <label for="cat-ui">UI-киты</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-textures" class="category-filter" value="textures">
+                            <label for="cat-textures">Текстуры/Материалы</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-other" class="category-filter" value="other">
+                            <label for="cat-other">Прочее</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Совместимость</h3>
+                    <div class="filter-options">
+                        <div class="filter-option">
+                            <input type="checkbox" id="comp-figma" class="compatibility-filter" value="figma">
+                            <label for="comp-figma">Figma</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="comp-ps" class="compatibility-filter" value="ps">
+                            <label for="comp-ps">Photoshop</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="comp-ai" class="compatibility-filter" value="ai">
+                            <label for="comp-ai">Illustrator</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="comp-ae" class="compatibility-filter" value="ae">
+                            <label for="comp-ae">After Effects</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="comp-pr" class="compatibility-filter" value="pr">
+                            <label for="comp-pr">Premiere</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="comp-blender" class="compatibility-filter" value="blender">
+                            <label for="comp-blender">Blender</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="comp-c4d" class="compatibility-filter" value="c4d">
+                            <label for="comp-c4d">Cinema 4D</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="comp-svg" class="compatibility-filter" value="svg">
+                            <label for="comp-svg">SVG</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="comp-png" class="compatibility-filter" value="png">
+                            <label for="comp-png">PNG</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="comp-universal" class="compatibility-filter" value="universal">
+                            <label for="comp-universal">Универсальные</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Цена</h3>
+                    <div class="price-range">
+                        <input type="range" id="price-range" min="0" max="200" value="200" step="10">
+                        <div class="price-display">
+                            <span>$0</span>
+                            <span id="price-display">$200</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main" id="main">
+        <div class="container">
+            <!-- Store Products -->
+            <section class="store-products" aria-label="Товары магазина">
+                <div class="products-grid" id="store-products">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tiarkel</h3>
+                    <p>Школа дизайна Татьяны Аракеловой. Профессиональное обучение веб-дизайну и разработке сайтов.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Обучение</h4>
+                    <ul>
+                        <li><a href="../program.html">Программа курса</a></li>
+                        <li><a href="../pricing.html">Тарифы</a></li>
+                        <li><a href="../cases.html">Кейсы студентов</a></li>
+                        <li><a href="../faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Магазин</h4>
+                    <ul>
+                        <li><a href="index.html">Все товары</a></li>
+                        <li><a href="index.html?category=mockups">Макеты</a></li>
+                        <li><a href="index.html?category=ui">UI-киты</a></li>
+                        <li><a href="index.html?category=fonts">Шрифты</a></li>
+                        <li><a href="index.html?category=icons">Иконки</a></li>
+                        <li><a href="index.html?category=3d">3D-ассеты</a></li>
+                        <li><a href="index.html?category=presets">LUT/Presets</a></li>
+                        <li><a href="index.html?category=branding">Branding Kits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="../contacts.html">Контакты</a></li>
+                        <li><a href="../privacy.html">Политика конфиденциальности</a></li>
+                        <li><a href="../oferta.html">Публичная оферта</a></li>
+                        <li><a href="legal/eula.html">Лицензионное соглашение</a></li>
+                        <li><a href="legal/refund.html">Условия возврата</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tiarkel. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../navigation.js"></script>
+    <script src="../js/store.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</body>
+</html> 

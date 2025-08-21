@@ -20,6 +20,12 @@
         "sub_sections": []
       },
       {
+        "id": "store",
+        "title": "Магазин",
+        "url": "store/",
+        "sub_sections": []
+      },
+      {
         "id": "cases",
         "title": "Кейсы студентов",
         "url": "cases.html",
@@ -77,6 +83,12 @@
         "id": "program",
         "title": "Kurs dasturi",
         "url": "program.html",
+        "sub_sections": []
+      },
+      {
+        "id": "store",
+        "title": "Do'kon",
+        "url": "store/",
         "sub_sections": []
       },
       {

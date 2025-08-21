@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Товар — Магазин Tiarkel</title>
+    <meta name="description" id="page-description" content="Детальная информация о товаре">
+    <meta name="author" content="Руслан Рустамов">
+    <link rel="canonical" id="page-canonical" href="https://tiarkel.com/store/product.html">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../store-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../../Logo.svg" as="image">
+    <link rel="preload" href="../../styles.css" as="style">
+    <link rel="preload" href="../../store-styles.css" as="style">
+    
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Tiarkel">
+    <meta property="og:title" id="og-title" content="Товар — Магазин Tiarkel">
+    <meta property="og:description" id="og-description" content="Детальная информация о товаре">
+    <meta property="og:type" content="product">
+    <meta property="og:url" id="og-url" content="https://tiarkel.com/store/product.html">
+    <meta property="og:image" id="og-image" content="https://tiarkel.com/images/og-store.jpg">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twitter-title" content="Товар — Магазин Tiarkel">
+    <meta name="twitter:description" id="twitter-description" content="Детальная информация о товаре">
+    <meta name="twitter:image" id="twitter-image" content="https://tiarkel.com/images/og-store.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json" id="structured-data">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Товар",
+        "description": "Детальная информация о товаре",
+        "url": "https://tiarkel.com/store/product.html",
+        "image": "https://tiarkel.com/images/og-store.jpg",
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "0",
+            "highPrice": "0",
+            "offerCount": "1"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Главная навигация">
+                <div class="nav-brand">
+                    <a href="../../index.html" aria-label="Tiarkel - Главная страница">
+                        <img src="../../Logo.svg" alt="Tiarkel" width="120" height="40">
+                    </a>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn-primary" id="header-cta" onclick="scrollToSection('contact')">Записаться на курс</button>
+                </div>
+            </nav>
+            <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Главное меню">
+                <button class="drawer-close" aria-label="Закрыть меню">✕</button>
+                <div class="nav-menu-container">
+                    <ul class="nav-menu" id="nav-menu">
+                        <!-- Navigation will be loaded from navigation.json -->
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-backdrop"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" id="main">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item">
+                        <a href="../../index.html" class="breadcrumbs-link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs-item">
+                        <a href="../index.html" class="breadcrumbs-link">Магазин</a>
+                    </li>
+                    <li class="breadcrumbs-item">
+                        <span class="breadcrumbs-current" id="breadcrumb-current">Товар</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <!-- Product Page -->
+            <section class="product-page">
+                <div class="product-layout">
+                    <!-- Product Gallery -->
+                    <div class="product-gallery">
+                        <div class="gallery-main">
+                            <img id="main-image" src="" alt="" loading="eager">
+                        </div>
+                        <div class="gallery-thumbnails" id="gallery-thumbnails">
+                            <!-- Thumbnails will be loaded dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="product-details">
+                        <div class="product-header">
+                            <h1 id="product-title">Загрузка...</h1>
+                            <p id="product-subtitle">Загрузка...</p>
+                        </div>
+
+                        <!-- License Options -->
+                        <div class="license-options" id="license-options">
+                            <!-- License options will be loaded dynamically -->
+                        </div>
+
+                        <!-- Checkout Section -->
+                        <div class="checkout-section">
+                            <a href="#" class="checkout-btn" id="checkout-btn">
+                                Купить сейчас
+                            </a>
+                        </div>
+
+                        <!-- Product Features -->
+                        <div class="product-features" id="product-features">
+                            <!-- Features will be loaded dynamically -->
+                        </div>
+
+                        <!-- Product Compatibility -->
+                        <div class="product-compatibility-full" id="product-compatibility">
+                            <!-- Compatibility will be loaded dynamically -->
+                        </div>
+
+                        <!-- Product Meta -->
+                        <div class="product-meta" id="product-meta">
+                            <!-- Meta information will be loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Description -->
+                <div class="product-description">
+                    <h2>Описание</h2>
+                    <div class="product-description-content" id="product-description">
+                        <!-- Description will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="recommendations">
+                    <h2>С этим часто покупают</h2>
+                    <div class="recommendations-grid" id="recommendations">
+                        <!-- Recommendations will be loaded dynamically -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tiarkel</h3>
+                    <p>Школа дизайна Татьяны Аракеловой. Профессиональное обучение веб-дизайну и разработке сайтов.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Обучение</h4>
+                    <ul>
+                        <li><a href="../../program.html">Программа курса</a></li>
+                        <li><a href="../../pricing.html">Тарифы</a></li>
+                        <li><a href="../../cases.html">Кейсы студентов</a></li>
+                        <li><a href="../../faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Магазин</h4>
+                    <ul>
+                        <li><a href="../index.html">Все товары</a></li>
+                        <li><a href="../index.html?category=mockups">Макеты</a></li>
+                        <li><a href="../index.html?category=ui">UI-киты</a></li>
+                        <li><a href="../index.html?category=fonts">Шрифты</a></li>
+                        <li><a href="../index.html?category=icons">Иконки</a></li>
+                        <li><a href="../index.html?category=3d">3D-ассеты</a></li>
+                        <li><a href="../index.html?category=presets">LUT/Presets</a></li>
+                        <li><a href="../index.html?category=branding">Branding Kits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="../../contacts.html">Контакты</a></li>
+                        <li><a href="../../privacy.html">Политика конфиденциальности</a></li>
+                        <li><a href="../../oferta.html">Публичная оферта</a></li>
+                        <li><a href="legal/eula.html">Лицензионное соглашение</a></li>
+                        <li><a href="legal/refund.html">Условия возврата</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tiarkel. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../navigation.js"></script>
+    <script src="../../js/store.js"></script>
+    <script src="../../script.js"></script>
+    
+    <!-- Product Page Script -->
+    <script>
+        // Product page specific functionality
+        class ProductPage {
+            constructor() {
+                this.productId = this.getProductIdFromUrl();
+                this.product = null;
+                this.init();
+            }
+
+            getProductIdFromUrl() {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get('id');
+            }
+
+            async init() {
+                if (!this.productId) {
+                    this.showError('Товар не найден');
+                    return;
+                }
+
+                try {
+                    await this.loadProduct();
+                    this.updatePageContent();
+                    this.setupEventListeners();
+                } catch (error) {
+                    console.error('Failed to load product:', error);
+                    this.showError('Ошибка загрузки товара');
+                }
+            }
+
+            async loadProduct() {
+                // Load products data
+                const response = await fetch('../../data/products.json');
+                const data = await response.json();
+                this.product = data.products.find(p => p.id === this.productId);
+                
+                if (!this.product) {
+                    throw new Error('Product not found');
+                }
+            }
+
+            updatePageContent() {
+                // Update page title and meta
+                document.title = this.product.seo.title;
+                document.getElementById('page-description').content = this.product.seo.description;
+                document.getElementById('page-canonical').href = `https://tiarkel.com/store/product.html?id=${this.product.id}`;
+                
+                // Update Open Graph
+                document.getElementById('og-title').content = this.product.seo.title;
+                document.getElementById('og-description').content = this.product.seo.description;
+                document.getElementById('og-url').content = `https://tiarkel.com/store/product.html?id=${this.product.id}`;
+                document.getElementById('og-image').content = `https://tiarkel.com${this.product.seo.og_image}`;
+                
+                // Update Twitter Cards
+                document.getElementById('twitter-title').content = this.product.seo.title;
+                document.getElementById('twitter-description').content = this.product.seo.description;
+                document.getElementById('twitter-image').content = `https://tiarkel.com${this.product.seo.og_image}`;
+
+                // Update breadcrumbs
+                const category = this.getCategoryTitle(this.product.category);
+                document.getElementById('breadcrumb-current').textContent = this.product.title;
+
+                // Update product content
+                document.getElementById('product-title').textContent = this.product.title;
+                document.getElementById('product-subtitle').textContent = this.product.subtitle;
+
+                // Update gallery
+                this.updateGallery();
+
+                // Update license options
+                this.updateLicenseOptions();
+
+                // Update features
+                this.updateFeatures();
+
+                // Update compatibility
+                this.updateCompatibility();
+
+                // Update meta information
+                this.updateMeta();
+
+                // Update description
+                this.updateDescription();
+
+                // Update recommendations
+                this.updateRecommendations();
+
+                // Update structured data
+                this.updateStructuredData();
+            }
+
+            updateGallery() {
+                const mainImage = document.getElementById('main-image');
+                const thumbnails = document.getElementById('gallery-thumbnails');
+                
+                if (this.product.gallery && this.product.gallery.length > 0) {
+                    mainImage.src = this.product.gallery[0];
+                    mainImage.alt = this.product.title;
+                    
+                    thumbnails.innerHTML = this.product.gallery.map((image, index) => `
+                        <div class="gallery-thumbnail ${index === 0 ? 'active' : ''}" onclick="productPage.changeMainImage(${index})">
+                            <img src="${image}" alt="${this.product.title} - изображение ${index + 1}">
+                        </div>
+                    `).join('');
+                }
+            }
+
+            changeMainImage(index) {
+                const mainImage = document.getElementById('main-image');
+                const thumbnails = document.querySelectorAll('.gallery-thumbnail');
+                
+                mainImage.src = this.product.gallery[index];
+                mainImage.alt = `${this.product.title} - изображение ${index + 1}`;
+                
+                thumbnails.forEach((thumb, i) => {
+                    thumb.classList.toggle('active', i === index);
+                });
+            }
+
+            updateLicenseOptions() {
+                const container = document.getElementById('license-options');
+                const defaultLicense = this.product.license_options.find(opt => opt.type === this.product.default_license);
+                
+                container.innerHTML = this.product.license_options.map(option => {
+                    const isDefault = option.type === this.product.default_license;
+                    const price = this.formatPrice(option.price_usd);
+                    
+                    return `
+                        <label class="license-option ${isDefault ? 'selected' : ''}">
+                            <input type="radio" name="license" value="${option.type}" 
+                                   ${isDefault ? 'checked' : ''} 
+                                   onchange="productPage.updatePrice('${option.type}')">
+                            <div class="license-info">
+                                <h4>${this.getLicenseTitle(option.type)}</h4>
+                                <p>${this.getLicenseDescription(option.type)}</p>
+                                <div class="license-price">
+                                    <span class="price-usd">${price.usd}</span>
+                                    <span class="price-uzs">${price.uzs}</span>
+                                </div>
+                            </div>
+                        </label>
+                    `;
+                }).join('');
+
+                // Update checkout button
+                this.updateCheckoutButton(defaultLicense);
+            }
+
+            updatePrice(licenseType) {
+                const license = this.product.license_options.find(opt => opt.type === licenseType);
+                if (!license) return;
+
+                const price = this.formatPrice(license.price_usd);
+                
+                // Update selected license option
+                document.querySelectorAll('.license-option').forEach(option => {
+                    option.classList.remove('selected');
+                });
+                
+                const selectedOption = document.querySelector(`input[value="${licenseType}"]`).closest('.license-option');
+                selectedOption.classList.add('selected');
+
+                // Update checkout button
+                this.updateCheckoutButton(license);
+
+                // Track event
+                if (window.store) {
+                    window.store.trackEvent('license_select', {
+                        item_id: this.product.id,
+                        license_type: licenseType,
+                        price: license.price_usd
+                    });
+                }
+            }
+
+            updateCheckoutButton(license) {
+                const checkoutBtn = document.getElementById('checkout-btn');
+                checkoutBtn.href = `${license.archive_url}?license=${license.type}&product_id=${this.product.id}`;
+            }
+
+            updateFeatures() {
+                const container = document.getElementById('product-features');
+                container.innerHTML = this.product.whats_inside.map(feature => 
+                    `<div class="feature-item">${feature}</div>`
+                ).join('');
+            }
+
+            updateCompatibility() {
+                const container = document.getElementById('product-compatibility');
+                container.innerHTML = this.product.compatibility.map(comp => {
+                    const tag = this.getCompatibilityTag(comp);
+                    return tag ? `<span class="compatibility-tag-full">${tag.title}</span>` : '';
+                }).join('');
+            }
+
+            updateMeta() {
+                const container = document.getElementById('product-meta');
+                container.innerHTML = `
+                    <div class="meta-item">
+                        <div class="meta-label">Версия</div>
+                        <div class="meta-value">${this.product.version}</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Размер файла</div>
+                        <div class="meta-value">${this.product.file_size_mb} МБ</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Обновлено</div>
+                        <div class="meta-value">${new Date(this.product.last_update).toLocaleDateString('ru-RU')}</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Языки</div>
+                        <div class="meta-value">${this.product.languages.join(', ').toUpperCase()}</div>
+                    </div>
+                `;
+            }
+
+            updateDescription() {
+                const container = document.getElementById('product-description');
+                container.innerHTML = this.product.long_description_html;
+            }
+
+            updateRecommendations() {
+                const container = document.getElementById('recommendations');
+                const recommendations = this.getRecommendations();
+                
+                container.innerHTML = recommendations.map(product => `
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="${product.thumbnail}" alt="${product.title}" loading="lazy">
+                            ${this.renderBadges(product.badges)}
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">${product.title}</h3>
+                            <p class="product-subtitle">${product.subtitle}</p>
+                            <div class="product-price">
+                                <span class="price-usd">${this.formatPrice(product.license_options[0].price_usd).usd}</span>
+                                <span class="price-uzs">${this.formatPrice(product.license_options[0].price_usd).uzs}</span>
+                            </div>
+                            <a href="product.html?id=${product.id}" class="btn-secondary">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            updateStructuredData() {
+                const structuredData = {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": this.product.title,
+                    "description": this.product.short_description,
+                    "url": `https://tiarkel.com/store/product.html?id=${this.product.id}`,
+                    "image": `https://tiarkel.com${this.product.thumbnail}`,
+                    "category": this.getCategoryTitle(this.product.category),
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "Tiarkel"
+                    },
+                    "offers": {
+                        "@type": "AggregateOffer",
+                        "priceCurrency": "USD",
+                        "lowPrice": Math.min(...this.product.license_options.map(opt => opt.price_usd)),
+                        "highPrice": Math.max(...this.product.license_options.map(opt => opt.price_usd)),
+                        "offerCount": this.product.license_options.length,
+                        "availability": "https://schema.org/InStock"
+                    }
+                };
+
+                document.getElementById('structured-data').textContent = JSON.stringify(structuredData);
+            }
+
+            getRecommendations() {
+                // This would normally come from the store module
+                // For now, return empty array
+                return [];
+            }
+
+            getCategoryTitle(categoryId) {
+                const categories = {
+                    'mockups': 'Макеты',
+                    'templates': 'Шаблоны',
+                    'fonts': 'Шрифты',
+                    'icons': 'Иконки',
+                    '3d': '3D-ассеты',
+                    'presets': 'LUT/Presets',
+                    'branding': 'Branding Kits',
+                    'ui': 'UI-киты',
+                    'textures': 'Текстуры/Материалы',
+                    'other': 'Прочее'
+                };
+                return categories[categoryId] || categoryId;
+            }
+
+            getCompatibilityTag(compId) {
+                const tags = {
+                    'figma': { title: 'Figma' },
+                    'ps': { title: 'Photoshop' },
+                    'ai': { title: 'Illustrator' },
+                    'ae': { title: 'After Effects' },
+                    'pr': { title: 'Premiere' },
+                    'blender': { title: 'Blender' },
+                    'c4d': { title: 'Cinema 4D' },
+                    'svg': { title: 'SVG' },
+                    'png': { title: 'PNG' },
+                    'universal': { title: 'Универсальные' }
+                };
+                return tags[compId];
+            }
+
+            getLicenseTitle(type) {
+                const titles = {
+                    'personal': 'Personal',
+                    'commercial': 'Commercial',
+                    'extended': 'Extended'
+                };
+                return titles[type] || type;
+            }
+
+            getLicenseDescription(type) {
+                const descriptions = {
+                    'personal': '1 пользователь, некоммерческое использование',
+                    'commercial': 'До 5 коммерческих проектов',
+                    'extended': 'Без ограничений, мультиклиент'
+                };
+                return descriptions[type] || '';
+            }
+
+            formatPrice(priceUsd) {
+                const usd = `$${priceUsd}`;
+                let uzs = '';
+                
+                // Simple conversion (in real app, would use exchange rates)
+                const uzsAmount = Math.round(priceUsd * 12500);
+                uzs = `≈${uzsAmount.toLocaleString('ru-RU')} UZS`;
+
+                return { usd, uzs };
+            }
+
+            renderBadges(badges) {
+                if (!badges || badges.length === 0) return '';
+                
+                const badgeLabels = {
+                    'new': 'Новинка',
+                    'best': 'Популярное',
+                    'free': 'Бесплатно'
+                };
+
+                return badges.map(badge => 
+                    `<span class="badge badge-${badge}">${badgeLabels[badge] || badge}</span>`
+                ).join('');
+            }
+
+            setupEventListeners() {
+                // Add any additional event listeners here
+            }
+
+            showError(message) {
+                const main = document.getElementById('main');
+                main.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">❌</div>
+                        <h3>Ошибка</h3>
+                        <p>${message}</p>
+                        <a href="../index.html" class="btn-primary">Вернуться в магазин</a>
+                    </div>
+                `;
+            }
+        }
+
+        // Initialize product page
+        const productPage = new ProductPage();
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</body>
+</html> 

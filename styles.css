@@ -8619,4 +8619,26 @@ img[loading="lazy"].loaded {
 .store-preview-badge-free {
     background: #4299e1;
     color: white;
+}/ *   = = = = =   U P D A T E D   H E R O   S E C T I O N   S T Y L E S   = = = = =   * /  
+ 
+/* Hero Benefits */
+.hero-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
 }
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: rgba(98, 60, 151, 0.1);
+    border: 1px solid rgba(98, 60, 151, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease;
+    animation-fill-mode: both;
+}
+

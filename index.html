@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курс веб-дизайна и разработки сайтов от Tiarkel</title>
-    <meta name="description" content="Профессиональный курс веб-дизайна и разработки сайтов. Научитесь создавать современные веб-сайты с нуля до профессионального уровня. Получите практические навыки в HTML, CSS, JavaScript и других технологиях веб-разработки. Станьте востребованным специалистом в области веб-дизайна и разработки.">
+    <title>Курс графического и бренд-дизайна Tiarkel</title>
+    <meta name="description" content="Курс графического и бренд-дизайна от Tiarkel. Портфолио из 15 проектов, поддержка кураторов, разборы и фидбек. Старт от $239. Пошаговая программа от брифа до коммерческой упаковки.">
     <meta name="author" content="Руслан Рустамов">
     <link rel="canonical" href="https://tiarkel.com/">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nav-styles.css">
+    <link rel="stylesheet" href="hero-styles.css">
+    <link rel="stylesheet" href="header-styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Preload critical resources -->
@@ -17,16 +19,16 @@
     
     <!-- Open Graph -->
     <meta property="og:site_name" content="Tiarkel">
-    <meta property="og:title" content="Курс веб-дизайна и разработки сайтов от Tiarkel">
-    <meta property="og:description" content="Профессиональный курс веб-дизайна и разработки сайтов. Научитесь создавать современные веб-сайты с нуля до профессионального уровня.">
+    <meta property="og:title" content="Курс бренд-дизайна Tiarkel">
+    <meta property="og:description" content="Портфолио из 15 проектов, поддержка кураторов, старт от $239.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tiarkel.com/">
     <meta property="og:image" content="https://tiarkel.com/images/og-home.jpg">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Курс веб-дизайна и разработки сайтов от Tiarkel">
-    <meta name="twitter:description" content="Профессиональный курс веб-дизайна и разработки сайтов.">
+    <meta name="twitter:title" content="Курс бренд-дизайна Tiarkel">
+    <meta name="twitter:description" content="Портфолио из 15 проектов, поддержка кураторов, старт от $239.">
     <meta name="twitter:image" content="https://tiarkel.com/images/og-home.jpg">
     
     <!-- Structured Data -->
@@ -34,8 +36,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Course",
-        "name": "Курс веб-дизайна и разработки сайтов",
-        "description": "Профессиональный курс веб-дизайна и разработки сайтов. Научитесь создавать современные веб-сайты с нуля до профессионального уровня. Получите практические навыки в HTML, CSS, JavaScript и других технологиях веб-разработки.",
+        "name": "Курс графического и бренд-дизайна Tiarkel",
+        "description": "Курс графического и бренд-дизайна от Tiarkel. Портфолио из 15 проектов, поддержка кураторов, разборы и фидбек. Пошаговая программа от брифа до коммерческой упаковки.",
         "inLanguage": ["ru", "uz"],
         "provider": {
             "@type": "Organization",
@@ -100,63 +102,115 @@
     <a href="#main" class="skip-link">Перейти к основному содержимому</a>
     
     <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <nav class="nav" role="navigation" aria-label="Основная навигация">
-                <!-- Mobile burger button -->
-                <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="sidebar">
+    <header class="site-header" id="header" role="banner">
+        <div class="header-inner">
+            <!-- Brand/Logo (Left) -->
+            <div class="brand">
+                <a href="index.html" class="logo" aria-label="Tiarkel — курсы бренд-дизайна">
+                    <img src="Logo.svg" alt="Tiarkel — курсы бренд-дизайна" class="logo-img" loading="eager" />
+                </a>
+            </div>
+            
+            <!-- Center Navigation (Desktop) -->
+            <nav class="nav-left" role="navigation" aria-label="Основная навигация">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active" data-page="home">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="program.html" class="nav-link" data-page="program">Программа</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pricing.html" class="nav-link" data-page="pricing">Тарифы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="store/" class="nav-link" data-page="store">Магазин</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cases.html" class="nav-link" data-page="cases">Кейсы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="faq.html" class="nav-link" data-page="faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacts.html" class="nav-link" data-page="contacts">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Right Actions -->
+            <div class="actions">
+                <!-- Language Toggle (Desktop) -->
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="uz">UZ</button>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="pricing.html#pro" class="btn-primary header-cta">Поступить на курс</a>
+                
+                <!-- Mobile Burger -->
+                <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="navDrawer">
                     <span></span><span></span><span></span>
                 </button>
-                
-                <!-- Logo -->
-                <div class="nav-center">
-                    <a href="index.html" class="logo" aria-label="Главная страница">
-                        <img src="Logo.svg" alt="Логотип Tiarkel" class="logo-img" loading="eager" />
-                        <div class="logo-descriptor">Школа веб-дизайна</div>
-                    </a>
-                </div>
-                
-                <!-- Desktop navigation -->
-                <div class="nav-menu-desktop">
-                    <ul class="nav-menu" id="nav-menu-desktop">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link active" data-page="home">Главная</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="program.html" class="nav-link" data-page="program">Программа</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pricing.html" class="nav-link" data-page="pricing">Тарифы</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="store/" class="nav-link" data-page="store">Магазин</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="cases.html" class="nav-link" data-page="cases">Кейсы</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="faq.html" class="nav-link" data-page="faq">FAQ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contacts.html" class="nav-link" data-page="contacts">Контакты</a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Right side controls -->
-                <div class="nav-right">
-                    <!-- Language toggle -->
-                    <div class="language-toggle">
-                        <span>RU</span>
-                        <button class="lang-switch" aria-label="Переключить язык">UZ</button>
-                    </div>
-                    
-                    <!-- CTA button -->
-                    <a href="pricing.html#pro" class="btn-primary" id="header-cta">Поступить на курс</a>
-                </div>
-            </nav>
+            </div>
         </div>
+        
+        <!-- Mobile Navigation Drawer -->
+        <aside class="nav-drawer" id="navDrawer" aria-hidden="true" aria-labelledby="burger">
+            <div class="drawer-header">
+                <button class="drawer-close" aria-label="Закрыть меню">
+                    <span>×</span>
+                </button>
+            </div>
+            
+            <nav class="drawer-nav" role="navigation" aria-label="Основная навигация">
+                <ul class="drawer-menu">
+                    <li class="drawer-item">
+                        <a href="index.html" class="drawer-link active" data-page="home">Главная</a>
+                    </li>
+                    <li class="drawer-item">
+                        <a href="program.html" class="drawer-link" data-page="program">Программа</a>
+                    </li>
+                    <li class="drawer-item">
+                        <a href="pricing.html" class="drawer-link" data-page="pricing">Тарифы</a>
+                    </li>
+                    <li class="drawer-item">
+                        <a href="store/" class="drawer-link" data-page="store">Магазин</a>
+                    </li>
+                    <li class="drawer-item">
+                        <a href="cases.html" class="drawer-link" data-page="cases">Кейсы</a>
+                    </li>
+                    <li class="drawer-item">
+                        <a href="faq.html" class="drawer-link" data-page="faq">FAQ</a>
+                    </li>
+                    <li class="drawer-item">
+                        <a href="contacts.html" class="drawer-link" data-page="contacts">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="drawer-footer">
+                <div class="drawer-language">
+                    <span>Язык:</span>
+                    <div class="language-toggle">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="uz">UZ</button>
+                    </div>
+                </div>
+                
+                <a href="pricing.html#pro" class="btn-primary drawer-cta">Поступить на курс</a>
+            </div>
+        </aside>
+        
+        <!-- Backdrop -->
+        <div class="backdrop" hidden></div>
     </header>
+
+    <!-- Mobile Sticky CTA (Optional) -->
+    <div class="mobile-sticky-cta">
+        <a href="pricing.html#pro" class="btn-primary">Поступить на курс</a>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
@@ -164,33 +218,70 @@
             <div class="hero-content">
                 <div class="hero-left">
                     <h1 class="hero-title">
-                    Школа Дизайна Татьяны Аракеловой
+                        Курс графического и бренд-дизайна Tiarkel
                     </h1>
                     <p class="hero-subtitle">
-                        Научитесь создавать современные веб-сайты с нуля до профессионального уровня
+                        От основ до портфолио из 15 проектов и бренд-гайда. Пошаговая программа: от брифа до коммерческой упаковки.
                     </p>
-                    <div class="hero-badges">
-                        <span class="badge">3 месяца обучения</span>
-                        <span class="badge">15 практических проектов</span>
-                        <span class="badge">Поддержка 24/7 - 15 дней</span>
-                        <span class="badge">Гарантия трудоустройства</span>
-                    </div>
-                    <button class="btn-primary btn-large" onclick="scrollToSection('contact')">Записаться на курс</button>
-                </div>
-                <div class="hero-right">
-                    <div class="hero-card">
-                        <h2>Стоимость курса<br>997 USD</h2>
-                        <div class="hero-badges-mobile">
-                            <span class="badge">3 месяца обучения</span>
-                            <span class="badge">15 практических проектов</span>
+                    
+                    <!-- Benefits -->
+                    <div class="hero-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📁</div>
+                            <div class="benefit-text">
+                                <strong>Портфолио:</strong> 15 реальных проектов
+                            </div>
                         </div>
-                        <p class="hero-description">
-                            За 3 месяца обучения вы получите все необходимые навыки для создания профессиональных веб-сайтов и сможете зарабатывать от 2000$ в месяц как веб-дизайнер
-                        </p>
-                        <button class="btn-primary btn-large" onclick="scrollToSection('contact')">Записаться на курс</button>
-                        <div class="hero-info">
-                            <p>3 месяца обучения</p>
-                            <p>15 практических проектов</p>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">👨‍🏫</div>
+                            <div class="benefit-text">
+                                <strong>Разборы и фидбек</strong> кураторов по дедлайнам
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">💬</div>
+                            <div class="benefit-text">
+                                <strong>Поддержка:</strong> комьюнити, эфиры и карьерные подсказки
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Anchor -->
+                    <div class="hero-price">
+                        <span class="price-start">Старт от $239</span>
+                        <span class="price-popular">· Чаще выбирают PRO — $399</span>
+                    </div>
+                    
+                    <!-- CTAs -->
+                    <div class="hero-cta">
+                        <a href="pricing.html#pro" class="btn-primary btn-large">Поступить на курс</a>
+                        <a href="program.html" class="btn-secondary btn-large">Смотреть программу</a>
+                    </div>
+                    
+                    <!-- Micro CTA -->
+                    <div class="hero-micro-cta">
+                        <a href="assets/docs/syllabus.txt" class="link-micro" download>
+                            📄 Скачать силлабус (PDF)
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-right">
+                    <div class="hero-visual">
+                        <div class="hero-visual-content">
+                            <div class="hero-mockup">
+                                <div class="mockup-screen">
+                                    <div class="mockup-header">
+                                        <div class="mockup-dots">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="mockup-content">
+                                        <div class="mockup-logo">Tiarkel</div>
+                                        <div class="mockup-text">Бренд-дизайн</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -383,7 +474,7 @@
                 </div>
                 
                 <div class="store-preview-cta">
-                    <a href="store/" class="btn-secondary">Смотреть всё</a>
+                    <a href="store/index.html" class="btn-secondary">Смотреть всё</a>
                 </div>
             </section>
 
@@ -512,7 +603,7 @@
         </div>
     </footer>
 
-    <script src="js/sidebar.js?v=202501201200" defer></script>
+    <script src="js/header.js?v=202501201200" defer></script>
     <script src="script.js?v=202501201200" defer></script>
     <script src="js/store-preview.js?v=202501201200" defer></script>
 </body>

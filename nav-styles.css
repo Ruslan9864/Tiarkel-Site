@@ -1,0 +1,139 @@
+/* Стили для обновленной навигации */
+
+/* Новая десктопная навигация */
+.nav-menu-desktop {
+    display: none;
+}
+
+.nav-menu-desktop .nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-menu-desktop .nav-item {
+    position: relative;
+}
+
+.nav-menu-desktop .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.nav-menu-desktop .nav-link:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #bfd732;
+}
+
+.nav-menu-desktop .nav-link:focus-visible {
+    outline: 2px solid #bfd732;
+    outline-offset: 2px;
+}
+
+.nav-menu-desktop .nav-link.active {
+    color: #bfd732;
+    background: rgba(191, 215, 50, 0.1);
+}
+
+.nav-menu-desktop .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: #bfd732;
+    border-radius: 1px;
+}
+
+/* Переключатель языка */
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 16px;
+}
+
+.language-toggle span {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.lang-switch {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lang-switch:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.lang-switch:focus-visible {
+    outline: 2px solid #bfd732;
+    outline-offset: 2px;
+}
+
+/* Адаптивность для десктопной навигации */
+@media (min-width: 1024px) {
+    .nav {
+        grid-template-columns: 48px auto 1fr auto;
+        column-gap: 24px;
+    }
+    
+    .nav-menu-desktop {
+        display: block;
+    }
+    
+    .burger {
+        display: none;
+    }
+    
+    .logo-descriptor {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 1023px) {
+    .nav-menu-desktop {
+        display: none;
+    }
+    
+    .burger {
+        display: inline-flex;
+    }
+    
+    .language-toggle {
+        display: none;
+    }
+}
+
+/* Скрываем старое выпадающее меню */
+.nav-drawer {
+    display: none !important;
+}
+
+.nav-backdrop {
+    display: none !important;
+} 

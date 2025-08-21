@@ -15,6 +15,7 @@
     <link rel="canonical" href="https://tiarkel.com/contacts.html">
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav-styles.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -55,59 +56,62 @@
     
 
     <!-- Header -->
-
     <header class="header" id="header">
-
         <div class="container">
-
-            <nav class="nav">
-
-                <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
-
+            <nav class="nav" role="navigation" aria-label="Основная навигация">
+                <!-- Mobile burger button -->
+                <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="sidebar">
                     <span></span><span></span><span></span>
-
                 </button>
-
+                
+                <!-- Logo -->
                 <div class="nav-center">
-
                     <a href="index.html" class="logo" aria-label="Главная страница">
-
                         <img src="Logo.svg" alt="Логотип Tiarkel" class="logo-img" loading="eager" />
-
                         <div class="logo-descriptor">Школа веб-дизайна</div>
-
                     </a>
-
                 </div>
-
-                <div class="nav-right">
-
-                    <button class="btn-primary" id="header-cta" onclick="scrollToSection('contact')">Записаться на курс</button>
-
-                </div>
-
-            </nav>
-
-            <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Главное меню">
-
-                <button class="drawer-close" aria-label="Закрыть меню">✕</button>
-
-                <div class="nav-menu-container">
-
-                    <ul class="nav-menu" id="nav-menu">
-
-                        <!-- Navigation will be loaded from navigation.json -->
-
+                
+                <!-- Desktop navigation -->
+                <div class="nav-menu-desktop">
+                    <ul class="nav-menu" id="nav-menu-desktop">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link" data-page="home">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="program.html" class="nav-link" data-page="program">Программа</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pricing.html" class="nav-link" data-page="pricing">Тарифы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="store/" class="nav-link" data-page="store">Магазин</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="cases.html" class="nav-link" data-page="cases">Кейсы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="faq.html" class="nav-link" data-page="faq">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacts.html" class="nav-link active" data-page="contacts">Контакты</a>
+                        </li>
                     </ul>
-
                 </div>
-
-            </div>
-
-            <div class="nav-backdrop"></div>
-
+                
+                <!-- Right side controls -->
+                <div class="nav-right">
+                    <!-- Language toggle -->
+                    <div class="language-toggle">
+                        <span>RU</span>
+                        <button class="lang-switch" aria-label="Переключить язык">UZ</button>
+                    </div>
+                    
+                    <!-- CTA button -->
+                    <a href="pricing.html#pro" class="btn-primary" id="header-cta">Поступить на курс</a>
+                </div>
+            </nav>
         </div>
-
     </header>
 
 
@@ -354,12 +358,8 @@
 
 
 
-    <script src="navigation.js"></script>
-
-    <script src="script.js"></script>
-
-    <script src="js/sidebar.js"></script>
-
+    <script src="js/sidebar.js?v=202501201200" defer></script>
+    <script src="script.js?v=202501201200" defer></script>
 </body>
 
 </html> 

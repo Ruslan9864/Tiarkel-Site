@@ -8,6 +8,7 @@
     <meta name="author" content="Руслан Рустамов">
     <link rel="canonical" href="https://ruslan9864.github.io/Tiarkel-Site/faq.html">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav-styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Open Graph -->
@@ -86,44 +87,59 @@
     <!-- Header -->
     <header class="header" id="header">
         <div class="container">
-            <nav class="nav">
-                <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+            <nav class="nav" role="navigation" aria-label="Основная навигация">
+                <!-- Mobile burger button -->
+                <button class="burger mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="sidebar">
                     <span></span><span></span><span></span>
                 </button>
+                
+                <!-- Logo -->
                 <div class="nav-center">
-                    <a href="index.html" class="logo" aria-label="На главную">
-                        <img src="Logo.svg" alt="Tiarkel — бренд-дизайн и обучение" class="logo-img" loading="eager" />
-                        <div class="logo-descriptor">Tiarkel — Школа брендинга и дизайна</div>
+                    <a href="index.html" class="logo" aria-label="Главная страница">
+                        <img src="Logo.svg" alt="Логотип Tiarkel" class="logo-img" loading="eager" />
+                        <div class="logo-descriptor">Школа веб-дизайна</div>
                     </a>
                 </div>
-                <div class="nav-right">
-                    <button class="language-switcher" aria-label="Переключить язык">
-                        <span class="language-indicator">RU</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M8 1L15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <button class="btn-primary" id="header-cta" onclick="scrollToSection('contact')">Записаться</button>
-                </div>
-            </nav>
-            <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Основное меню">
-                <button class="drawer-close" aria-label="Закрыть меню">×</button>
-                <div class="nav-menu-container">
-                    <ul class="nav-menu">
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="index.html#about">О курсе</a></li>
-                        <li><a href="index.html#program">Программа</a></li>
-                        <li><a href="index.html#reviews">Отзывы</a></li>
-                        <li><a href="cases.html">Работы учеников</a></li>
-                        <li><a href="program.html">Программа курса</a></li>
-                        <li><a href="pricing.html">Тарифы</a></li>
-                        <li><a href="store/">Магазин</a></li>
-                        <li><a href="cases.html">Кейсы студентов</a></li>
-                        <li><a href="contacts.html">Контакты</a></li>
+                
+                <!-- Desktop navigation -->
+                <div class="nav-menu-desktop">
+                    <ul class="nav-menu" id="nav-menu-desktop">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link" data-page="home">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="program.html" class="nav-link" data-page="program">Программа</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pricing.html" class="nav-link" data-page="pricing">Тарифы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="store/" class="nav-link" data-page="store">Магазин</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="cases.html" class="nav-link" data-page="cases">Кейсы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="faq.html" class="nav-link active" data-page="faq">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacts.html" class="nav-link" data-page="contacts">Контакты</a>
+                        </li>
                     </ul>
                 </div>
-            </div>
-            <div class="nav-backdrop"></div>
+                
+                <!-- Right side controls -->
+                <div class="nav-right">
+                    <!-- Language toggle -->
+                    <div class="language-toggle">
+                        <span>RU</span>
+                        <button class="lang-switch" aria-label="Переключить язык">UZ</button>
+                    </div>
+                    
+                    <!-- CTA button -->
+                    <a href="pricing.html#pro" class="btn-primary" id="header-cta">Поступить на курс</a>
+                </div>
+            </nav>
         </div>
     </header>
 
@@ -229,7 +245,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="navigation.js"></script>
+    <script src="js/sidebar.js?v=202501201200" defer></script>
+    <script src="script.js?v=202501201200" defer></script>
 </body>
 </html> 

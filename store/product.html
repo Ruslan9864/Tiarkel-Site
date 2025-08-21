@@ -218,6 +218,15 @@
     
     <!-- Product Page Script -->
     <script>
+        // Определяем базовый путь для GitHub Pages
+        const BASE_PATH = (() => {
+            const path = window.location.pathname;
+            if (path.includes('/Tiarkel-Site/')) {
+                return '/Tiarkel-Site/';
+            }
+            return './';
+        })();
+
         // Product page specific functionality
         class ProductPage {
             constructor() {
@@ -249,7 +258,7 @@
 
             async loadProduct() {
                 // Load products data
-                const response = await fetch('../../data/products.json');
+                const response = await fetch(`${BASE_PATH}data/products.json`);
                 const data = await response.json();
                 this.product = data.products.find(p => p.id === this.productId);
                 

@@ -15,12 +15,12 @@
         {"type": "extended", "price_usd": 99}
       ],
       "default_license": "commercial",
-      "thumbnail": "/assets/store/mockup-branding-kit-01/thumb.webp",
+      "thumbnail": "../images/store/mockup-branding-kit-01/thumb.webp",
       "gallery": [
-        "/assets/store/mockup-branding-kit-01/1.webp",
-        "/assets/store/mockup-branding-kit-01/2.webp",
-        "/assets/store/mockup-branding-kit-01/3.webp",
-        "/assets/store/mockup-branding-kit-01/demo.mp4"
+        "../images/store/mockup-branding-kit-01/1.webp",
+        "../images/store/mockup-branding-kit-01/2.webp",
+        "../images/store/mockup-branding-kit-01/3.webp",
+        "../images/store/mockup-branding-kit-01/demo.mp4"
       ],
       "whats_inside": [
         "15 mockups 4000×3000px",
@@ -38,7 +38,7 @@
       "seo": {
         "title": "Купить Premium Branding Kit Mockups — Магазин Tiarkel",
         "description": "Профессиональные мокапы для брендинга. 15 высококачественных мокапов в разрешении 4000×3000px. Подходит для Photoshop, Figma.",
-        "og_image": "/assets/store/mockup-branding-kit-01/og.webp"
+        "og_image": "../images/store/mockup-branding-kit-01/og.webp"
       }
     },
     {
@@ -56,11 +56,11 @@
         {"type": "extended", "price_usd": 149}
       ],
       "default_license": "commercial",
-      "thumbnail": "/assets/store/ui-kit-modern-01/thumb.webp",
+      "thumbnail": "../images/store/ui-kit-modern-01/thumb.webp",
       "gallery": [
-        "/assets/store/ui-kit-modern-01/1.webp",
-        "/assets/store/ui-kit-modern-01/2.webp",
-        "/assets/store/ui-kit-modern-01/3.webp"
+        "../images/store/ui-kit-modern-01/1.webp",
+        "../images/store/ui-kit-modern-01/2.webp",
+        "../images/store/ui-kit-modern-01/3.webp"
       ],
       "whats_inside": [
         "50+ компонентов",
@@ -78,7 +78,7 @@
       "seo": {
         "title": "Купить Modern UI Kit — Магазин Tiarkel",
         "description": "Современный UI-кит с 50+ компонентами для веб-приложений. Figma components с auto-layout и design system.",
-        "og_image": "/assets/store/ui-kit-modern-01/og.webp"
+        "og_image": "../images/store/ui-kit-modern-01/og.webp"
       }
     },
     {
@@ -96,10 +96,10 @@
         {"type": "extended", "price_usd": 89}
       ],
       "default_license": "commercial",
-      "thumbnail": "/assets/store/font-modern-sans-01/thumb.webp",
+      "thumbnail": "../images/store/font-modern-sans-01/thumb.webp",
       "gallery": [
-        "/assets/store/font-modern-sans-01/1.webp",
-        "/assets/store/font-modern-sans-01/2.webp"
+        "../images/store/font-modern-sans-01/1.webp",
+        "../images/store/font-modern-sans-01/2.webp"
       ],
       "whats_inside": [
         "4 начертания",
@@ -117,7 +117,7 @@
       "seo": {
         "title": "Купить Modern Sans Font Family — Магазин Tiarkel",
         "description": "Современная sans-serif гарнитура с 4 начертаниями. Поддержка кириллицы, web-оптимизированные форматы.",
-        "og_image": "/assets/store/font-modern-sans-01/og.webp"
+        "og_image": "../images/store/font-modern-sans-01/og.webp"
       }
     },
     {
@@ -135,10 +135,10 @@
         {"type": "extended", "price_usd": 29}
       ],
       "default_license": "personal",
-      "thumbnail": "/assets/store/icon-set-minimal-01/thumb.webp",
+      "thumbnail": "../images/store/icon-set-minimal-01/thumb.webp",
       "gallery": [
-        "/assets/store/icon-set-minimal-01/1.webp",
-        "/assets/store/icon-set-minimal-01/2.webp"
+        "../images/store/icon-set-minimal-01/1.webp",
+        "../images/store/icon-set-minimal-01/2.webp"
       ],
       "whats_inside": [
         "100+ иконок",
@@ -156,7 +156,7 @@
       "seo": {
         "title": "Скачать Minimal Icon Set — Магазин Tiarkel",
         "description": "Минималистичный набор из 100+ иконок в стиле flat design. Бесплатно для личного использования. SVG, PNG форматы.",
-        "og_image": "/assets/store/icon-set-minimal-01/og.webp"
+        "og_image": "../images/store/icon-set-minimal-01/og.webp"
       }
     },
     {
@@ -174,11 +174,11 @@
         {"type": "extended", "price_usd": 129}
       ],
       "default_license": "commercial",
-      "thumbnail": "/assets/store/3d-product-mockup-01/thumb.webp",
+      "thumbnail": "../images/store/3d-product-mockup-01/thumb.webp",
       "gallery": [
-        "/assets/store/3d-product-mockup-01/1.webp",
-        "/assets/store/3d-product-mockup-01/2.webp",
-        "/assets/store/3d-product-mockup-01/3.webp"
+        "../images/store/3d-product-mockup-01/1.webp",
+        "../images/store/3d-product-mockup-01/2.webp",
+        "../images/store/3d-product-mockup-01/3.webp"
       ],
       "whats_inside": [
         "10 3D сцен",
@@ -196,7 +196,7 @@
       "seo": {
         "title": "Купить 3D Product Mockup Collection — Магазин Tiarkel",
         "description": "Коллекция 3D мокапов для презентации продуктов. 10 готовых сцен для Blender и Cinema 4D с текстурами и материалами.",
-        "og_image": "/assets/store/3d-product-mockup-01/og.webp"
+        "og_image": "../images/store/3d-product-mockup-01/og.webp"
       }
     },
     {
@@ -214,11 +214,11 @@
         {"type": "extended", "price_usd": 69}
       ],
       "default_license": "commercial",
-      "thumbnail": "/assets/store/lut-cinematic-01/thumb.webp",
+      "thumbnail": "../images/store/lut-cinematic-01/thumb.webp",
       "gallery": [
-        "/assets/store/lut-cinematic-01/1.webp",
-        "/assets/store/lut-cinematic-01/2.webp",
-        "/assets/store/lut-cinematic-01/demo.mp4"
+        "../images/store/lut-cinematic-01/1.webp",
+        "../images/store/lut-cinematic-01/2.webp",
+        "../images/store/lut-cinematic-01/demo.mp4"
       ],
       "whats_inside": [
         "20 LUT файлов",
@@ -236,7 +236,7 @@
       "seo": {
         "title": "Купить Cinematic LUT Pack — Магазин Tiarkel",
         "description": "Набор из 20 кинематографических LUT для профессионального видео. Совместим с After Effects, Premiere и Photoshop.",
-        "og_image": "/assets/store/lut-cinematic-01/og.webp"
+        "og_image": "../images/store/lut-cinematic-01/og.webp"
       }
     }
   ],

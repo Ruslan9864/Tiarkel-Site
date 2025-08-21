@@ -1,4 +1,14 @@
 // Store Module
+
+// Определяем базовый путь для GitHub Pages
+const BASE_PATH = (() => {
+    const path = window.location.pathname;
+    if (path.includes('/Tiarkel-Site/')) {
+        return '/Tiarkel-Site/';
+    }
+    return './';
+})();
+
 class Store {
     constructor() {
         this.products = [];
@@ -29,14 +39,14 @@ class Store {
     async loadData() {
         try {
             // Load products data
-            const productsResponse = await fetch('data/products.json');
+            const productsResponse = await fetch(`${BASE_PATH}data/products.json`);
             const productsData = await productsResponse.json();
             this.products = productsData.products;
             this.categories = productsData.categories;
             this.compatibilityTags = productsData.compatibility_tags;
 
             // Load exchange rates
-            const ratesResponse = await fetch('data/exchange-rates.json');
+            const ratesResponse = await fetch(`${BASE_PATH}data/exchange-rates.json`);
             this.exchangeRates = await ratesResponse.json();
 
             // Track analytics

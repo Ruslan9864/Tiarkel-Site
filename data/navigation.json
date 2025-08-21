@@ -8,15 +8,15 @@
         "sub_sections": []
       },
       {
-        "id": "about-course",
-        "title": "О курсе",
-        "url": "#about",
+        "id": "program",
+        "title": "Программа",
+        "url": "program.html",
         "sub_sections": []
       },
       {
-        "id": "program",
-        "title": "Программа курса",
-        "url": "program.html",
+        "id": "pricing",
+        "title": "Тарифы",
+        "url": "pricing.html",
         "sub_sections": []
       },
       {
@@ -27,41 +27,21 @@
       },
       {
         "id": "cases",
-        "title": "Кейсы студентов",
+        "title": "Кейсы",
         "url": "cases.html",
         "sub_sections": []
       },
       {
-        "id": "services",
-        "title": "Услуги дизайна",
-        "url": "services.html",
+        "id": "faq",
+        "title": "FAQ",
+        "url": "faq.html",
         "sub_sections": []
       },
       {
-        "id": "pricing",
-        "title": "Тарифы и запись",
-        "sub_sections": [
-          {
-            "id": "tariffs",
-            "title": "Тарифы",
-            "url": "pricing.html"
-          },
-          {
-            "id": "faq",
-            "title": "FAQ",
-            "url": "faq.html"
-          },
-          {
-            "id": "contacts",
-            "title": "Контакты",
-            "url": "contacts.html"
-          },
-          {
-            "id": "apply",
-            "title": "Заявка на курс",
-            "url": "#contact"
-          }
-        ]
+        "id": "contacts",
+        "title": "Контакты",
+        "url": "contacts.html",
+        "sub_sections": []
       }
     ]
   },
@@ -74,15 +54,15 @@
         "sub_sections": []
       },
       {
-        "id": "about-course",
-        "title": "Kurs haqida",
-        "url": "#about",
+        "id": "program",
+        "title": "Dastur",
+        "url": "program.html",
         "sub_sections": []
       },
       {
-        "id": "program",
-        "title": "Kurs dasturi",
-        "url": "program.html",
+        "id": "pricing",
+        "title": "Tariflar",
+        "url": "pricing.html",
         "sub_sections": []
       },
       {
@@ -93,41 +73,21 @@
       },
       {
         "id": "cases",
-        "title": "Talabalar ishlari",
+        "title": "Ishlar",
         "url": "cases.html",
         "sub_sections": []
       },
       {
-        "id": "services",
-        "title": "Dizayn xizmatlari",
-        "url": "services.html",
+        "id": "faq",
+        "title": "FAQ",
+        "url": "faq.html",
         "sub_sections": []
       },
       {
-        "id": "pricing",
-        "title": "Tariflar va ro'yxatdan o'tish",
-        "sub_sections": [
-          {
-            "id": "tariffs",
-            "title": "Tariflar",
-            "url": "pricing.html"
-          },
-          {
-            "id": "faq",
-            "title": "FAQ",
-            "url": "faq.html"
-          },
-          {
-            "id": "contacts",
-            "title": "Aloqa",
-            "url": "contacts.html"
-          },
-          {
-            "id": "apply",
-            "title": "Kursga ariza",
-            "url": "#contact"
-          }
-        ]
+        "id": "contacts",
+        "title": "Aloqa",
+        "url": "contacts.html",
+        "sub_sections": []
       }
     ]
   }

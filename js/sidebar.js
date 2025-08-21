@@ -39,364 +39,223 @@ class SidebarMenu {
         const sidebarHTML = `
             <div class="sidebar" id="sidebar">
                 <div class="sidebar-header">
-                    <a href="${BASE_PATH}index.html" class="sidebar-logo">
-                        <img src="${BASE_PATH}Logo.svg" alt="Tiarkel">
+                    <a href="index.html" class="sidebar-logo">
+                        <img src="Logo.svg" alt="Tiarkel">
                     </a>
                     <button class="sidebar-close" id="sidebar-close" aria-label="Закрыть меню">
                         <span>×</span>
                     </button>
                 </div>
                 
-                <nav class="sidebar-nav">
-                    <div class="sidebar-section">
-                        <div class="sidebar-section-title">Основные разделы</div>
-                        <ul class="sidebar-menu">
-                            <li><a href="${BASE_PATH}index.html" class="sidebar-link" data-page="home">
-                                <span class="sidebar-icon">🏠</span>
-                                <span class="sidebar-text">Главная</span>
-                            </a></li>
-                            <li><a href="${BASE_PATH}program.html" class="sidebar-link" data-page="program">
-                                <span class="sidebar-icon">📚</span>
-                                <span class="sidebar-text">Программа курса</span>
-                            </a></li>
-                            <li><a href="${BASE_PATH}pricing.html" class="sidebar-link" data-page="pricing">
-                                <span class="sidebar-icon">💰</span>
-                                <span class="sidebar-text">Тарифы</span>
-                                <span class="sidebar-badge">4 тарифа</span>
-                            </a></li>
-                            <li><a href="${BASE_PATH}cases.html" class="sidebar-link" data-page="cases">
-                                <span class="sidebar-icon">🎯</span>
-                                <span class="sidebar-text">Кейсы студентов</span>
-                                <span class="sidebar-badge">8 кейсов</span>
-                            </a></li>
-                            <li><a href="${BASE_PATH}services.html" class="sidebar-link" data-page="services">
-                                <span class="sidebar-icon">🎨</span>
-                                <span class="sidebar-text">Услуги студии</span>
-                                <span class="sidebar-badge">4 услуги</span>
-                            </a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <div class="sidebar-section-title">Информация</div>
-                        <ul class="sidebar-menu">
-                            <li><a href="${BASE_PATH}contacts.html" class="sidebar-link" data-page="contacts">
-                                <span class="sidebar-icon">📞</span>
-                                <span class="sidebar-text">Контакты</span>
-                            </a></li>
-                            <li><a href="${BASE_PATH}faq.html" class="sidebar-link" data-page="faq">
-                                <span class="sidebar-icon">❓</span>
-                                <span class="sidebar-text">FAQ</span>
-                            </a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <div class="sidebar-section-title">Документы</div>
-                        <ul class="sidebar-menu">
-                            <li><a href="${BASE_PATH}oferta.html" class="sidebar-link" data-page="oferta">
-                                <span class="sidebar-icon">📄</span>
-                                <span class="sidebar-text">Публичная оферта</span>
-                            </a></li>
-                            <li><a href="${BASE_PATH}privacy.html" class="sidebar-link" data-page="privacy">
-                                <span class="sidebar-icon">🔒</span>
-                                <span class="sidebar-text">Политика конфиденциальности</span>
-                            </a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <div class="sidebar-section-title">Курсы</div>
-                        <ul class="sidebar-menu">
-                            <li><a href="${BASE_PATH}courses/osnovnoy-kurs.html" class="sidebar-link" data-page="course">
-                                <span class="sidebar-icon">🎓</span>
-                                <span class="sidebar-text">Основной курс</span>
-                                <span class="sidebar-badge">LITE</span>
-                            </a></li>
-                        </ul>
-                    </div>
+                <nav class="sidebar-nav" role="navigation" aria-label="Основная навигация">
+                    <ul class="sidebar-menu">
+                        <li><a href="index.html" class="sidebar-link" data-page="home">
+                            <span class="sidebar-icon">🏠</span>
+                            <span class="sidebar-text">Главная</span>
+                        </a></li>
+                        <li><a href="program.html" class="sidebar-link" data-page="program">
+                            <span class="sidebar-icon">📚</span>
+                            <span class="sidebar-text">Программа</span>
+                        </a></li>
+                        <li><a href="pricing.html" class="sidebar-link" data-page="pricing">
+                            <span class="sidebar-icon">💰</span>
+                            <span class="sidebar-text">Тарифы</span>
+                        </a></li>
+                        <li><a href="store/" class="sidebar-link" data-page="store">
+                            <span class="sidebar-icon">🛍️</span>
+                            <span class="sidebar-text">Магазин</span>
+                        </a></li>
+                        <li><a href="cases.html" class="sidebar-link" data-page="cases">
+                            <span class="sidebar-icon">🎯</span>
+                            <span class="sidebar-text">Кейсы</span>
+                        </a></li>
+                        <li><a href="faq.html" class="sidebar-link" data-page="faq">
+                            <span class="sidebar-icon">❓</span>
+                            <span class="sidebar-text">FAQ</span>
+                        </a></li>
+                        <li><a href="contacts.html" class="sidebar-link" data-page="contacts">
+                            <span class="sidebar-icon">📞</span>
+                            <span class="sidebar-text">Контакты</span>
+                        </a></li>
+                    </ul>
                 </nav>
                 
                 <div class="sidebar-footer">
-                    <div class="sidebar-social">
-                        <a href="https://www.instagram.com/tiarkel/" target="_blank" aria-label="Instagram">
-                            <span>📷</span>
-                        </a>
-                        <a href="https://t.me/tatvorit" target="_blank" aria-label="Telegram">
-                            <span>📱</span>
-                        </a>
-                        <a href="https://www.behance.net/1db30958" target="_blank" aria-label="Behance">
-                            <span>🎨</span>
-                        </a>
+                    <div class="language-toggle">
+                        <span>RU</span>
+                        <button class="lang-switch" aria-label="Переключить язык">UZ</button>
                     </div>
-                    <div class="sidebar-contact">
-                        <p>Нужна помощь?</p>
-                        <a href="https://t.me/tatvorit" target="_blank">Написать в Telegram</a>
-                    </div>
+                    <a href="pricing.html#pro" class="btn-primary sidebar-cta">
+                        Поступить на курс
+                    </a>
                 </div>
             </div>
-            
-            <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
         `;
         
-        // Добавляем HTML в body
+        // Добавляем сайдбар в DOM
         document.body.insertAdjacentHTML('beforeend', sidebarHTML);
+        
+        // Создаем backdrop
+        const backdropHTML = '<div class="sidebar-backdrop" id="sidebar-backdrop"></div>';
+        document.body.insertAdjacentHTML('beforeend', backdropHTML);
         
         // Получаем ссылки на элементы
         this.sidebar = document.getElementById('sidebar');
         this.sidebarBackdrop = document.getElementById('sidebar-backdrop');
         this.sidebarClose = document.getElementById('sidebar-close');
-        this.burgerButton = document.querySelector('.burger');
     }
     
     setupEventListeners() {
-        // Открытие меню через бургер
+        // Кнопка бургера
+        this.burgerButton = document.querySelector('.burger, .mobile-menu-toggle');
         if (this.burgerButton) {
-            this.burgerButton.addEventListener('click', () => {
-                this.openSidebar();
-            });
+            this.burgerButton.addEventListener('click', () => this.openSidebar());
         } else {
-            console.warn('Burger button not found - sidebar may not work properly');
+            console.warn('Burger button not found');
         }
         
-        // Закрытие меню
+        // Кнопка закрытия
         if (this.sidebarClose) {
-            this.sidebarClose.addEventListener('click', () => {
-                this.closeSidebar();
-            });
+            this.sidebarClose.addEventListener('click', () => this.closeSidebar());
+        } else {
+            console.error('Sidebar close button not found');
         }
         
-        // Закрытие по клику на backdrop
+        // Backdrop
         if (this.sidebarBackdrop) {
-            this.sidebarBackdrop.addEventListener('click', () => {
-                this.closeSidebar();
+            this.sidebarBackdrop.addEventListener('click', () => this.closeSidebar());
+        } else {
+            console.error('Sidebar backdrop not found');
+        }
+        
+        // Ссылки в меню
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                this.trackNavEvent('click', link.dataset.page);
+            });
+        });
+    }
+    
+    setupKeyboardNavigation() {
+        // Ловушка фокуса в сайдбаре
+        if (this.sidebar) {
+            this.sidebar.addEventListener('keydown', (e) => {
+                if (e.key === 'Tab') {
+                    const focusableElements = this.sidebar.querySelectorAll(
+                        'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+                    );
+                    const firstElement = focusableElements[0];
+                    const lastElement = focusableElements[focusableElements.length - 1];
+                    
+                    if (e.shiftKey) {
+                        if (document.activeElement === firstElement) {
+                            e.preventDefault();
+                            lastElement.focus();
+                        }
+                    } else {
+                        if (document.activeElement === lastElement) {
+                            e.preventDefault();
+                            firstElement.focus();
+                        }
+                    }
+                }
             });
         }
         
-        // Закрытие по Escape
+        // Закрытие по Esc
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && this.isOpen()) {
                 this.closeSidebar();
             }
         });
-        
-        // Обработка кликов по ссылкам
-        if (this.sidebar) {
-            this.sidebar.addEventListener('click', (e) => {
-                if (e.target.closest('.sidebar-link')) {
-                    const link = e.target.closest('.sidebar-link');
-                    this.handleLinkClick(link);
-                }
-            });
-            
-            // Анимация элементов при открытии
-            this.sidebar.addEventListener('transitionend', () => {
-                if (this.isOpen()) {
-                    this.animateMenuItems();
-                }
-            });
-        }
     }
     
     openSidebar() {
         if (!this.sidebar || !this.sidebarBackdrop) {
-            console.error('Sidebar elements not found');
+            console.error('Sidebar or backdrop not found');
             return;
         }
         
         this.sidebar.classList.add('active');
         this.sidebarBackdrop.classList.add('active');
-        document.body.style.overflow = 'hidden';
         
-        // Активируем бургер
         if (this.burgerButton) {
-            this.burgerButton.classList.add('active');
+            this.burgerButton.setAttribute('aria-expanded', 'true');
         }
         
-        // Фокус на кнопку закрытия для доступности
-        setTimeout(() => {
-            if (this.sidebarClose) {
-                this.sidebarClose.focus();
-            }
-        }, 300);
+        document.body.style.overflow = 'hidden';
         
-        // Трекинг события
-        this.trackEvent('sidebar_opened');
+        // Фокус на первый элемент сайдбара
+        const firstFocusable = this.sidebar.querySelector('a[href], button');
+        if (firstFocusable) {
+            firstFocusable.focus();
+        }
+        
+        this.trackNavEvent('open');
     }
     
     closeSidebar() {
         if (!this.sidebar || !this.sidebarBackdrop) {
-            console.error('Sidebar elements not found');
+            console.error('Sidebar or backdrop not found');
             return;
         }
         
         this.sidebar.classList.remove('active');
         this.sidebarBackdrop.classList.remove('active');
-        document.body.style.overflow = '';
         
-        // Деактивируем бургер
         if (this.burgerButton) {
-            this.burgerButton.classList.remove('active');
+            this.burgerButton.setAttribute('aria-expanded', 'false');
+            // Возвращаем фокус на кнопку бургера
+            this.burgerButton.focus();
         }
         
-        // Возвращаем фокус на бургер
-        setTimeout(() => {
-            if (this.burgerButton) {
-                this.burgerButton.focus();
-            }
-        }, 300);
+        document.body.style.overflow = '';
         
-        // Трекинг события
-        this.trackEvent('sidebar_closed');
+        this.trackNavEvent('close');
     }
     
     isOpen() {
         return this.sidebar && this.sidebar.classList.contains('active');
     }
     
-    handleLinkClick(link) {
-        const href = link.getAttribute('href');
-        const page = link.getAttribute('data-page');
+    getCurrentPage() {
+        const path = window.location.pathname;
+        const page = path.split('/').pop() || 'index.html';
         
-        // Если это внешняя ссылка или текущая страница, закрываем меню
-        if (href.startsWith('http') || href === window.location.pathname.split('/').pop()) {
-            this.closeSidebar();
+        // Обработка store/
+        if (path.includes('/store/')) {
+            return 'store';
         }
         
-        // Трекинг клика по ссылке
-        this.trackEvent('sidebar_link_clicked', {
-            page: page,
-            href: href
-        });
+        return page.replace('.html', '');
     }
     
     highlightCurrentPage() {
-        if (!this.sidebar) return;
+        const currentPage = this.getCurrentPage();
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
         
-        const currentLink = this.sidebar.querySelector(`[data-page="${this.currentPage}"]`);
-        if (currentLink) {
-            currentLink.classList.add('active');
-        }
-    }
-    
-    getCurrentPage() {
-        const path = window.location.pathname;
-        const filename = path.split('/').pop();
-        
-        if (filename === '' || filename === 'index.html') return 'home';
-        if (filename === 'program.html') return 'program';
-        if (filename === 'pricing.html') return 'pricing';
-        if (filename === 'cases.html') return 'cases';
-        if (filename === 'services.html') return 'services';
-        if (filename === 'contacts.html') return 'contacts';
-        if (filename === 'faq.html') return 'faq';
-        if (filename === 'oferta.html') return 'oferta';
-        if (filename === 'privacy.html') return 'privacy';
-        if (path.includes('courses/')) return 'course';
-        
-        return 'home';
-    }
-    
-    animateMenuItems() {
-        if (!this.sidebar) return;
-        
-        const menuItems = this.sidebar.querySelectorAll('.sidebar-menu a');
-        
-        menuItems.forEach((item, index) => {
-            setTimeout(() => {
-                item.classList.add('animate');
-            }, index * 100);
-        });
-    }
-    
-    setupKeyboardNavigation() {
-        if (!this.sidebar) return;
-        
-        // Навигация по Tab
-        this.sidebar.addEventListener('keydown', (e) => {
-            if (e.key === 'Tab') {
-                const focusableElements = this.sidebar.querySelectorAll(
-                    'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
-                );
-                
-                const firstElement = focusableElements[0];
-                const lastElement = focusableElements[focusableElements.length - 1];
-                
-                if (e.shiftKey) {
-                    if (document.activeElement === firstElement) {
-                        e.preventDefault();
-                        lastElement.focus();
-                    }
-                } else {
-                    if (document.activeElement === lastElement) {
-                        e.preventDefault();
-                        firstElement.focus();
-                    }
-                }
+        sidebarLinks.forEach(link => {
+            const pageId = link.dataset.page;
+            if (pageId === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
             }
         });
     }
     
-    trackEvent(eventName, parameters = {}) {
-        // Google Analytics 4
+    trackNavEvent(action, item = null) {
         if (typeof gtag !== 'undefined') {
-            gtag('event', eventName, {
-                event_category: 'sidebar',
-                ...parameters
+            gtag('event', 'nav_' + action, {
+                item: item,
+                page: window.location.pathname
             });
         }
-        
-        // Facebook Pixel
-        if (typeof fbq !== 'undefined') {
-            fbq('track', 'CustomEvent', {
-                event_name: eventName,
-                event_category: 'sidebar',
-                ...parameters
-            });
-        }
-        
-        // Console для отладки
-        console.log(`Sidebar Event: ${eventName}`, parameters);
-    }
-    
-    // Публичные методы для внешнего использования
-    toggle() {
-        if (this.isOpen()) {
-            this.closeSidebar();
-        } else {
-            this.openSidebar();
-        }
-    }
-    
-    open() {
-        this.openSidebar();
-    }
-    
-    close() {
-        this.closeSidebar();
     }
 }
 
 // Инициализация при загрузке DOM
 document.addEventListener('DOMContentLoaded', () => {
     window.sidebarMenu = new SidebarMenu();
-});
-
-// Глобальные функции для внешнего использования
-window.openSidebar = () => {
-    if (window.sidebarMenu) {
-        window.sidebarMenu.open();
-    }
-};
-
-window.closeSidebar = () => {
-    if (window.sidebarMenu) {
-        window.sidebarMenu.close();
-    }
-};
-
-window.toggleSidebar = () => {
-    if (window.sidebarMenu) {
-        window.sidebarMenu.toggle();
-    }
-}; 
+}); 
